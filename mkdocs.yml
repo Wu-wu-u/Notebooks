@@ -1,0 +1,195 @@
+# [Info]
+# 左上角标题
+site_name: Wu-wu-u's Notebooks
+site_url: https://github.com/Wu-wu-u/Notebooks
+site_author: Wu-wu-u
+repo_url: https://github.com/Wu-wu-u/Notebooks
+repo_name: Wu-wu-u/Notebooks
+copyright: Copyright &copy; 2023-2024 <a herf="https://github.com/Wu-wu-u" target="_blank" rel="noopener">Wu-wu-u</a>
+
+theme:
+  name: material
+  language: zh # 语言设置为中文(会改变搜索栏/最后修改 等文字)，默认为英文
+  #logo: assets/logo.jpg # 页面中顶部栏左侧图标
+  favicon: assets/favicon.png
+  icon:
+    repo: fontawesome/brands/github # git-alt/github-alt
+    annotation: material/arrow-right-circle
+    logo: material/notebook-outline
+  font: False
+  palette:
+    # 日间模式
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+
+      # 主颜色
+      # https://squidfunk.github.io/mkdocs-material/setup/changing-the-colors/#primary-color
+      primary: white
+
+      # 链接等可交互元件的高亮色
+      # https://squidfunk.github.io/mkdocs-material/setup/changing-the-colors/#accent-color
+      # accent: teal
+        
+      toggle:
+        # 图标
+        icon: material/weather-sunny
+        # 鼠标悬浮提示
+        name: 切换至夜间模式
+    # 夜间模式
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: black
+      accent: blue
+      toggle:
+        icon: material/weather-night
+        name: 切换至日间模式
+  features:
+    - toc.follow # 右侧目录随页面滑动
+
+    # 使用 Tab 来进行分类
+    # https://squidfunk.github.io/mkdocs-material/setup/setting-up-navigation/#navigation-tabs
+    - navigation.tabs
+
+    # 返回顶部的按钮，在上滑时出现
+    # https://squidfunk.github.io/mkdocs-material/setup/setting-up-navigation/#back-to-top-button
+    - navigation.top
+
+    # 给每个 Tab 添加一个 index.md，且在点击 Tab 时打开
+    # https://squidfunk.github.io/mkdocs-material/setup/setting-up-navigation/#section-index-pages-with-section-index-pages
+    - navigation.indexes
+
+    # 打开 Tab 时左侧目录全部展开
+    # https://squidfunk.github.io/mkdocs-material/setup/setting-up-navigation/#navigation-expansion
+    - navigation.expand
+
+    # 可以通过按钮复制代码
+    # https://squidfunk.github.io/mkdocs-material/reference/code-blocks/#code-copy-button
+    - content.code.copy
+
+    # 可以在代码块中内嵌注释
+    # https://squidfunk.github.io/mkdocs-material/reference/code-blocks/#code-annotations
+    - content.code.annotate
+
+    # 搜索输入一些字母时推荐补全整个单词
+    # https://squidfunk.github.io/mkdocs-material/setup/setting-up-site-search/#search-suggestions
+    - search.suggest
+
+    # 搜索的关键词文章加入高亮
+    # https://squidfunk.github.io/mkdocs-material/setup/setting-up-site-search/#search-highlighting
+    - search.highlight
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/Wu-wu-u
+
+extra_css:
+  - https://cdn.tonycrane.cc/jbmono/jetbrainsmono.css
+  - https://cdn.tonycrane.cc/lxgw/lxgwscreen.css
+  - https://cdn.tonycrane.cc/utils/katex.min.css
+  - css/custom.css 
+
+markdown_extensions:
+  - toc:
+      permalink: true
+      toc_depth: 5
+  - admonition #应用admonition
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite #添加了对内联代码块的语法突出显示的支持
+  - pymdownx.snippets #使用简单语法将任意文件的内容嵌入到文档
+  - pymdownx.superfences #允许代码和内容块任意嵌套，包括警告、选项卡、列表和所有其他元素
+  
+  - pymdownx.details #admonition可以折叠
+
+  - attr_list #允许使用特殊语法将 HTML 属性和 CSS 类添加到几乎每个Markdown 内联和块级元素。
+  - md_in_html
+  - pymdownx.keys #添加了一个简单的语法来允许呈现键盘按键和组合 
+
+  # Caret 、 Mark和Tilde扩展添加了使用简单语法突出显示文本并定义下标和上标的功能。
+  - pymdownx.caret
+  - pymdownx.mark
+  - pymdownx.tilde
+
+  - pymdownx.critic #允许使用Critic 标记来突出显示文档中添加、删除或更新的部分，即跟踪 Markdown 语法的更改。
+
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji 
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg  
+  # 相关内容或者代码块可以分组展示
+  - pymdownx.tabbed:
+      alternate_style: true
+  
+  # 允许使用任务清单即- []      
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  
+  # 允许渲染公式，还需要添加mathjax配置和JavaScript      
+  # https://squidfunk.github.io/mkdocs-material/setup/extensions/python-markdown-extensions/#arithmatex
+  - pymdownx.arithmatex:
+      generic: true
+
+  - def_list #使用各类表格
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - meta
+  - sane_lists
+  - pymdownx.magiclink
+
+
+extra_javascript:
+  - javascripts/mathjax.js
+  - https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js 
+
+plugins:
+  - glightbox #图片放大
+  
+  - statistics: #统计页面字数、代 码行数、阅读时间
+    #https://github.com/TonyCrane/mkdocs-statistics-plugin  
+  - search
+  - git-revision-date-localized
+
+
+nav:
+  - Home:
+    - index.md
+  - Computer Science:
+    - cs/index.md
+    - 编程语言:
+        - cs/pl/index.md
+        - C/C++:
+          - C语言: cs/pl/c_cpp/C/c.md
+          - C++: cs/pl/c_cpp/CPP/cpp.md
+        - python:
+          - cs/pl/python/index.md
+          - CS61A: cs/pl/python/CS61A/cs61a.md
+    - 计算机系统:
+        - cs/systems/index.md
+        - Verilog: cs/systems/Verilog/verilog.md
+        - 数字逻辑设计: cs/systems/LCDF/LCDF.md
+        - 计算机组成: cs/systems/CO/CO.md
+    - 算法相关:
+      - cs/algorithm/index.md
+      - 数据结构基础: cs/algorithm/FDS/fds.md
+      - 高级数据结构: cs/algorithm/ADS/ads.md
+    - 理论相关:
+      - cs/theories/index.md
+      - 离散数学: cs/theories/Discrete_Math/discrete_math.md
+    - 工具相关:
+      - cs/tools/index.md
+      - Git: cs/tools/git/git.md
+      - Latex: cs/tools/latex/latex.md
+      - Vim: cs/tools/vim/vim.md
+      - GDB: cs/tools/gdb/gdb.md
+      - Make: cs/tools/make/make.md
+      - Docker: cs/tools/docker/docker.md
+      - Mkdocs: cs/tools/mkdocs/mkdocs.md
+  - Others:
+    - others/index.md
+    - 课程记录:
+      - others/lessons/index.md
+      - CTF101: others/lessons/CTF/ctf.md
+
+
