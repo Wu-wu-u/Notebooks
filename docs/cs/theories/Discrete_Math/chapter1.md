@@ -120,57 +120,57 @@ be true. However, if $∀x∃yP(x,y)$ is true, it is not necessary for $∃y∀x
 1. Modus ponens
 
 $$
-p \\  
-p→q \\  
+p, \\  
+p→q, \\  
 \therefore q
 $$
 
 2. Modus tollens
 
 $$
-\lnot q \\
-p→q \\
+\lnot q, \\
+p→q, \\
 \therefore \lnot p
 $$
 
 3. Hypothetical Syllogism
 
 $$
-p\rightarrow q \\
-q→r \\
+p\rightarrow q, \\
+q→r, \\
 \therefore p \rightarrow r
 $$
 
 4. Disjunctive Syllogism
 
-$$p \lor q \\
-\lnot p \\
+$$p \lor q, \\
+\lnot p, \\
 \therefore q
 $$
 
 5. Addition
 
-$$p \\
+$$p, \\
 \therefore p \lor q
 $$
 
 6. Simplifcation
 
-$$p\land q \\
+$$p\land q, \\
 \therefore p
 $$
 
 7. Conjunction
 
-$$p \\
-q \\
+$$p, \\
+q, \\
 \therefore p\land q
 $$
 
 8. Resolution
 
 $$
-p\lor q \\
-\lnot p \land r \\
+p\lor q, \\
+\lnot p \land r, \\
 \therefore q\lor r
 $$

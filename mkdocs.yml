@@ -158,15 +158,12 @@ nav:
   - Computer Science:
     - cs/index.md
     - 编程语言:
-        - cs/pl/index.md
         - C/C++:
           - C语言: cs/pl/c_cpp/C/c.md
           - C++: cs/pl/c_cpp/CPP/cpp.md
         - python:
-          - cs/pl/python/index.md
           - CS61A: cs/pl/python/CS61A/cs61a.md
     - 计算机系统:
-        - cs/systems/index.md
         - Verilog: cs/systems/Verilog/verilog.md
         - 数字逻辑设计: 
           - cs/systems/LCDF/index.md
@@ -179,7 +176,6 @@ nav:
           - Chapter7  Memory Basics: cs/systems/LCDF/Chapter7.md
         - 计算机组成: cs/systems/CO/CO.md
     - 算法相关:
-      - cs/algorithm/index.md
       - 数据结构基础: 
         - cs/algorithm/FDS/index.md
         - Chapter 2 Algorithm Analysis: cs/algorithm/FDS/chapter2.md
@@ -193,9 +189,7 @@ nav:
         - 题目集: cs/algorithm/FDS/problems.md
       - 高级数据结构: cs/algorithm/ADS/ads.md
     - 理论相关:
-      - cs/theories/index.md
       - 离散数学: 
-        - cs/theories/Discrete_Math/index.md
         - Chapter 1 Logic and Proofs: cs/theories/Discrete_Math/chapter1.md
         - Chapter 2 Basic Structures: cs/theories/Discrete_Math/chapter2.md
         - Chapter 3 Algorithm: cs/theories/Discrete_Math/chapter3.md
@@ -207,14 +201,15 @@ nav:
         - Chapter 10 Graphs: cs/theories/Discrete_Math/chapter10.md
         - Chapter 11 Trees: cs/theories/Discrete_Math/chapter11.md
     - 工具相关:
-      - cs/tools/index.md
       - Git: cs/tools/git/git.md
       - Latex: cs/tools/latex/latex.md
       - Vim: cs/tools/vim/vim.md
       - GDB: cs/tools/gdb/gdb.md
       - Make: cs/tools/make/make.md
       - Docker: cs/tools/docker/docker.md
-      - Mkdocs: cs/tools/mkdocs/mkdocs.md
+      - Mkdocs: 
+        - Build Website: cs/tools/mkdocs/Build_Website.md
+        - 配置: cs/tools/mkdocs/mkdocs.md
   - Others:
     - others/index.md
     - 课程记录:

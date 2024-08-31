@@ -6,8 +6,7 @@ Number Theory and Cryptography
 - 除法没什么好说，注意余数必须非负就行
 
 
-!!! "定理"
-
+!!! note "定理"
     ![Untitled](Discrete%20Mathematics%20707067c13df14f39b11935dff13def32/Untitled%2021.png)
 
 ## 4.3 质数与gcd

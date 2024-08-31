@@ -1,8 +1,8 @@
-## Web
+# Web
 
-### IP
+## IP
 
-#### IPv4
+### IPv4
 
 - Internet Protocol version 4
 - 由4个段组成，每个段 8 位，可以用任何表示 32 位整数的方式表示 IPv4 地址
@@ -11,16 +11,16 @@
     ![Untitled](web_1.png)
     
 
-#### IPv6
+### IPv6
 
 - Internet Protocol version 6
 - 由8个段组成，每个段16位
     - [**2001:da8:e000:731a:ff00:0:0:642d**](http://[2001:da8:e000:731a:ff00::642d]/)
     - **连续的全 0 段可以省略：2001:da8:e000:731a:ff00::642d**
 
-### TCP/UDP
+## TCP/UDP
 
-#### 背景
+### 背景
 
 - OSI模型和TCP/IP模型
 正如我们写代码层层封装，计算机网络的总体架构也是分层的。这样每个层各司其职，下层上上层的基础设施，逐渐构建复杂的功能。
@@ -33,19 +33,19 @@
     ![Untitled](web_3.png)
     
 
-#### TCP
+### TCP
 
 - **传输控制协议 Transmission Control Protocol：面向连接的协议**
 - 通过复杂的握手、确认、重传等机制保证数据的顺序和可靠性
 
-#### UDP
+### UDP
 
 - **用户数据报协议User Datagram Protocol：无连接；"send and forget"**
 - 更简单且快速；单向传输，不保证顺序，不保证可靠性
 
 ![Untitled](web_4.png)
 
-#### 端口
+### 端口
 
 - 软件层面的通信端点，与 IP 地址一起构成网络通信的基础端口号的范围是 0~65535
     - IP 地址识别机器，端口号识别软件（服务）
@@ -58,7 +58,7 @@
     - 即 [http://10.78.18.216](http://10.78.18.216/) 就是 [http://10.78.18.216:80](http://10.78.18.216/)
     - 否则需要写明端口号，如 [http://10.78.18.216:39200](http://10.78.18.216:39200/)
 
-### 域名与DNS
+## 域名与DNS
 
 - 域名Domain Name用于标识互联网上的计算机
     - 由一串用 . 分隔的字符串组成，例如 example.com
@@ -85,7 +85,7 @@
     ```
     
 
-#### HTTP协议
+### HTTP协议
 
 - 超文本传输协议HyperText Transfer Protocol
 - 是基于文本的协议，用于在客户端和服务器之间传输网页
@@ -95,7 +95,7 @@ GET / HTTP/1.1
 Host: www.example.com
 ```
 
-#### 架构
+### 架构
 
 **客户端：你的浏览器**
 
@@ -113,9 +113,8 @@ Host: www.example.com
 - 服务器也可以有不同分工：前端后端、数据库……
 - 安全：用户不能获得不该获取的信息（比如 flag），不能为所欲为（比如任意代码执行）
 
-#### URL：统一资源定位符
-
-[https://slides.tonycrane.cc/PracticalSkillsTutorial/2023-fall-ckc/lec6/lec6/URI_syntax_diagram.svg.avif](https://slides.tonycrane.cc/PracticalSkillsTutorial/2023-fall-ckc/lec6/lec6/URI_syntax_diagram.svg.avif)
+### URL：统一资源定位符
+![URL](./web_5.avif)
 
 - URI（统一资源标识符）的一种，用于定位互联网上的资源
 
@@ -133,7 +132,7 @@ Host: www.example.com
 - URL 中只能包含 ASCII 字符，由百分号编码定义的字符集
 例如空格编码为 %20，或有些情况下编码为 +
 
-#### 请求方法
+### 请求方法
 
 - [HTTP 请求方法 - MDN Web Docs](https://developer.mozilla.org/zh-CN/docs/Web/HTTP/Methods)
 
@@ -152,7 +151,7 @@ Host: httpbin.org
     - PUT 更新资源；DELETE 删除资源；HEAD 获取资源的头部信息；等等
     - 如何解释请求方法由服务器决定，不同的服务器可能有不同的实现
 
-#### 标头，请求体，响应体
+### 标头，请求体，响应体
 
 ```bash
 POST /post HTTP/1.1
@@ -170,34 +169,34 @@ hello server
     - 不同标头有不同的含义，如 Content-Length（正文的长度）
 - 可以在浏览器的开发者工具中查看所有的 HTTP 请求及其所有内容
 
-#### More
+### More
 
 - nc 直接操作TCP流，不会自动处理HTTP协议，所以需要手动输入内容
     - 有更方便的命令行工具：curl、wget等
     - 也可以用浏览器自带的开发者工具
 
 ```bash
-## 默认进行 GET 请求
+# 默认进行 GET 请求
 curl "http://httpbin.org/get?hello=world"
 
-## -i 显示响应头
+# -i 显示响应头
 curl -i http://10.78.18.216:39200
 
-## -v 显示详细信息，-X 指定请求方法，-d 指定请求体
+# -v 显示详细信息，-X 指定请求方法，-d 指定请求体
 curl -v -X POST http://httpbin.org/post -d 'hello server'
 
 ```
 
-### SQL注入
+## SQL注入
 
-#### MySQL基础
+### MySQL基础
 - mysql -u root -p 使用密码登录
 - SHOW DATABASES;
 - USE db_name;
 - SHOW TABLES;
 - SHOW COLUMNS FROM table_name;
 
-##### SELECT
+#### SELECT
 ```sql
 SELECT field1, field2,...fieldN (FROM table_name1, table_name2... 
 [WHERE condition1 [AND [OR]] condition2...)
@@ -221,16 +220,16 @@ SELECT col_name1, col_name2… FROM table_name LIMIT M OFFSET N  /*也�
 SELECT concat(col_name1, col_name2…) FROM table_name /*整合列数据*/
 SELECT group_concat(col_name1, col_name2…) FROM table_name /*整合行、列数据*/
 ```
-##### 注释
+#### 注释
 
 ```
 /*
 这是注释，支持多行
 */
 -- 这也是注释
-## 这还是注释
+# 这还是注释
 ```
-##### 其他
+#### 其他
 
 - 一些常用的URL编码:  
 Space: %20  
@@ -240,9 +239,9 @@ Space: %20
 +:	%2B  
 `#+$-_.!*()` 浏览器地址栏默认不编码，但是不意味着不能编码
 
-#### 注入技巧
+### 注入技巧
 
-##### 判断为数字型还是字符型
+#### 判断为数字型还是字符型
 
 ```sql
 传入id=2-1
@@ -256,7 +255,7 @@ SELECT col_name(…) FROM table_name WHERE id = '2-1'
 会因为查询不到内容
 ```
 
-##### 联合查询
+#### 联合查询
 
 ```sql
 SELECT field1, …, fieldN FROM table_name UNION SELECT field1*, …, fieldN* FROM table_name*;
@@ -298,7 +297,7 @@ SELECT col_name1, …, col_nameN FROM table_name WHERE id = 3 UNION SELECT passw
 
 ```
 
-##### 无回显的注入
+#### 无回显的注入
 
 - 提取字符进行判断
 ```sql
@@ -323,7 +322,7 @@ SELECT col_name(…) FROM table_name WHERE username = 'admin' and IF(ASCII(SUBST
 
 如果延时超过2秒，说明条件为假，反之为真
 ```
-##### 绕过
+#### 绕过
 
 针对关键字/正则匹配
 
@@ -340,7 +339,7 @@ SELECT col_name(…) FROM table_name WHERE username = 'admin' and IF(ASCII(SUBST
 3. %00截断/换行截断
 4. 改变请求方式 GET->POST, ?a=1 -> /a/1
 
-##### Python相关
+#### Python相关
 
 - 利用requests库来发送请求
 ```python

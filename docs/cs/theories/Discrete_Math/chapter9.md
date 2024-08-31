@@ -6,7 +6,7 @@ Relations
 !!! note "关键"
     一个从A到B的二元关系是 $A\times B$ 的子集
 
-??? examples:
+??? note "examples"
     ![Untitled](Discrete%20Mathematics%20707067c13df14f39b11935dff13def32/Untitled%2094.png)
 
     ![Untitled](Discrete%20Mathematics%20707067c13df14f39b11935dff13def32/Untitled%2095.png)
@@ -130,6 +130,9 @@ Relations
 
         如果warshall得到的传递关系和原关系相同就说明原关系传递
 
+
+-----
+
 ### Warshall’s Algorithm
 
 ![Untitled](Discrete%20Mathematics%20707067c13df14f39b11935dff13def32/Untitled%20119.png)
@@ -155,6 +158,8 @@ Relations
 - 那么每层循环 Mt[i,j]保留（逻辑加）
 
 - 然后通过 Mt[i,k]&Mt[k,j]实现一层又一层的 路过 $V_1…V_n$，完成所有路径可能
+
+-----
 
 ## Equivalence Relations 等价关系
 
@@ -230,6 +235,8 @@ Relations
         ![Untitled](Discrete%20Mathematics%20707067c13df14f39b11935dff13def32/Untitled%20132.png)
 
         - 所以我们能推出 $(R_1\cup R_2)^*$是等价关系
+
+-----
 
 ### mod 定理
 
@@ -307,6 +314,8 @@ Relations
     - 注意别忘了A里面自身的元素也可作上下界
 
     - 最小上界(**lub**),最大下界(**glb**)
+
+-----
 
 ### Well-order Sets
 
