@@ -60,7 +60,7 @@ theme:
 
     # 打开 Tab 时左侧目录全部展开
     # https://squidfunk.github.io/mkdocs-material/setup/setting-up-navigation/#navigation-expansion
-    - navigation.expand
+    # - navigation.expand
 
     # 可以通过按钮复制代码
     # https://squidfunk.github.io/mkdocs-material/reference/code-blocks/#code-copy-button
@@ -100,8 +100,11 @@ markdown_extensions:
       pygments_lang_class: true
   - pymdownx.inlinehilite #添加了对内联代码块的语法突出显示的支持
   - pymdownx.snippets #使用简单语法将任意文件的内容嵌入到文档
-  - pymdownx.superfences #允许代码和内容块任意嵌套，包括警告、选项卡、列表和所有其他元素
-  
+  - pymdownx.superfences: #允许代码和内容块任意嵌套，包括警告、选项卡、列表和所有其他元素
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
   - pymdownx.details #admonition可以折叠
 
   - attr_list #允许使用特殊语法将 HTML 属性和 CSS 类添加到几乎每个Markdown 内联和块级元素。
@@ -162,7 +165,12 @@ nav:
           - C语言: cs/pl/c_cpp/C/c.md
           - C++: cs/pl/c_cpp/CPP/cpp.md
         - python:
-          - CS61A: cs/pl/python/CS61A/cs61a.md
+          - 基础语法: cs/pl/python/Syntax/syntax.md
+          - CS61A: 
+            - cs/pl/python/CS61A/index.md
+            - 函数与列表: cs/pl/python/CS61A/cs61a.md
+            - 面向对象编程: cs/pl/python/CS61A/object.md
+        - x86 汇编语言: cs/pl/asm/asm.md
     - 计算机系统:
         - Verilog: cs/systems/Verilog/verilog.md
         - 数字逻辑设计: 
@@ -174,7 +182,11 @@ nav:
           - Chapter5  Digital Hardware Implementation: cs/systems/LCDF/Chapter5.md
           - Chapter6  Registers & Register Transfers: cs/systems/LCDF/Chapter6.md
           - Chapter7  Memory Basics: cs/systems/LCDF/Chapter7.md
-        - 计算机组成: cs/systems/CO/CO.md
+        - 计算机组成: 
+          - cs/systems/CO/index.md
+          - 1.Preface: cs/systems/CO/preface.md
+          - 2.Instructions: cs/systems/CO/instruction.md
+          - 3.Arithmetic: cs/systems/CO/arithmetic.md
     - 算法相关:
       - 数据结构基础: 
         - cs/algorithm/FDS/index.md
@@ -187,7 +199,11 @@ nav:
         - Chapter 8 The Disjoint Set: cs/algorithm/FDS/chapter8.md
         - Chapter 9 Graph Algorithms: cs/algorithm/FDS/chapter9.md
         - 题目集: cs/algorithm/FDS/problems.md
-      - 高级数据结构: cs/algorithm/ADS/ads.md
+      - 高级数据结构:
+        - cs/algorithm/ADS/index.md
+        - Amortized analysis: cs/algorithm/ADS/amortized.md
+        - lec1|Avl Trees & Splay Trees: cs/algorithm/ADS/lec1.md
+        - lec2|Red Black Trees & B+ Trees: cs/algorithm/ADS/lec2.md 
     - 理论相关:
       - 离散数学: 
         - Chapter 1 Logic and Proofs: cs/theories/Discrete_Math/chapter1.md
@@ -200,6 +216,8 @@ nav:
         - Chapter 9 Relations: cs/theories/Discrete_Math/chapter9.md
         - Chapter 10 Graphs: cs/theories/Discrete_Math/chapter10.md
         - Chapter 11 Trees: cs/theories/Discrete_Math/chapter11.md
+    - 人工智能:
+      - 基础库的使用: cs/AI/basic_module.md  
     - 工具相关:
       - Git: cs/tools/git/git.md
       - Latex: cs/tools/latex/latex.md
@@ -213,7 +231,6 @@ nav:
   - Others:
     - others/index.md
     - 课程记录:
-      - others/lessons/index.md
       - CTF101: 
         - others/lessons/CTF/index.md
         - Web: others/lessons/CTF/web.md
@@ -221,5 +238,9 @@ nav:
         - Reverse: others/lessons/CTF/reverse.md
         - Pwn: others/lessons/CTF/pwn.md
         - Misc: others/lessons/CTF/misc.md
-
+      - 微信小程序开发:
+        - others/lessons/WX/index.md
+        - HTML基础: others/lessons/WX/basic.md
+        - CSS基础: others/lessons/WX/css.md
+        
 
