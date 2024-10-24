@@ -56,7 +56,7 @@
 /*end here */
 
 # 黑白主题背景设置
-[data-md-color-scheme="default"] {
+body[data-md-color-scheme="default"] {
   --md-primary-fg-color: #efefef;
   --md-primary-bg-color: #000000;
   --md-typeset-a-color: #555555;
@@ -65,8 +65,16 @@
   --md-footer-bg-color--dark: #efefef;
   --md-footer-fg-color--light: #000000;
   --md-footer-fg-color--lighter: #000000;
-  --md-code-bg-color: #fafafa;
+  --md-code-bg-color: #fff3e4 !important;
   --md-code-fg-color: var(--md-typeset-color);
+}
+
+body[data-md-color-primary="white"] .md-typeset code{
+  background-color: #FDF6EC;
+}
+
+body[data-md-color-primary="white"] .highlight .c, .highlight .c1, .highlight .ch, .highlight .cm, .highlight .cs, .highlight .sd, .highlight .n, .highlight .kc {
+    color: green;
 }
 
 
