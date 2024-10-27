@@ -247,5 +247,6 @@ nav:
         - HTML基础: others/lessons/WX/basic.md
         - CSS基础: others/lessons/WX/css.md
         - JavaScript基础: others/lessons/WX/js.md
+        - JS RegExp: others/lessons/WX/reg.md
         - Tips: others/lessons/WX/tips.md  
 

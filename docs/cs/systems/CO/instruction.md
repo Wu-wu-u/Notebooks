@@ -79,7 +79,7 @@ S-Format: Store
 !!! note "例子"
 
     ```c title="C code"
-    - `A[30] = h + A[30] + 1`
+    A[30] = h + A[30] + 1
     
     // (Assume: h -> x21   base address of A -> x10)
     ```
@@ -544,9 +544,9 @@ $\text{Target address} = \text{PC} + \text{Branch offset} = \text{PC} + \text{im
 
 ### Jump Addressing
 
-- `jal`（jump-and-link）指令，用20-bit的立即数来进行跳转
+- `jal`（jump-and-link）指令，用21-bit的立即数来进行跳转
 
-- 这里是一个有符号数，因此范围就是分支**前后**大约512K($2^{19}$)
+- 这里是一个有符号数，因此范围就是分支**前后**大约1MB($2^{20}$)
 
 ![alt text](ins_11.png)
 
@@ -557,6 +557,22 @@ $\text{Target address} = \text{PC} + \text{Branch offset} = \text{PC} + \text{im
     - 用`lui temp, address[31:12]`读取address[31:12]到一个寄存器`temp`中
 
     - 再用`jalr x0, address[11:0](temp)`附以立即数imm=address[11:0]来跳转到 **target address**
+
+!!! tip "跳转范围的计算"
+    ![alt text](ins_12.png)
+
+    ??? note "答案"
+        - `jal`中立即数是默认最后一位为0的21-bit的数字，最高位为符号位
+        
+        - 那么所能表示的最大正数为$0~1111~1111~1111~1111~1110 = \text{0xFFFFE}$
+
+        - 最小负数为$1~0000~0000~0000~0000~0000 = \text{0x100000}$，但是拓展位数之后就是$\text{0xFFF00000}$，所以最终答案为 0x1FF00000~0x200FFFFE
+
+        ----
+
+        - `beq`中立即数是默认最后一位为0的13-bit的数字，最高位为符号位
+
+        - 同理可得，范围为 0x1FFFF000~0x200000FFE
 
 ----
 

@@ -73,7 +73,7 @@ body[data-md-color-primary="white"] .md-typeset code{
   background-color: #FDF6EC;
 }
 
-body[data-md-color-primary="white"] .highlight .c, .highlight .c1, .highlight .ch, .highlight .cm, .highlight .cs, .highlight .sd, .highlight .n, .highlight .kc {
+body[data-md-color-primary="white"] .highlight .c, .highlight .c1, .highlight .ch, .highlight .cm, .highlight .cs, .highlight .sd,  .highlight .kc {
     color: green;
 }
 
