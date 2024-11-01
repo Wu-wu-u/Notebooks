@@ -187,6 +187,7 @@ nav:
           - 1.Preface: cs/systems/CO/preface.md
           - 2.Instructions: cs/systems/CO/instruction.md
           - 3.Arithmetic: cs/systems/CO/arithmetic.md
+          - 4.Processor: cs/systems/CO/processor.md
     - 算法相关:
       - 数据结构基础: 
         - cs/algorithm/FDS/index.md
@@ -208,6 +209,7 @@ nav:
         - lec4|Leftise Heaps & Skew Heaps: cs/algorithm/ADS/lec4.md
         - lec5|Binomial Queue: cs/algorithm/ADS/lec5.md
         - lec6|Search & Backtracing: cs/algorithm/ADS/lec6.md
+        - lec7|Divide & Conquer: cs/algorithm/ADS/lec7.md
     - 理论相关:
       - 离散数学: 
         - Chapter 1 Logic and Proofs: cs/theories/Discrete_Math/chapter1.md
@@ -249,4 +251,5 @@ nav:
         - JavaScript基础: others/lessons/WX/js.md
         - JS RegExp: others/lessons/WX/reg.md
         - Tips: others/lessons/WX/tips.md  
+        - 微信开发者工具: others/lessons/WX/dev.md
 

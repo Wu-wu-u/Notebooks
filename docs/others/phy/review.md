@@ -615,7 +615,7 @@ $$
 
     - 磁场强度$H$用环路定理来求
 
-    - 然后磁感应强度$B$用磁通量$\Phi$来求，$\Phi=BS$和$N$**无关**
+    - 然后磁感应强度$B$用磁通量$\Phi$来求，$\Phi=BS$和$N$**无关**，有关的是后面**感生电动势**中
 
     - 最后$j_m=M=\frac{B}{\mu_0}-H$
 
@@ -671,7 +671,7 @@ $$
 
 $$
 d\epsilon_i=(v\times B)\cdot dl \\
-\epsilon_i = \int d\epsion_i = \int_L (v \times B)\cdot dl
+\epsilon_i = \int d\epsilon_i = \int_L (v \times B)\cdot dl
 $$
 
 ---
@@ -691,10 +691,76 @@ $$
 
 ---
 
+#### 感生电动势
+
+$$
+\epsilon_i = -\frac{d\Phi}{dt} = - \frac{d}{dt}\iint B\cdot dS = - \iint \frac{\partial B}{\partial t}\cdot dS
+$$
+
+- 不论空间有无导体存在，**变化的磁场**总是在其周围激发一种电场，这种电场具有涡旋性，称为**感生电场或涡旋电场**。
+
+- 从场的观点看，涡旋电场可在任意有变化磁场的空间存在，而不依赖于是否有导体存在。
+
+- 当有导体存在时，显示出感应电流。
+
+- 感生电场是有旋场，与磁感应强度变化率的方向 相反
+
+!!! abstract "计算导体上的感生电动势"
+    - 第一种：用法拉第电磁感应定律
+
+    - 第二种：如果磁场的分布有对称性，我们可以用上面的结论先求出$E_i$然后，在导体棒上积分即可$\epsilon_i=\oint_a^b E_i \cdot dl$
+
+---
+
+!!! tip "Example--涡旋电场的简单例子"
+    ![alt text](QQ_1730365106412.png)
+    ??? note "答案"
+        ![alt text](QQ_1730365232094.png)
+
+---
+
+!!! tip "Example--涡旋电场中求感生电动势"
+    ![alt text](QQ_1730365641471.png)
+
+    ??? note "答案"
+        ![alt text](QQ_1730365653125.png)
+        ![alt text](QQ_1730365660949.png)
+        ![alt text](QQ_1730365734638.png)
+
+        - 法二尤其巧妙，将$\oint E_i \cdot dl = - \frac{d\Phi}{dt}$结合得紧密！！！
+
+!!! tip "Example--综合"
+    ![alt text](QQ_1730366053522.png)
+    ![alt text](QQ_1730366062269.png)
+
+---
 
 
+### 自感与互感
 
+#### 自感系数
 
+- 这是针对于螺线管中发生的事情
 
+$$
+\begin{align}
+B &= \frac{\mu_0NI}{l} \\
+\Phi &= BS = \frac{\mu_0NI}{l}\pi R^2 \\
+\Psi &= N\Phi = \frac{\mu_0N^2I}{l}\pi R^2 \\
+\epsilon_L &= -\frac{d\Psi}{dt} = -\frac{\mu_0\pi N^2R^2}{l}\frac{dI}{dt}
+\end{align}
+$$
+
+- $\epsilon_L = -\frac{d\Psi}{dt} = -L\frac{dI}{dt}$
+
+- 因此得到自感系数 $L=\frac{d\Psi}{dI}$
+
+- 自感系数（自感）定义为：**回路**中电流变化为单位值时，在回路本身所围面积内引起的全磁通的改变值。
+
+!!! tip "Example"
+    两根半径为a的平行长直传输线，相距为d(见图)，且a << d。试求长为l的这对传输线的自感。
+
+    ![alt text](QQ_1730369020235.png)
+    ![alt text](QQ_1730369028324.png)
 
 

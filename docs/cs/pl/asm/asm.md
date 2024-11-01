@@ -463,17 +463,259 @@ end main
 
 ---
 
-```asm title="在屏幕上打印红色的A和绿色的B"
+## Lec 7
+
+### 显卡相关输出
+
+- 计算机在启动时会实现`B800:0000`与跟显卡相应地址的映射
+
+- 显卡有两种模式
+
+    1. 文本模式：只能输出字符
+    2. 图形模式：可以输出点
+
+
+- 对于屏幕，我们可以看作是从(0,0)~(79,24)的坐标轴
+
+- 然后对于上面的一点(x,y)，计算它对应的$显卡偏移地址=(y\cdot 80 + x)\cdot 2$
+
+- 公式中之所以是`2`，是因为每2个byte控制一个元素，第一个byte用于控制显示的**字符**，第二个byte控制**颜色**
+
+!!! tip "Example--文本模式"
+
+    - 下面的例子在(0,0)和(0,1)初打印了红色的A和绿色的B
+
+    ```asm title="在屏幕上打印红色的A和绿色的B"
+    code segment
+    assume cs:code
+    main:
+        mov ax, 0B800h ; 理解成显卡段地址
+        mov ds, ax
+        mov byte ptr ds:[0], 'A'
+        mov byte ptr ds:[1], 74h ; 高四位是背景，第四位是前景，此处就是白色背景红色前景
+        mov byte ptr ds:[2], 'B'
+        mov byte ptr ds:[3], 72h
+        mov ah, 4Ch
+        int 21h
+    code ends
+    end main
+
+    ```
+
+
+
+---
+
+
+```asm title="一个看似移动的'A'字符"
 code segment
 assume cs:code
 main:
-    mov ax, 0B800h ; 理解成显卡段地址
-    mov ds, ax
-    mov byte ptr ds:[0], 'A'
-    mov byte ptr ds:[1], 74h ; 高四位是背景，第四位是前景，此处就是白色背景红色前景
-    mov byte ptr ds:[2], 'B'
-    mov byte ptr ds:[3], 72h
+   mov ax, 0B800h
+   mov ds, ax
+   mov di, 0
+   mov al, 'A'
+   mov ah, 17h; 蓝色背景,白色前景
+   mov cx, 2000
+again:
+   mov ds:[di], ax
+   mov bx, 200h
+wait_wait:
+   mov dx, 0
+wait_a_while:
+   sub dx, 1
+   jnz wait_a_while
+   sub bx, 1
+   jnz wait_wait
+
+   mov word ptr ds:[di], 0020h
+   add di, 2
+   sub cx, 1
+   jnz again
+   mov ah, 1
+   int 21h; 相当于AL=getchar();
+   mov ah, 4Ch
+   int 21h
 code ends
 end main
 
 ```
+
+---
+
+#### 图形模式编程
+
+- 把显卡切换到图形模式：调用int 10h中断
+
+- 例如,要切换到分辨率320*200,颜色为256色的图形模式:
+
+    ```asm
+    mov ax, 0A000h
+    mov ds, ax
+    mov ah, 0  	; 其中AH=0表示int 10h的子功能号为0
+    mov al, 13h; 其中AL=13h代表图形模式编号
+    int 10h     ; int 10h是与显示相关的bios中断
+    ```
+
+- 图形模式中，屏幕就是(0,0)~(319,199)的坐标轴
+
+- **不同**于文本模式中，每一个坐标是一个**byte**，此处每个坐标是一个**pixel**
+
+- 同理：图形模式下每个坐标(x,y)$显卡偏移地址=y\cdot 320 + x$
+
+```asm title="一个方块"
+code segment
+assume cs:code; cs不需要赋值会自动等于code
+main:
+   jmp begin
+i  dw 0
+begin:
+   mov ax, 0013h
+   int 10h
+   mov ax, 0A000h
+   mov es, ax
+   ;(320/2, 200/2)
+   mov di, (100-20)*320+(160-20); (160-20,100-20)
+   ;mov cx, 41; rows=41
+   mov i, 41
+next_row:
+   ;push cx
+   push di
+   mov al, 4; color=red
+   mov cx, 41; dots=41
+next_dot:
+   mov es:[di], al
+   add di, 1
+   sub cx, 1
+   jnz next_dot
+   pop di; 左上角(x,y)对应的地址
+   ;pop cx; cx=41
+   add di, 320; 下一行的起点的地址
+   ;sub cx, 1; 行数-1
+   sub i, 1
+   jnz next_row
+   mov ah,0
+   int 16h;bios键盘输入,类似int 21h的01h功能
+   mov ax, 0003h
+   int 10h; 切换到80*25文本模式
+   mov ah, 4Ch
+   int 21h
+code ends
+end main
+
+```
+
+!!! tip "Example--描绘点阵汉字“我”"
+
+    ```asm
+    data segment
+    hz  db 04h,80h,0Eh,0A0h,78h,90h,08h,90h
+        db 08h,84h,0FFh,0FEh,08h,80h,08h,90h
+        db 0Ah,90h,0Ch,60h,18h,40h,68h,0A0h
+        db 09h,20h,0Ah,14h,28h,14h,10h,0Ch
+    data ends
+    code segment
+    assume cs:code, ds:data
+    main:
+        mov ax, data
+        mov ds, ax
+        mov ax, 0A000h
+        mov es, ax
+        mov di, 0
+        mov ax, 0013h
+        int 10h
+        mov dx, 16
+        mov si, 0
+    next_row:
+        mov ah, hz[si]
+        mov al, hz[si+1] ; AX=0480h=0000 0100 1000 0000
+        add si, 2
+        mov cx, 16
+    check_next_dot:
+        shl ax, 1; 刚移出的位会自动进入CF(进位标志)
+        jnc no_dot; 若没有进位即CF=0则跳到no_dot
+    is_dot:
+        mov byte ptr es:[di], 0Ch
+    no_dot:
+        add di, 1
+        sub cx, 1
+        jnz check_next_dot
+        sub di, 16
+        add di, 320
+        sub dx, 1
+        jnz next_row
+        mov ah, 1
+        int 21h
+        mov ax, 0003h
+        int 10h
+        mov ah, 4Ch
+        int 21h
+    code ends
+    end main
+    ```
+
+---
+
+### assume
+
+- 帮助编译器建立**段寄存器与段的关联**, 当源程序中引用了某个段内的变量时，编译器会在编译出来的机器码中把**变量的段地址替换成关联的段寄存器**。
+
+- 程序会从`main`开始，即首条指令的地址；`end`表示源程序的结束
+
+- 所以`main`不一定要写在代码的最前面，写在后面也可以，程序也会从它开始执行
+
+??? tip "并非一定main"
+    - `main` procedure一定要需要叫`main`，只需要最后和`end`对应上名字就可以了；如
+
+    ```asm
+    master:
+        mov ah, 4Ch
+        int 21h
+    end master
+    ```
+
+```asm title="example"
+data segment
+abc db 1,2,3,4
+data ends
+
+code segment
+assume cs:code, es:data
+;同一个段与多个段寄存器有关联时:ds > ss > es > cs
+main:
+   mov ax, data
+   mov es, ax
+   mov al, abc[1]; 编译后变成mov al, es:[0001]
+   ;先替换成mov al, data:[0001]
+   ;再替换成mov al, es:[0001]
+   ;在替换时编译器并不检查es与data是否相等
+   ;假定前面assume ds:data,则这句话就会替换成
+   ;mov al, ds:[0001]并简化成mov al, [0001]
+   ;因为[]中没有bp时，默认的段地址一定是ds且ds
+   ;可以省略。
+
+   mov al, abc[0]
+   mov al, [abc]
+   mov al, abc ; 上面这三句都是等价的，
+               ; 编译器会统一处理成 mov ah, [abc]再编译
+   mov ah, 4Ch
+   int 21h
+code ends
+end main
+```
+
+---
+
+### 远近指针
+
+```c
+char *q = (char *)0x1000;
+char far *p = (char far*) 0xB8000000;
+```
+
+- 近指针`char *`的宽度只有16位，只能保存偏移地址；配套的**段地址**是`ds`
+
+- 远指针`char far *`的宽度有32位，可以保存偏移地址和段地址；
+
+
+
