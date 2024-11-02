@@ -43,6 +43,7 @@ deploy:
     runs-on: ubuntu-latest # 创建一个新的云端虚拟机 使用最新Ubuntu系统
     steps:
     - uses: actions/checkout@v2 # 先checkout到main分支
+        fetch-depth: 0
     - uses: actions/setup-python@v2 # 再安装Python3和相关环境
         with:
         python-version: 3.x
