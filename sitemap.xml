@@ -2,366 +2,414 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://github.com/Wu-wu-u/Notebooks/</loc>
-         <lastmod>2024-11-02</lastmod>
+         <lastmod>2024-12-19</lastmod>
     </url>
     <url>
          <loc>https://github.com/Wu-wu-u/Notebooks/cs/</loc>
-         <lastmod>2024-11-02</lastmod>
+         <lastmod>2024-12-19</lastmod>
+    </url>
+    <url>
+         <loc>https://github.com/Wu-wu-u/Notebooks/cs/AI/CNN/</loc>
+         <lastmod>2024-12-19</lastmod>
     </url>
     <url>
          <loc>https://github.com/Wu-wu-u/Notebooks/cs/AI/ML/</loc>
-         <lastmod>2024-11-02</lastmod>
+         <lastmod>2024-12-19</lastmod>
     </url>
     <url>
          <loc>https://github.com/Wu-wu-u/Notebooks/cs/AI/basic_module/</loc>
-         <lastmod>2024-11-02</lastmod>
+         <lastmod>2024-12-19</lastmod>
     </url>
     <url>
          <loc>https://github.com/Wu-wu-u/Notebooks/cs/AI/beginner/</loc>
-         <lastmod>2024-11-02</lastmod>
+         <lastmod>2024-12-19</lastmod>
     </url>
     <url>
          <loc>https://github.com/Wu-wu-u/Notebooks/cs/AI/exam_oriented/</loc>
-         <lastmod>2024-11-02</lastmod>
+         <lastmod>2024-12-19</lastmod>
     </url>
     <url>
          <loc>https://github.com/Wu-wu-u/Notebooks/cs/algorithm/</loc>
-         <lastmod>2024-11-02</lastmod>
+         <lastmod>2024-12-19</lastmod>
     </url>
     <url>
          <loc>https://github.com/Wu-wu-u/Notebooks/cs/algorithm/ADS/</loc>
-         <lastmod>2024-11-02</lastmod>
+         <lastmod>2024-12-19</lastmod>
     </url>
     <url>
          <loc>https://github.com/Wu-wu-u/Notebooks/cs/algorithm/ADS/amortized/</loc>
-         <lastmod>2024-11-02</lastmod>
+         <lastmod>2024-12-19</lastmod>
     </url>
     <url>
          <loc>https://github.com/Wu-wu-u/Notebooks/cs/algorithm/ADS/lec1/</loc>
-         <lastmod>2024-11-02</lastmod>
+         <lastmod>2024-12-19</lastmod>
+    </url>
+    <url>
+         <loc>https://github.com/Wu-wu-u/Notebooks/cs/algorithm/ADS/lec10/</loc>
+         <lastmod>2024-12-19</lastmod>
+    </url>
+    <url>
+         <loc>https://github.com/Wu-wu-u/Notebooks/cs/algorithm/ADS/lec11/</loc>
+         <lastmod>2024-12-19</lastmod>
+    </url>
+    <url>
+         <loc>https://github.com/Wu-wu-u/Notebooks/cs/algorithm/ADS/lec12/</loc>
+         <lastmod>2024-12-19</lastmod>
+    </url>
+    <url>
+         <loc>https://github.com/Wu-wu-u/Notebooks/cs/algorithm/ADS/lec13/</loc>
+         <lastmod>2024-12-19</lastmod>
+    </url>
+    <url>
+         <loc>https://github.com/Wu-wu-u/Notebooks/cs/algorithm/ADS/lec14/</loc>
+         <lastmod>2024-12-19</lastmod>
     </url>
     <url>
          <loc>https://github.com/Wu-wu-u/Notebooks/cs/algorithm/ADS/lec2/</loc>
-         <lastmod>2024-11-02</lastmod>
+         <lastmod>2024-12-19</lastmod>
     </url>
     <url>
          <loc>https://github.com/Wu-wu-u/Notebooks/cs/algorithm/ADS/lec3/</loc>
-         <lastmod>2024-11-02</lastmod>
+         <lastmod>2024-12-19</lastmod>
     </url>
     <url>
          <loc>https://github.com/Wu-wu-u/Notebooks/cs/algorithm/ADS/lec4/</loc>
-         <lastmod>2024-11-02</lastmod>
+         <lastmod>2024-12-19</lastmod>
     </url>
     <url>
          <loc>https://github.com/Wu-wu-u/Notebooks/cs/algorithm/ADS/lec5/</loc>
-         <lastmod>2024-11-02</lastmod>
+         <lastmod>2024-12-19</lastmod>
     </url>
     <url>
          <loc>https://github.com/Wu-wu-u/Notebooks/cs/algorithm/ADS/lec6/</loc>
-         <lastmod>2024-11-02</lastmod>
+         <lastmod>2024-12-19</lastmod>
     </url>
     <url>
          <loc>https://github.com/Wu-wu-u/Notebooks/cs/algorithm/ADS/lec7/</loc>
-         <lastmod>2024-11-02</lastmod>
+         <lastmod>2024-12-19</lastmod>
+    </url>
+    <url>
+         <loc>https://github.com/Wu-wu-u/Notebooks/cs/algorithm/ADS/lec8/</loc>
+         <lastmod>2024-12-19</lastmod>
+    </url>
+    <url>
+         <loc>https://github.com/Wu-wu-u/Notebooks/cs/algorithm/ADS/lec9/</loc>
+         <lastmod>2024-12-19</lastmod>
     </url>
     <url>
          <loc>https://github.com/Wu-wu-u/Notebooks/cs/algorithm/FDS/</loc>
-         <lastmod>2024-11-02</lastmod>
+         <lastmod>2024-12-19</lastmod>
     </url>
     <url>
          <loc>https://github.com/Wu-wu-u/Notebooks/cs/algorithm/FDS/Fundamentals%20of%20Data%20Structures%20505ba7ea12b7454ab10fc2d6a857950f/</loc>
-         <lastmod>2024-11-02</lastmod>
+         <lastmod>2024-12-19</lastmod>
     </url>
     <url>
          <loc>https://github.com/Wu-wu-u/Notebooks/cs/algorithm/FDS/chapter2/</loc>
-         <lastmod>2024-11-02</lastmod>
+         <lastmod>2024-12-19</lastmod>
     </url>
     <url>
          <loc>https://github.com/Wu-wu-u/Notebooks/cs/algorithm/FDS/chapter3/</loc>
-         <lastmod>2024-11-02</lastmod>
+         <lastmod>2024-12-19</lastmod>
     </url>
     <url>
          <loc>https://github.com/Wu-wu-u/Notebooks/cs/algorithm/FDS/chapter4/</loc>
-         <lastmod>2024-11-02</lastmod>
+         <lastmod>2024-12-19</lastmod>
     </url>
     <url>
          <loc>https://github.com/Wu-wu-u/Notebooks/cs/algorithm/FDS/chapter5/</loc>
-         <lastmod>2024-11-02</lastmod>
+         <lastmod>2024-12-19</lastmod>
     </url>
     <url>
          <loc>https://github.com/Wu-wu-u/Notebooks/cs/algorithm/FDS/chapter6/</loc>
-         <lastmod>2024-11-02</lastmod>
+         <lastmod>2024-12-19</lastmod>
     </url>
     <url>
          <loc>https://github.com/Wu-wu-u/Notebooks/cs/algorithm/FDS/chapter7/</loc>
-         <lastmod>2024-11-02</lastmod>
+         <lastmod>2024-12-19</lastmod>
     </url>
     <url>
          <loc>https://github.com/Wu-wu-u/Notebooks/cs/algorithm/FDS/chapter8/</loc>
-         <lastmod>2024-11-02</lastmod>
+         <lastmod>2024-12-19</lastmod>
     </url>
     <url>
          <loc>https://github.com/Wu-wu-u/Notebooks/cs/algorithm/FDS/chapter9/</loc>
-         <lastmod>2024-11-02</lastmod>
+         <lastmod>2024-12-19</lastmod>
     </url>
     <url>
          <loc>https://github.com/Wu-wu-u/Notebooks/cs/algorithm/FDS/problems/</loc>
-         <lastmod>2024-11-02</lastmod>
+         <lastmod>2024-12-19</lastmod>
     </url>
     <url>
          <loc>https://github.com/Wu-wu-u/Notebooks/cs/pl/</loc>
-         <lastmod>2024-11-02</lastmod>
+         <lastmod>2024-12-19</lastmod>
     </url>
     <url>
          <loc>https://github.com/Wu-wu-u/Notebooks/cs/pl/asm/asm/</loc>
-         <lastmod>2024-11-02</lastmod>
+         <lastmod>2024-12-19</lastmod>
     </url>
     <url>
          <loc>https://github.com/Wu-wu-u/Notebooks/cs/pl/c_cpp/C/c/</loc>
-         <lastmod>2024-11-02</lastmod>
+         <lastmod>2024-12-19</lastmod>
     </url>
     <url>
          <loc>https://github.com/Wu-wu-u/Notebooks/cs/pl/c_cpp/CPP/cpp/</loc>
-         <lastmod>2024-11-02</lastmod>
+         <lastmod>2024-12-19</lastmod>
     </url>
     <url>
          <loc>https://github.com/Wu-wu-u/Notebooks/cs/pl/python/</loc>
-         <lastmod>2024-11-02</lastmod>
+         <lastmod>2024-12-19</lastmod>
     </url>
     <url>
          <loc>https://github.com/Wu-wu-u/Notebooks/cs/pl/python/CS61A/</loc>
-         <lastmod>2024-11-02</lastmod>
+         <lastmod>2024-12-19</lastmod>
     </url>
     <url>
          <loc>https://github.com/Wu-wu-u/Notebooks/cs/pl/python/CS61A/cs61a/</loc>
-         <lastmod>2024-11-02</lastmod>
+         <lastmod>2024-12-19</lastmod>
     </url>
     <url>
          <loc>https://github.com/Wu-wu-u/Notebooks/cs/pl/python/CS61A/object/</loc>
-         <lastmod>2024-11-02</lastmod>
+         <lastmod>2024-12-19</lastmod>
     </url>
     <url>
          <loc>https://github.com/Wu-wu-u/Notebooks/cs/pl/python/Syntax/syntax/</loc>
-         <lastmod>2024-11-02</lastmod>
+         <lastmod>2024-12-19</lastmod>
     </url>
     <url>
          <loc>https://github.com/Wu-wu-u/Notebooks/cs/systems/</loc>
-         <lastmod>2024-11-02</lastmod>
+         <lastmod>2024-12-19</lastmod>
     </url>
     <url>
          <loc>https://github.com/Wu-wu-u/Notebooks/cs/systems/CO/</loc>
-         <lastmod>2024-11-02</lastmod>
+         <lastmod>2024-12-19</lastmod>
+    </url>
+    <url>
+         <loc>https://github.com/Wu-wu-u/Notebooks/cs/systems/CO/IO/</loc>
+         <lastmod>2024-12-19</lastmod>
     </url>
     <url>
          <loc>https://github.com/Wu-wu-u/Notebooks/cs/systems/CO/arithmetic/</loc>
-         <lastmod>2024-11-02</lastmod>
+         <lastmod>2024-12-19</lastmod>
+    </url>
+    <url>
+         <loc>https://github.com/Wu-wu-u/Notebooks/cs/systems/CO/cache/</loc>
+         <lastmod>2024-12-19</lastmod>
     </url>
     <url>
          <loc>https://github.com/Wu-wu-u/Notebooks/cs/systems/CO/instruction/</loc>
-         <lastmod>2024-11-02</lastmod>
+         <lastmod>2024-12-19</lastmod>
     </url>
     <url>
          <loc>https://github.com/Wu-wu-u/Notebooks/cs/systems/CO/preface/</loc>
-         <lastmod>2024-11-02</lastmod>
+         <lastmod>2024-12-19</lastmod>
     </url>
     <url>
          <loc>https://github.com/Wu-wu-u/Notebooks/cs/systems/CO/processor/</loc>
-         <lastmod>2024-11-02</lastmod>
+         <lastmod>2024-12-19</lastmod>
     </url>
     <url>
          <loc>https://github.com/Wu-wu-u/Notebooks/cs/systems/LCDF/</loc>
-         <lastmod>2024-11-02</lastmod>
+         <lastmod>2024-12-19</lastmod>
     </url>
     <url>
          <loc>https://github.com/Wu-wu-u/Notebooks/cs/systems/LCDF/Chapter1/</loc>
-         <lastmod>2024-11-02</lastmod>
+         <lastmod>2024-12-19</lastmod>
     </url>
     <url>
          <loc>https://github.com/Wu-wu-u/Notebooks/cs/systems/LCDF/Chapter2/</loc>
-         <lastmod>2024-11-02</lastmod>
+         <lastmod>2024-12-19</lastmod>
     </url>
     <url>
          <loc>https://github.com/Wu-wu-u/Notebooks/cs/systems/LCDF/Chapter3/</loc>
-         <lastmod>2024-11-02</lastmod>
+         <lastmod>2024-12-19</lastmod>
     </url>
     <url>
          <loc>https://github.com/Wu-wu-u/Notebooks/cs/systems/LCDF/Chapter4/</loc>
-         <lastmod>2024-11-02</lastmod>
+         <lastmod>2024-12-19</lastmod>
     </url>
     <url>
          <loc>https://github.com/Wu-wu-u/Notebooks/cs/systems/LCDF/Chapter5/</loc>
-         <lastmod>2024-11-02</lastmod>
+         <lastmod>2024-12-19</lastmod>
     </url>
     <url>
          <loc>https://github.com/Wu-wu-u/Notebooks/cs/systems/LCDF/Chapter6/</loc>
-         <lastmod>2024-11-02</lastmod>
+         <lastmod>2024-12-19</lastmod>
     </url>
     <url>
          <loc>https://github.com/Wu-wu-u/Notebooks/cs/systems/LCDF/Chapter7/</loc>
-         <lastmod>2024-11-02</lastmod>
+         <lastmod>2024-12-19</lastmod>
     </url>
     <url>
          <loc>https://github.com/Wu-wu-u/Notebooks/cs/systems/LCDF/Logic%20and%20computer%20design%20fundamentals%20126e5290981e4d10ad7dab4e845bdd25/</loc>
-         <lastmod>2024-11-02</lastmod>
+         <lastmod>2024-12-19</lastmod>
     </url>
     <url>
          <loc>https://github.com/Wu-wu-u/Notebooks/cs/systems/Verilog/verilog/</loc>
-         <lastmod>2024-11-02</lastmod>
+         <lastmod>2024-12-19</lastmod>
     </url>
     <url>
          <loc>https://github.com/Wu-wu-u/Notebooks/cs/theories/</loc>
-         <lastmod>2024-11-02</lastmod>
+         <lastmod>2024-12-19</lastmod>
     </url>
     <url>
          <loc>https://github.com/Wu-wu-u/Notebooks/cs/theories/Discrete_Math/</loc>
-         <lastmod>2024-11-02</lastmod>
+         <lastmod>2024-12-19</lastmod>
     </url>
     <url>
          <loc>https://github.com/Wu-wu-u/Notebooks/cs/theories/Discrete_Math/Discrete%20Mathematics%20707067c13df14f39b11935dff13def32/</loc>
-         <lastmod>2024-11-02</lastmod>
+         <lastmod>2024-12-19</lastmod>
     </url>
     <url>
          <loc>https://github.com/Wu-wu-u/Notebooks/cs/theories/Discrete_Math/chapter1/</loc>
-         <lastmod>2024-11-02</lastmod>
+         <lastmod>2024-12-19</lastmod>
     </url>
     <url>
          <loc>https://github.com/Wu-wu-u/Notebooks/cs/theories/Discrete_Math/chapter10/</loc>
-         <lastmod>2024-11-02</lastmod>
+         <lastmod>2024-12-19</lastmod>
     </url>
     <url>
          <loc>https://github.com/Wu-wu-u/Notebooks/cs/theories/Discrete_Math/chapter11/</loc>
-         <lastmod>2024-11-02</lastmod>
+         <lastmod>2024-12-19</lastmod>
     </url>
     <url>
          <loc>https://github.com/Wu-wu-u/Notebooks/cs/theories/Discrete_Math/chapter2/</loc>
-         <lastmod>2024-11-02</lastmod>
+         <lastmod>2024-12-19</lastmod>
     </url>
     <url>
          <loc>https://github.com/Wu-wu-u/Notebooks/cs/theories/Discrete_Math/chapter3/</loc>
-         <lastmod>2024-11-02</lastmod>
+         <lastmod>2024-12-19</lastmod>
     </url>
     <url>
          <loc>https://github.com/Wu-wu-u/Notebooks/cs/theories/Discrete_Math/chapter4/</loc>
-         <lastmod>2024-11-02</lastmod>
+         <lastmod>2024-12-19</lastmod>
     </url>
     <url>
          <loc>https://github.com/Wu-wu-u/Notebooks/cs/theories/Discrete_Math/chapter5/</loc>
-         <lastmod>2024-11-02</lastmod>
+         <lastmod>2024-12-19</lastmod>
     </url>
     <url>
          <loc>https://github.com/Wu-wu-u/Notebooks/cs/theories/Discrete_Math/chapter6/</loc>
-         <lastmod>2024-11-02</lastmod>
+         <lastmod>2024-12-19</lastmod>
     </url>
     <url>
          <loc>https://github.com/Wu-wu-u/Notebooks/cs/theories/Discrete_Math/chapter8/</loc>
-         <lastmod>2024-11-02</lastmod>
+         <lastmod>2024-12-19</lastmod>
     </url>
     <url>
          <loc>https://github.com/Wu-wu-u/Notebooks/cs/theories/Discrete_Math/chapter9/</loc>
-         <lastmod>2024-11-02</lastmod>
+         <lastmod>2024-12-19</lastmod>
     </url>
     <url>
          <loc>https://github.com/Wu-wu-u/Notebooks/cs/tools/</loc>
-         <lastmod>2024-11-02</lastmod>
+         <lastmod>2024-12-19</lastmod>
     </url>
     <url>
          <loc>https://github.com/Wu-wu-u/Notebooks/cs/tools/docker/docker/</loc>
-         <lastmod>2024-11-02</lastmod>
+         <lastmod>2024-12-19</lastmod>
     </url>
     <url>
          <loc>https://github.com/Wu-wu-u/Notebooks/cs/tools/gdb/gdb/</loc>
-         <lastmod>2024-11-02</lastmod>
+         <lastmod>2024-12-19</lastmod>
     </url>
     <url>
          <loc>https://github.com/Wu-wu-u/Notebooks/cs/tools/git/git/</loc>
-         <lastmod>2024-11-02</lastmod>
+         <lastmod>2024-12-19</lastmod>
     </url>
     <url>
          <loc>https://github.com/Wu-wu-u/Notebooks/cs/tools/latex/latex/</loc>
-         <lastmod>2024-11-02</lastmod>
+         <lastmod>2024-12-19</lastmod>
     </url>
     <url>
          <loc>https://github.com/Wu-wu-u/Notebooks/cs/tools/make/make/</loc>
-         <lastmod>2024-11-02</lastmod>
+         <lastmod>2024-12-19</lastmod>
     </url>
     <url>
          <loc>https://github.com/Wu-wu-u/Notebooks/cs/tools/mkdocs/Build_Website/</loc>
-         <lastmod>2024-11-02</lastmod>
+         <lastmod>2024-12-19</lastmod>
     </url>
     <url>
          <loc>https://github.com/Wu-wu-u/Notebooks/cs/tools/mkdocs/mkdocs/</loc>
-         <lastmod>2024-11-02</lastmod>
+         <lastmod>2024-12-19</lastmod>
     </url>
     <url>
          <loc>https://github.com/Wu-wu-u/Notebooks/cs/tools/vim/vim/</loc>
-         <lastmod>2024-11-02</lastmod>
+         <lastmod>2024-12-19</lastmod>
     </url>
     <url>
          <loc>https://github.com/Wu-wu-u/Notebooks/others/</loc>
-         <lastmod>2024-11-02</lastmod>
+         <lastmod>2024-12-19</lastmod>
     </url>
     <url>
          <loc>https://github.com/Wu-wu-u/Notebooks/others/lessons/</loc>
-         <lastmod>2024-11-02</lastmod>
+         <lastmod>2024-12-19</lastmod>
     </url>
     <url>
          <loc>https://github.com/Wu-wu-u/Notebooks/others/lessons/CTF/</loc>
-         <lastmod>2024-11-02</lastmod>
+         <lastmod>2024-12-19</lastmod>
     </url>
     <url>
          <loc>https://github.com/Wu-wu-u/Notebooks/others/lessons/CTF/crypto/</loc>
-         <lastmod>2024-11-02</lastmod>
+         <lastmod>2024-12-19</lastmod>
     </url>
     <url>
          <loc>https://github.com/Wu-wu-u/Notebooks/others/lessons/CTF/misc/</loc>
-         <lastmod>2024-11-02</lastmod>
+         <lastmod>2024-12-19</lastmod>
     </url>
     <url>
          <loc>https://github.com/Wu-wu-u/Notebooks/others/lessons/CTF/pwn/</loc>
-         <lastmod>2024-11-02</lastmod>
+         <lastmod>2024-12-19</lastmod>
     </url>
     <url>
          <loc>https://github.com/Wu-wu-u/Notebooks/others/lessons/CTF/reverse/</loc>
-         <lastmod>2024-11-02</lastmod>
+         <lastmod>2024-12-19</lastmod>
     </url>
     <url>
          <loc>https://github.com/Wu-wu-u/Notebooks/others/lessons/CTF/web/</loc>
-         <lastmod>2024-11-02</lastmod>
+         <lastmod>2024-12-19</lastmod>
+    </url>
+    <url>
+         <loc>https://github.com/Wu-wu-u/Notebooks/others/lessons/WLAN/</loc>
+         <lastmod>2024-12-19</lastmod>
+    </url>
+    <url>
+         <loc>https://github.com/Wu-wu-u/Notebooks/others/lessons/WLAN/wlan/</loc>
+         <lastmod>2024-12-19</lastmod>
     </url>
     <url>
          <loc>https://github.com/Wu-wu-u/Notebooks/others/lessons/WX/</loc>
-         <lastmod>2024-11-02</lastmod>
+         <lastmod>2024-12-19</lastmod>
     </url>
     <url>
          <loc>https://github.com/Wu-wu-u/Notebooks/others/lessons/WX/basic/</loc>
-         <lastmod>2024-11-02</lastmod>
+         <lastmod>2024-12-19</lastmod>
     </url>
     <url>
          <loc>https://github.com/Wu-wu-u/Notebooks/others/lessons/WX/css/</loc>
-         <lastmod>2024-11-02</lastmod>
+         <lastmod>2024-12-19</lastmod>
     </url>
     <url>
          <loc>https://github.com/Wu-wu-u/Notebooks/others/lessons/WX/dev/</loc>
-         <lastmod>2024-11-02</lastmod>
+         <lastmod>2024-12-19</lastmod>
     </url>
     <url>
          <loc>https://github.com/Wu-wu-u/Notebooks/others/lessons/WX/js/</loc>
-         <lastmod>2024-11-02</lastmod>
+         <lastmod>2024-12-19</lastmod>
     </url>
     <url>
          <loc>https://github.com/Wu-wu-u/Notebooks/others/lessons/WX/reg/</loc>
-         <lastmod>2024-11-02</lastmod>
+         <lastmod>2024-12-19</lastmod>
     </url>
     <url>
          <loc>https://github.com/Wu-wu-u/Notebooks/others/lessons/WX/tips/</loc>
-         <lastmod>2024-11-02</lastmod>
+         <lastmod>2024-12-19</lastmod>
     </url>
     <url>
          <loc>https://github.com/Wu-wu-u/Notebooks/others/p%26s/p%26s/</loc>
-         <lastmod>2024-11-02</lastmod>
+         <lastmod>2024-12-19</lastmod>
     </url>
     <url>
          <loc>https://github.com/Wu-wu-u/Notebooks/others/phy/review/</loc>
-         <lastmod>2024-11-02</lastmod>
+         <lastmod>2024-12-19</lastmod>
     </url>
 </urlset>
