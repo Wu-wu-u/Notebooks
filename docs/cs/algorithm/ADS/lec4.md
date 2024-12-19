@@ -1,5 +1,10 @@
 # lec4|Leftist Heaps & Skew Heaps
 
+!!! abstract "复杂度"
+    - Leftist Heap:Insert、DeleteMin、Merge在worst case和average case下均是$O(\text{logN})$
+
+    - Skew Heap:Insert、DeleteMin、Merge在worst case下为$O(N)$；average case下是$O(\text{logN})$
+
 ## Leftist Heaps
 
 - 左斜堆，或者说左偏堆(Leftist Heap)，它相比于普通的堆，更好的一点在于它**支持快速的堆合并操作**。“左偏”，并不断将新的东西往右侧合并，来实现每次都是往相对小的那一侧塞进东西，进而相对保证了这个
@@ -138,7 +143,7 @@ LeftistHeapNode* merge(LeftistHeapNode *x, LeftistHeapNode *y){
 - 下面是神奇的势能函数定义
 
 $$
-\Phi(Heap)=\text{number of heavy node in} Heap
+\Phi(Heap)=\text{number of heavy node in} ~Heap
 $$
 
 - 然后我们就会发现一些性质   
@@ -148,4 +153,6 @@ $$
 
     3. 合并过程中，如果一个节点的 heavy/light属性 发生变化，那么**它原先一定在堆的最右侧路径上**；
 
+
+---
 

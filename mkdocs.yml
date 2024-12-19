@@ -30,19 +30,19 @@ theme:
       # https://squidfunk.github.io/mkdocs-material/setup/changing-the-colors/#accent-color
       # accent: teal
         
-      toggle:
-        # 图标
-        icon: material/weather-sunny
-        # 鼠标悬浮提示
-        name: 切换至夜间模式
-    # 夜间模式
-    - media: "(prefers-color-scheme: dark)"
-      scheme: slate
-      primary: black
-      accent: blue
-      toggle:
-        icon: material/weather-night
-        name: 切换至日间模式
+    #   toggle:
+    #     # 图标
+    #     icon: material/weather-sunny
+    #     # 鼠标悬浮提示
+    #     name: 切换至夜间模式
+    # # 夜间模式
+    # - media: "(prefers-color-scheme: dark)"
+    #   scheme: slate
+    #   primary: black
+    #   accent: blue
+    #   toggle:
+    #     icon: material/weather-night
+    #     name: 切换至日间模式
   features:
     - toc.follow # 右侧目录随页面滑动
 
@@ -188,6 +188,7 @@ nav:
           - 2.Instructions: cs/systems/CO/instruction.md
           - 3.Arithmetic: cs/systems/CO/arithmetic.md
           - 4.Processor: cs/systems/CO/processor.md
+          - 5.Cache: cs/systems/CO/cache.md
     - 算法相关:
       - 数据结构基础: 
         - cs/algorithm/FDS/index.md
@@ -210,6 +211,13 @@ nav:
         - lec5|Binomial Queue: cs/algorithm/ADS/lec5.md
         - lec6|Search & Backtracing: cs/algorithm/ADS/lec6.md
         - lec7|Divide & Conquer: cs/algorithm/ADS/lec7.md
+        - lec8|Dynamic Programming: cs/algorithm/ADS/lec8.md
+        - lec9|Greedy Algorithm: cs/algorithm/ADS/lec9.md
+        - lec10|NP completeness: cs/algorithm/ADS/lec10.md
+        - lec11|Approximation: cs/algorithm/ADS/lec11.md
+        - lec12|Local Search: cs/algorithm/ADS/lec12.md
+        - lec13|Randomized Algorithm: cs/algorithm/ADS/lec13.md
+        - lec14|Parallel: cs/algorithm/ADS/lec14.md
     - 理论相关:
       - 离散数学: 
         - Chapter 1 Logic and Proofs: cs/theories/Discrete_Math/chapter1.md
@@ -252,4 +260,7 @@ nav:
         - JS RegExp: others/lessons/WX/reg.md
         - Tips: others/lessons/WX/tips.md  
         - 微信开发者工具: others/lessons/WX/dev.md
+      - 无线网络应用:
+        - others/lessons/WLAN/index.md
+        - 课程知识: others/lessons/WLAN/wlan.md
 

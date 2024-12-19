@@ -164,7 +164,8 @@
     - P不为根节点，GPX呈**zig-zag**  
     - P不为根节点，GPX呈**zig-zig**  
 
-=== "P为根节点"
+=== "zig(P为根节点)"
+    ![alt text](splay_4.png)
     - 直接调换X和P即可  
     - 正常的**SingleRotation**
 
@@ -184,3 +185,38 @@
 !!! note "Example"
     ![alt text](splay_3.png)
 
+
+### 摊还分析
+
+- 说实话过于巧妙，这里简要介绍思路
+
+- 定义了一个势能函数$\Phi(T)=\Sigma \text{log}Size(des)=\Sigma Rank(des)$
+
+- $Rank(des)$其实就是就是一颗树所有子节点的数量总和，再取对数
+
+$$
+\begin{align}
+T_{\text{rotate x to root}} &= T_{\text{zig}} + \Sigma T_{\text{zig-zag}} + \Sigma T_{\text{zig-zig}} \\
+\hat{c}_{\text{rotate x to root}} &= \hat{c}_{\text{zig}} + \Sigma \hat{c}_{\text{zig-zag}} + \Sigma \hat{c}_{\text{zig-zig}}
+\end{align}
+$$
+
+- 然后一通巧妙的分析放缩
+
+$$
+\begin{align}
+\hat{c}_{\text{zig}} &\leq 1 + Rank_i(X) - Rank_{i-1}(X) \\
+\hat{c}_{\text{zig-zag}} &\leq 2 ( Rank_i(X) - Rank_{i-1}(X)) \\
+\hat{c}_{\text{zig-zig}} &\leq 3 ( Rank_i(X) - Rank_{i-1}(X)) \\
+\end{align}
+$$
+
+- 最终得到均摊上界
+
+$$
+\begin{align}
+\hat{c}_{\text{rotate x to root}} &= \hat{c}_{\text{zig}} + \Sigma \hat{c}_{\text{zig-zag}} + \Sigma \hat{c}_{\text{zig-zig}}\\
+&=O(1) + 3(Rank_i(X)-Rank_{i-1}(X))
+&=O(\text{log}N)
+\end{align}
+$$

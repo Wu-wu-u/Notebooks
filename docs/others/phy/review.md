@@ -75,7 +75,8 @@
 |类型|场强|电容|
 |---|---|----|
 |平行板电容器|$E=\frac{\sigma}{\epsilon_0}$|$C=\frac{\epsilon_0S}{d}$|
-|球|$E=\frac{q}{4\pi\epsilon_0r^2}$|$U=\int_{R_A}^{R_B}Edr=\frac{q}{4\pi\epsilon_0}(\frac{1}{R_A}-\frac{1}{R_B})$ -> $C=\frac{q}{U}$|
+|单个球壳|$E=\frac{\sigma}{\epsilon}$|$C=\frac{\sigma\cdot 4\pi r^2}{E}=4\pi r^2 \epsilon$|
+|两个球壳间|$E=\frac{q}{4\pi\epsilon_0r^2}$|$U=\int_{R_A}^{R_B}Edr=\frac{q}{4\pi\epsilon_0}(\frac{1}{R_A}-\frac{1}{R_B})$ -> $C=\frac{q}{U}$|
 |圆柱|$E=\frac{\lambda}{2\pi \epsilon_0 r}$|$U=\int_{R_A}^{R_B}Edr=\frac{\lambda}{2\pi\epsilon_0}ln\frac{R_B}{R_A}$ -> $C=\frac{q}{U}$|
 
 ![alt text](image-26.png)
@@ -133,7 +134,7 @@ $P=D-\epsilon_0 E$
 
 #### 点电荷
 
-- 点电荷系统的静电能，两两之间计算再相加，$$W = \frac{1}{2}\sum_{i=1}^n q_iU_i $
+- 点电荷系统的静电能，两两之间计算再相加，$W = \frac{1}{2}\sum_{i=1}^n q_iU_i$
 
 - U是电势
 
@@ -170,7 +171,7 @@ $P=D-\epsilon_0 E$
 
 - 然后引入电场能量密度（单位体积）
 
-- 常用 $\w_e=\frac{1}{2}DE$
+- 常用 $w_e=\frac{1}{2}DE$
 ![alt text](QQ_1728613817488.png)
 
 
@@ -560,7 +561,7 @@ $$
 
 ### 磁场强度、磁介质中的安培环路定理
 
-- 由$\oint_L B\cdot dl = \mu_0(\SigmeI_0+\SigmeI_m)$
+- 由$\oint_L B\cdot dl = \mu_0(\Sigma I_0+\Sigma I_m)$
 
 - 得到$\oint_L(\frac{B}{\mu_0}-M)\cdot dl = \Sigma I$
 
@@ -764,3 +765,685 @@ $$
     ![alt text](QQ_1730369028324.png)
 
 
+### 磁场的能量
+
+!!! abstract
+
+    $$\begin{align}
+    W_m &= \frac{1}{2}LI_0^2=\frac{1}{2}BHV\\
+    \omega_m &= \frac{1}{2}B\cdot H
+    \end{align}
+    $$
+
+
+!!! tip "Example--两种方式求自感"
+    - ![alt text](QQ_1730968317179.png)
+
+    - 第一问能量的计算，直接套公式$\omega_m = \frac{1}{2}BH$；然后就积分$dW_m = \omega_m dV$
+
+    - 第二问有两种方法：
+
+        1. $L = \frac{d\Phi}{dI}$
+
+        2. $W_m = \frac{1}{2}LI_0^2$
+
+    ??? note "答案"
+        ![alt text](QQ_1730969442884.png)
+        ![alt text](QQ_1730969449014.png)
+
+        - 另一种方法：
+
+        ![alt text](QQ_1730969483249.png)
+    
+---
+
+## 电磁场与电磁波
+
+### 位移电流
+
+- 环路定理**只适用于稳恒电流**，而在不稳定条件下，环路定理不适用。引起原因是传导电流不连续。在电容器充（放）电时，$I$ 在极板上被截断，但电荷量$q$及面密度$σ$随时间变化，期间的电位移$D$及电位移通量$\phi_D=SD$ 也随时间而改变。设电容器极板面积为$S$，电荷面密度$σ$，则充放电时：
+    
+$$
+\begin{align}
+I &= \frac{dq}{dt}=S\frac{d\sigma}{dt}=S\frac{dD}{dt}\\
+\end{align}
+$$
+
+- $dD/dt$在充电时与电场方向一致，放电时与电场方向相反，但无论充放电都与电流方向一致。Maxwell提出：变化的电场也可以看作是一种电流——**位移电流**
+
+$$
+\begin{align}
+j_d &= \frac{\partial D}{\partial t}\\
+I_d &= \frac{d\Phi_d}{dt}
+\end{align}
+$$
+
+- **电场中某点的位移电流密度等于该点电位移矢量的时间变化率。通过电场中某截面的位移电流等于通过该截面的电位移通量对时间的变化率。**
+
+---
+
+- 在充电电路中，我们引入**全电流**的概念
+
+- $I_全=\Sigma I+I_d$
+
+!!! abstract "非稳恒情况下的安培环路"
+    $$
+    \oint H\cdot dl = \Sigma I + I_d = \frac{d\Phi}{dt}
+    $$
+
+    - 凡是有随**时间变化**的电场，就会有位移电流
+
+    - 其中对于平行板电容器，一般有$\Phi_D=DS=\sigma S=Q=CV, I_D=\frac{d\Phi_D}{dt}=C\frac{dV}{dt}$
+
+### 电磁振荡
+
+![alt text](QQ_1732245291832.png)
+
+- 我们巧妙地发现了电磁振荡时$q$的振动方程，得到频率$\omega =1/\sqrt{LC}$
+
+![alt text](QQ_1732245378428.png)
+![alt text](QQ_1732245424738.png)
+![alt text](QQ_1732245433742.png)
+
+!!! tip "Example"
+    ![alt text](QQ_1732245630202.png)
+
+---
+
+## 光的干涉
+
+### 双缝干涉
+
+- 亮纹：$x=\pm k\frac{D}{d}\lambda$
+
+- 暗纹：$x=\pm (2k-1)\frac{D}{2d}\lambda$
+
+!!! abstract "说明"
+    1. 缝间距d愈小，干涉条纹间距Δx愈大，干涉明显。d大到一定程度，使得条纹间距小于0.1mm时，肉眼将观察不到干涉现象。
+
+    2. λ愈大，则条纹间距大；复色光源做实验时，红光在外，紫光在内
+
+    3. 要使条纹分得开，还需要D较大。
+
+---
+
+- 干涉条纹强度分布：
+
+$$
+\begin{align}
+E_p^2 &= E_1^2+E_2^2+2E_1E_2cos\Delta\phi\\
+E_p^2 &= 2E^2(1+cos\Delta\phi) = 4E^2cos^2\frac{\Delta\phi}{2}\\
+I_p &= 4Icos^2\frac{\Delta\phi}{2}
+\end{align}
+$$
+
+---
+
+### 薄膜干涉
+
+!!! tip "光程"
+    - 设光在真空中的波长为$\lambda$，在媒介中波长为$\lambda_n$，光在介质中经过的路程为x
+
+    $$
+    \begin{align}
+    折射率: n &= \frac{c}{u}\\
+    \lambda_n &= uT = \frac{cT}{n}=\frac{\lambda}{n}\\
+    \Delta\phi &= 2\pi \frac{x}{\lambda_n}=\frac{2\pi}{\lambda}nx
+    \end{align}
+    $$
+
+    - 称$\delta=nx$为光程
+
+- 若两相干光束（初相相同）通过不同介质，则在空间相遇时的相位差为:$\Delta\phi=\frac{2\pi}{\lambda}(n_2r_2-n_1r_1)$
+
+- 可见相位差取决于光程差$\delta=n_2r_2-n_1r_1$
+
+!!! tip "Example--小结论"
+    ![alt text](QQ_1731032990463.png)
+    ![alt text](QQ_1731033234133.png)
+
+    - 对于例题2，光强的变化取决于相位差，相位差取决于光程差
+
+    ??? note "答案"
+        $\delta = (n-1)x$
+
+        $I=I_0cos^2\frac{\Delta\phi}{2}=I_0cos^2\frac{(n-1)\pi x}{\lambda}$
+
+        ![alt text](QQ_1731033757309.png)
+
+---
+
+- **光垂直照射薄膜时**：
+
+![alt text](QQ_1731034491945.png)
+
+!!! tip "Example--增透"
+    - 增透：让进来的光线更多，出去的更少，则反射光要相消干涉
+
+    ![alt text](QQ_1731034532564.png)
+
+
+-------
+
+- **当倾斜入射时（等倾干涉）：**
+
+![alt text](QQ_1732847980234.png)
+![alt text](QQ_1732847991976.png)
+
+!!! tip "Example--反射"
+    ![alt text](QQ_1732846525062.png)
+    ![alt text](QQ_1732846613084.png)
+
+    ---
+
+    ![alt text](QQ_1732848832242.png)
+
+
+### 等厚干涉
+
+!!! abstract
+    ![alt text](QQ_1731036806237.png)
+
+    - 这决定了我们的**光程**！！！
+
+![alt text](QQ_1731034831701.png)
+![alt text](QQ_1731034847193.png)
+![alt text](QQ_1732848616097.png)
+
+!!! tip "另一种情况--测量小角度"
+    ![alt text](QQ_1732848672895.png)
+
+---
+
+!!! tip "Example--测直径"
+    ![alt text](QQ_1731035334406.png)
+    ![alt text](QQ_1731035348197.png)
+
+!!! tip "Example--根据条纹间距和厚度判断直径差"
+    ![alt text](QQ_1732849380780.png)
+
+!!! tip "Example--判断表面平整度！！"
+    ![alt text](QQ_1731035557229.png)    
+    ![alt text](QQ_1731035563686.png)
+    
+    - 暗条纹先行到来，说明e是提前变大了，那么肯定是往下**凹**了
+
+---
+
+- **牛顿环：**
+
+![alt text](QQ_1731035883136.png)
+![alt text](QQ_1731035890241.png)
+![alt text](QQ_1731035959915.png)
+![alt text](QQ_1731035965597.png)
+
+!!! tip "Example"
+    ![alt text](QQ_1731036367241.png)
+    ![alt text](QQ_1731036378698.png)
+
+!!! tip "Example--带折射率、无半波损失的牛顿环"
+    ![alt text](QQ_1732849638053.png)
+---
+
+
+
+## 光的衍射
+
+
+### 单缝夫琅和费衍射
+
+- 单缝夫琅和费衍射是平行光透过一条细长的矩形直缝后，在**很远的观察屏**上呈现的衍射现象
+
+#### 菲涅尔半波法
+
+![alt text](QQ_1731637679015.png)
+
+- 光程差$\delta = BC = asin\theta$
+
+!!! abstract
+    ![alt text](QQ_1731638143954.png)
+
+    !!! warning
+        - 只有**单缝衍射的公式不同**
+
+        - 我们会发现，这里的公式不同于以前的奇数倍相消、偶数倍相长；这里相消相长，主要是因为偶数倍平面的抵消了，奇数倍的才能相长
+
+#### 单缝衍射图样的特征
+
+!!! abstract 
+
+    1. 条纹的亮度分布
+        
+        - 中央明纹的光强最大，随着k增加，波带数增多，未被抵消的波带面积变小，条纹光强减弱
+
+    2. 中央明纹的半宽度$\Delta \theta$
+
+        - 第一级暗纹的衍射角
+
+        - $asin\theta_1 = \lambda, \Delta\theta = \theta_1=arcsin\frac{\lambda}{a} \approx \frac{\lambda}{a}$
+    
+    3. 色散效应
+
+        - λ一定，a减小，θ增大；a不变，λ增大，θ增大
+
+        ![alt text](QQ_1731638699500.png)
+    
+!!! tip "Example"
+    ![alt text](QQ_1731639015218.png)
+    ![alt text](QQ_1731639020465.png)
+    ![alt text](QQ_1731639025278.png)
+
+### 光栅衍射
+
+- 透射光栅中，透光缝宽度为a，不透光部分为b，d=a+b为光栅常数；光栅狭缝数越多，衍射条纹越亮、越细锐
+
+- 光栅衍射图像是由多个狭缝单缝衍射图像相互干涉形成的
+
+!!! abstract "明暗纹"
+    - 明纹：$dsin\theta=k\lambda$；称为光栅公式，k有上限$k<d/\lambda$
+
+    ---
+
+    - 暗纹：
+
+    ![alt text](QQ_1731639751772.png)
+    ![alt text](QQ_1731639863145.png)
+    ![alt text](QQ_1731639875132.png)
+
+    - 次极大：
+
+    ![alt text](QQ_1731640048466.png)
+
+    - 主极大缺级：光栅衍射图样是多个单缝衍射图象相互干涉形成的, 如果**单缝衍射暗纹出现的位置正好是光栅方程主极大的位置**, 就会发生主极大缺级
+
+    ![alt text](QQ_1731640495945.png)
+    ![alt text](QQ_1731640537699.png)
+
+    - 原因就是在单缝衍射暗纹的位置，光强是0，所以干涉叠加后也还是0 
+
+---
+
+
+!!! tip "Example"
+    ![alt text](QQ_1731640237586.png)
+
+    - 第一问简单，算个d，然后k上限就是d/λ，然后再注意缺级
+
+    - 第二问，斜入射就是光程差会多一部分dsinφ，不再单单是dsinθ
+
+    ??? note "答案"
+        ![alt text](QQ_1731640320533.png)
+        ![alt text](QQ_1731640326398.png)
+        ![alt text](QQ_1731640365431.png)
+
+#### 光栅光谱与分辨
+
+![alt text](QQ_1731640629270.png)
+
+![alt text](QQ_1731640653461.png)
+
+![alt text](QQ_1731640667799.png)
+
+!!! warning "这个$\lambda$通常取平均数$\bar{\lambda}$，见下例"
+
+!!! tip "Example"
+    ![alt text](QQ_1731641018686.png)
+
+    - 第一问，根据$R=\frac{\lambda}{\Delta\lambda}=KN$，算出N的范围
+
+    - 第二问，根据衍射角来算d的范围
+
+    - 第三问，缺级公式，显然能发现k1只能取1，算出具体的a和b
+
+    ??? note "答案"
+        ![alt text](QQ_1731641228341.png)
+        ![alt text](QQ_1731641232120.png)
+
+---
+
+### 圆孔衍射
+
+![alt text](QQ_1731641328131.png)
+![alt text](QQ_1731641332839.png)
+
+#### 瑞利判据
+
+- 瑞利判据：**当爱里斑的边缘（即第一级暗环）正好落到另一个爱里斑的中心**
+
+![alt text](QQ_1731642721355.png)
+
+
+!!! abstract
+    ![alt text](QQ_1731641344434.png)
+
+---
+
+!!! tip "Example"
+    ![alt text](QQ_1731643082241.png)   
+
+    ![alt text](QQ_1731644375199.png) 
+
+## 光的偏振
+
+- 只有横波具有偏振现象
+
+### 偏振光和自然光
+
+- 电磁波中E矢量始终沿某一方向振动，则是线偏振光
+
+![alt text](QQ_1732426826514.png)
+
+---
+
+- 振动面在空间各个方向高速随机变化的光称为自然光。在x和y方向上的平均振幅相同；则是自然光
+
+![alt text](QQ_1732426851434.png)
+
+---
+
+- 介于二者之间的偏振光称为部分偏振光
+
+![alt text](QQ_1732426875840.png)
+
+### 起偏和检偏
+
+- 一般光源发出的光大多是非偏振光。获得偏振光的主要途径是设法将自然光变为偏振光，称为**起偏**。凡是能够将非偏振光变为偏振光的光学器件称为**偏振器**，或**起偏器**。用适当的偏振光学器件检验一束光是否偏振光称为**检偏**，这种光学器件称**检偏器**。
+
+![alt text](QQ_1732427301272.png)
+
+---
+
+### 马吕斯定律
+
+![alt text](QQ_1732427315115.png)
+
+!!! tip "Example--马吕斯定律"
+    ![alt text](QQ_1732427412968.png)
+
+    - 自然光第一次变成偏振光时，光强减半；然后连用两次马吕斯定律
+
+    ??? note "答案"
+        ![alt text](QQ_1732427500456.png)
+        
+        ![alt text](QQ_1732427489343.png)
+
+### 布儒斯特定律
+
+- 自然光在两种介质n1,n2的交界面上发生反射和折射时, 反射光折射光都将成为**部分偏振光**。反射光中垂直入射面的光矢量相对加强, 折射光中平行入射面的光矢量相对加强。
+
+![alt text](QQ_1732427745621.png)
+![alt text](QQ_1732429318209.png)
+![alt text](QQ_1732427953567.png)
+
+
+### 光的双折射
+
+- 一束光线进入方解石晶体后，分裂成两束光线，它们沿不同方向折射，这种现象称为双折射。
+
+- 光线进入晶体后，分成两束，其中一束遵守折射定律，称为寻常光线（o光），另一束不遵守折射定律，称为异常光线（e光）。
+
+---
+
+!!! tip "波晶片"
+    ![alt text](QQ_1732781789498.png)
+    ![alt text](QQ_1732781859182.png)
+    ![alt text](QQ_1732781975332.png)
+    ![alt text](QQ_1732781995630.png)
+
+---
+
+!!! tip "椭圆偏振光"
+    ![alt text](QQ_1732781874660.png)
+    ![alt text](QQ_1732781894145.png)
+    ![alt text](QQ_1732781904377.png)
+    ![alt text](QQ_1732781912081.png)
+    ![alt text](QQ_1732781920607.png)
+    ![alt text](QQ_1732781927333.png)
+
+## 量子光学
+
+### 热辐射、黑体辐射
+
+1. 单色辐射出射度（单色辐出度）
+
+    - 单位时间，从单位表面积上发射的在$\lambda\sim d\lambda$范围内的辐射能为$dM_\lambda$
+
+    - 代表单位时间、单位面积、单位波长间隔所发射的能量
+
+$$
+M_\lambda(T)=\frac{dM_\lambda}{d\lambda}
+$$
+
+2. 辐射出射度
+
+    - 单位时间，单位面积上各种波长的总辐射能
+
+$$
+M(T)=\int_0^\infty M_\lambda(T)d\lambda
+$$
+
+3. 吸收系数，反射系数
+
+    - 吸收系数：吸收的能量与入射总能量的比值
+
+    - 反射系数：反射的能量与入射总能量的比值
+
+    - 单色吸收、反射系数：$\alpha(\lambda,T),r(\lambda,T)$
+
+- **黑体**：如果物体在热辐射过程中，任何温度下，**全部吸收**投射到其表面的各种波长的辐射能，既不反射也不透射，称为绝对黑体，简称黑体；$\alpha_B(\lambda,T)=1,r_B(\lambda,T)=0$
+
+#### 基尔霍夫定律
+
+- 各种不同的物体，在**同一温度**下，对任一波长的**单色辐出度与单色吸收系数的比值**都相等
+
+$$
+\frac{M_{1\lambda}(T)}{\alpha_1(\lambda,T)}=\frac{M_{2\lambda}(T)}{\alpha_2(\lambda,T)}=...=\frac{M_{B\lambda}(T)}{\alpha_B(\lambda,T)}
+$$
+
+- 因为绝对黑体的$\alpha_1(\lambda,T)=1$，上式可写成
+
+$$
+\frac{M_{\lambda}(T)}{\alpha(\lambda,T)}=M_{B\lambda}(T)
+$$
+
+#### 1. 斯忒藩-玻尔兹曼定律
+
+- 每一条曲线下的面积代表一定温度下绝对黑体的辐射出射度$M_B(T)$
+
+- 单位表面积所发射的功率：
+
+$$
+\begin{aligned}
+M_B(T)=\int_0^\infty M_{B\lambda}(T)d\lambda=\sigma T^4\\
+\sigma = 5.67\times 10^{-8}J\cdot s^{-1} \cdot m^{-2} \cdot K^{-4}
+\end{aligned}
+$$
+
+![alt text](image-46.png)
+
+#### 2. 维恩位移定律
+
+- 每条曲线都有一个峰值，随着温度升高，峰值对应的波长$\lambda_m$越短，即峰值位置往**短波**方向移动；同时各种波长的**单色辐出度**都随**温度的升高而迅速增大**
+
+$$
+\lambda_m = \frac{b}{T}, b=2.898\time 10^{-3}\cdot K
+$$
+
+!!! tip "Example"
+    测得太阳光的峰值波长为510nm，求太阳表面的温度及单位表面积所发射的功率。
+
+    $T=\frac{b}{\lambda_m}=5682K$
+
+    $M(T)=\sigma T^4 = 5.9\time 10^7 W\cdot m^{-2}$
+
+### 光电效应
+
+!!! tip "Example--能量量子化"
+    ![alt text](image-47.png)
+
+    - 第一问，求振子的能量，先求频率，再求能量
+
+    ??? note "答案"
+        ![alt text](image-48.png)
+        ![alt text](image-49.png)
+
+---
+
+#### 1. 入射光强度问题
+![alt text](image-50.png)
+
+- **饱和**电流$i$，以及单位时间内从阴极C发射的光电子数，与入射光的**强度**$I$成**正比**
+
+#### 2. 入射光频率问题
+
+- 最大初动能和遏止电压的关系：
+
+$$
+E_{km}=\frac{1}{2}mv^2=e|U_a|
+$$
+
+- 遏制电势差$U_a$随入射光频率$\nu$呈线性增加；光子最大初动能和频率有关，与光强无关；k是与金属材料无关的普适恒量，**U0则取决于金属性质**
+
+$$\begin{aligned}
+U_a&=k\nu-U_0 \\
+E_{km}&=e|U_a|=ek\nu-eU_0 
+\end{aligned}
+$$
+
+$$
+\frac{1}{2}mv_m^2=h\nu-W
+$$
+
+- 截止频率（红限）：$\nu_0=\frac{U_0}{k}$
+
+---
+
+#### 光电效应方程，光子能量、动量
+
+$$
+\begin{aligned}
+E&=h\nu=\frac{1}{2}mv_m^2+A, A是逸出功
+E&=h\nu=pc
+p&=\frac{h\nu}{c}=\frac{h}{\lambda}
+\end{aligned}
+$$
+
+- 特殊地，截止频率$h\nu_0 = A$
+
+---
+
+!!! tip "Exmaple--光电效应"
+    ![alt text](image-52.png)
+
+    - 第一问：初动能=光子能量-逸出功
+
+    - 第二问：用逸出功算红限
+
+    - 第三问：根据光强和光子能量来算数量
+
+    ??? note "答案"
+        ![alt text](image-53.png)
+
+---
+
+### 康普顿效应
+
+![alt text](image-54.png)
+
+![alt text](image-55.png)
+
+然后结合动量守恒定律
+
+$$\begin{aligned}
+&x方向：\frac{h\nu_0}{c}=\frac{h\nu}{c}cos\phi + mVcos\theta \\
+&y方向：\frac{h\nu}{c}sin\phi = mVsin\theta
+\end{aligned}
+$$
+
+联立之后消去$\theta,V$得到
+
+$$
+\Delta\lambda = \lambda-\lambda_0 = \frac{h}{m_0c}(1-cos\phi)=\frac{2h}{m_0c}sin^2\frac{\phi}{2}
+$$
+    
+![alt text](image-56.png)
+
+- 然后针对电子的能量，就是动能，考虑相对论效应
+
+$$
+E_k = mc^2-m_0c^2 = \frac{m_0c^2}{\sqrt{1-(v/c)^2}}-m_0c^2
+$$
+
+## 量子力学
+
+### 德布罗意波
+
+- 实物粒子也有波动性，具有相应的频率$\nu$和波长$\lambda$
+
+$$
+\begin{aligned}
+E &= mc^2 = h\nu \\
+p &= mv = \frac{h}{\lambda} \\
+\lambda &= \frac{h}{p} = \frac{h}{mv}, m = \frac{m_0}{\sqrt{1-v^2/c^2}}\\
+若v << c: \lambda &= \frac{h}{m_0v}
+\end{aligned}
+$$
+
+
+### 坐标和动量的不确定性关系
+
+- 在经典力学中，运动物体具有完全确定的位置、动量、能量和角动量。对于微观粒子，虽然分别确定其位置或动量在精确度上并不存在限制，但在实验中同时确定其位置和动量时，它们的精确度是有限的。
+
+- 微观粒子**位置**和**动量**两者不确定量之间的关系满足
+
+$$\begin{aligned}
+\Delta x \Delta p_x \geq \frac{\hbar}{2}, &\Delta y \Delta p_y \geq \frac{\hbar}{2}, \Delta z \Delta p_z \geq \frac{\hbar}{2}\\
+&\hbar = h/2\pi 
+\end{aligned}
+$$
+
+---
+
+!!! tip "Example"
+    ![alt text](image-57.png)
+    ![alt text](image-58.png)
+    ![alt text](image-59.png)
+
+### 能量和时间的不确定性关系
+
+$$
+\Delta E \Delta t \geq \frac{\hbar}{2}
+$$
+
+- 用上述关系可以解释各原子激发态的能级宽度$\Delta E$与它在激发态的平均寿命$\Delta t$之间的关系。
+
+### 波函数及其统计解释
+
+!!! abstract 
+
+    - $t$时刻，在空间某处(x,y,z)附近的无限小体积元$dV$内粒子出现的概率：
+
+    $$
+    dW = \Psi\Psi^*dV
+    $$
+
+!!! tip "Example"
+    ![alt text](image-60.png)
+
+
+### 一维无限深势阱
+
+![alt text](image-62.png)
+
+![alt text](image-61.png)
+
+- 然后用薛定谔方程一通算，最后得到**定态波函数**
+
+$$
+\psi_n(x) = \sqrt{\frac{2}{n}}sin\frac{n\pi x}{a}
+$$
+
+## 原子的玻尔理论
+
+
+24-1，24-3，24-5，24-7，24-10，24-11

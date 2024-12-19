@@ -312,3 +312,36 @@ A ===>|"C"| C --->|"C&R"| D
 
 
 #### 删除
+
+- 删除叶结点中相应的数据，如果需要的话：
+
+    1. 从其他叶结点借来键值
+    
+    2. 和其他叶结点合并
+
+!!! note "Example"
+    - After deleting 9 from the 2-3 tree given in the figure, which one of the following statements is FALSE?
+
+    ![alt text](rb_36.png)
+
+    A. the root is full
+
+    B. the second key stored in the root is 6
+
+    C. 6 and 8 are in the same node
+
+    D. 6 and 5 are in the same node
+
+    ??? tip "答案"
+        ![alt text](rb_35.png)
+    
+---
+
+!!! note "历年题"
+    Both AVL trees and red-black trees need at most O(1) rotations per insertion.(True or False?)
+
+    ??? tip "答案"
+        ![alt text](rb_37.png)
+
+
+

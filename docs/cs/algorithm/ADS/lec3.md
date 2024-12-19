@@ -86,3 +86,15 @@
     - 如果检索系统返回的文档数量很多，尽可能多地覆盖所有相关文档，那么召回率会很高。但是，由于返回的文档数量多，很多不相关的文档也被包含在内，导致精确率低。
 
 
+---
+
+!!! note "历年题"
+    While accessing a term by hashing in an inverted file index, range searches are expensive.(True or False?)
+
+    ??? tip "答案"
+        True
+
+        - 原因是哈希表（hash table）在进行精确查找（exact match）时非常高效，但在进行范围查找（range search）时效率较低。哈希表的设计初衷是通过哈希函数将键映射到存储桶（bucket），从而实现快速的查找、插入和删除操作。然而，哈希表并不维护键的顺序信息，因此无法直接支持范围查找。
+
+        - 在倒排文件索引（inverted file index）中，如果使用哈希表来存储术语（term），那么进行单个术语的查找会非常快，但如果需要查找一个范围内的术语（例如，查找所有以某个前缀开头的术语），哈希表就无法高效地完成这个任务，因为它无法利用键的顺序信息来限制查找范围。
+
