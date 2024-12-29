@@ -112,7 +112,7 @@ ConfigType State_flipping(){
 
         - 之所以这么定义，是因为这个值越大就代表我的好边越多，上限就是所有好边的权重和的绝对值
 
-        - 然后我们分析这个算法，思考一下当翻转一个not satisfied的点的state时，与它相邻的good->bad，bad->good；那么边的权重和一定会从正变为负，$Phi(S)$肯定是**只增不减**的
+        - 然后我们分析这个算法，思考一下当翻转一个not satisfied的点的state时，与它相邻的good->bad，bad->good；那么边的权重和一定会从正变为负，$\Phi(S)$肯定是**只增不减**的
 
 - 时间复杂度：$T = O(\sum|w_e|\cdot e)$，并非多项式时间复杂度，而是伪多项式
 
@@ -131,7 +131,7 @@ $$
 
 - 但是上一个问题是判定问题，所以一定可以找到一个可行解，但是最大割问题是一个优化问题，我们希望找到全局最优解，下面我们分析这个local search算法能否找到**全局最优**
 
-- 答案是并非全局最优，得到的是一个局部最优的近似解，不过近似比很耗为$\rho = 2$
+- 答案是并非全局最优，得到的是一个局部最优的近似解，不过近似比很好为$\rho = 2$
 
 ??? note "Proof"
     - 我们通过local search找到了一个局部最优解，那么对于任意一个node $u\in A$，会有不等式
@@ -140,7 +140,7 @@ $$
     &\sum_{v\in A} w_{uv} \leq \sum_{v \in B} w_{uv} \\
     &把所有u求和\\
     2\sum_{u,v \in A}w_{uv}=&\sum_{u\in A}\sum_{v\in A} w_{uv} \leq \sum_{u \in A}\sum_{v \in B} w_{uv} = w(A,B)\\
-    &2\sum_{u,v \in B}w_{uv} \leq \sum_{u \in A}\sum_{v \in B} w_{uv} = w(A,B)
+    &2\sum_{u,v \in B}w_{uv} \leq \sum_{u \in A}\sum_{v \in B} w_{uv} = w(A,B)\\
     w(A*,B*)\leq &\sum_{u,v \in A}w_{uv} + \sum_{u,v \in B}w_{uv} + w(A,B) \leq 2w(A,B)
     \end{aligned}
     $$

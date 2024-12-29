@@ -1,6 +1,6 @@
 # lec9|Greedy Algorithm
 
-## Activity Selection Problem
+## 例：Activity Selection Problem
 
 > 每一个贪心背后都有一个动态规划
 
@@ -44,4 +44,54 @@
 
 2. 然后再递归地对于子结构进行类似的替换
 
-## Huffman 
+## 例：Huffman Codes 
+
+- **霍夫曼编码（Huffman Coding）**是一种用于**数据压缩**的无损编码算法。它通过使用**变长编码**来表示字符，使得出现频率较高的字符使用较短的编码，出现频率较低的字符使用较长的编码，从而减少整体编码长度。
+
+
+- 给定一个文本，其中含有$a,u,x,z$四种字符，其中他们出现的频率由大到小为$a,x,u,z$，现在我们来考虑用二进制的编码和huffman编码，比较它们的cost
+
+![alt text](greed_2.png)
+![alt text](greed_3.png)
+
+- Huffman code巧妙在不同字符之间在编码树中不是父子关系，因而是唯一编码的
+
+### Huffman's Algorithm
+
+- 要实现这种编码方式，会用到Huffman's Algorithm，一种**贪心算法**
+
+```cpp
+void Huffman (PriorityQueue heap[], int C){
+    consider C characters as C nodes, 
+    and initialize them into a min heap;
+    for (int i = 1; i < C; i++){
+        create a new node;
+        deleteMin and attach it to the left_child;
+        deleteMin and attach it to the right_child;
+        weight of node = sum of weights of its children;
+        insert node into min heap;
+    }
+}
+```
+
+- 解释：我们每次都取频率最低的两个字符，然后合二为一，放回去；如此重复，一棵树就能构建出来
+
+![alt text](greed_4.png)
+
+=== "Step 1"
+    ![alt text](greed_5.png)
+
+=== "Step 2"
+    ![alt text](greed_6.png)
+
+=== "Step 3"
+    ![alt text](greed_7.png)
+
+=== "Step 4"
+    ![alt text](greed_8.png)
+
+=== "Step 5"
+    ![alt text](greed_9.png)
+
+----------
+

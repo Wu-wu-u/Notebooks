@@ -8,7 +8,7 @@
 |---|---|---|
 |读取字符（带回显）|ah=1|从标准输入读取一个字符，读取的字符在 `al` 寄存器中|
 |显示字符|ah=2|将 `dl` 寄存器中的字符显示在stdout|
-|读取字符串|ah=0Ah|从标准输入读取一个字符串到`dx`，直到遇到回车键（Enter）|
+|读取字符串|ah=0Ah|从标准输入读取一个字符串到缓冲区`ds:[dx]`，直到遇到回车键（Enter）|
 
 
 ## Lec 2
@@ -403,34 +403,34 @@ end main
 
 === "直接寻址"
 
-- 用常数来表示变量的偏移地址
+    - 用常数来表示变量的偏移地址
 
-```asm
-mov ax, 1000h
-mov ds, ax
-mov al, ds:[30h]
+    ```asm
+    mov ax, 1000h
+    mov ds, ax
+    mov al, ds:[30h]
 
-mov al, byte ptr ds:[30h] ;这里相当于是char类型的指针
-```
+    mov al, byte ptr ds:[30h] ;这里相当于是char类型的指针
+    ```
 
 === "间接寻址"
 
-- 用寄存器、寄存器+常数的形式来表示变量的偏移地址
+    - 用寄存器、寄存器+常数的形式来表示变量的偏移地址
 
-```asm
-[bx] [bp] [si] [di]
-[bx+2] [bp-1] [si+1] [di+2]
-[bx+si] [bx+di] [bp+si] [bp+di]
-[bx+si-2] [bx+di-2] [bp+si+6] [bp+di-6]
+    ```asm
+    [bx] [bp] [si] [di]
+    [bx+2] [bp-1] [si+1] [di+2]
+    [bx+si] [bx+di] [bp+si] [bp+di]
+    [bx+si-2] [bx+di-2] [bp+si+6] [bp+di-6]
 
-;[bx-si] [bp-si]是错误写法
+    ;[bx-si] [bp-si]是错误写法
 
-```
+    ```
 
 !!! warning "注意"
     - `b`开头的寄存器不能相加，`i`结尾的寄存器不能相加，所以实际上一共只有4种组合
 
-    - 寄存器**不能相减**
+    - 表示地址时，寄存器**不能相减**
 
 ----
 
@@ -838,7 +838,7 @@ stk ends ; 程序开始时ss=stk, sp=200h
 #### 进位标志 CF
 - 当计算产生进位（**超过了目标寄存器的位宽**）（借位也是一种进位）时，会使CF置1
 
-- 同时进位也会对`CF`产生影响，$CF=移出去的最后一位数$
+- 同时移位也会对`CF`产生影响，$CF=移出去的最后一位数$
 
 - `mov`指令不会对`FL`中任何标志位产生影响
 
@@ -1335,19 +1335,19 @@ xchg ax, ds:[bx]
 
     1.除以0
 
-        ```asm
-        mov ax, 1234h
-        mov bh, 0
-        div bh; 除以0显然发生溢出
-        ```
+    ```asm
+    mov ax, 1234h
+    mov bh, 0
+    div bh; 除以0显然发生溢出
+    ```
     
     2.商无法保存在`AL`中（寄存器太小）
 
-        ```asm
-        mov ax, 123h
-        mov bh, 1
-        dib bh ; 此时由于商无法保存到AL中，因此也会发生溢出
-        ```
+    ```asm
+    mov ax, 123h
+    mov bh, 1
+    div bh ; 此时由于商无法保存到AL中，因此也会发生溢出
+    ```
 
 ## Lec 11
 
@@ -1418,7 +1418,7 @@ mov es, ds:[bx+2] ;es=1234h
 
 ---
 
-#### les, les
+#### les, lds
 
 - `LES`（Load Pointer Using ES）指令用于将内存中的数据加载到指定的通用寄存器和 `ES`（附加段寄存器）中。
 
@@ -1744,7 +1744,7 @@ main:
     fild [i]        ; st(0)=2
     fld [x]         ; st(0)=3.141592..., st(1)=2
     fadd st, st(1)  ; st(0)=5.141592..., st(1)=2
-    fld [y]         ; st(0)=9.375976..., st(1)=3.141592..., st(2)=2
+    fld [y]         ; st(0)=9.375976..., st(1)=5.141592..., st(2)=2
     fsub st(1), st  ; st(0)=9.375976..., st(1)=-4.23438..., st(2)=2
     fstp st         ; st(0)=-4.23438..., st(1)=2
 ```
@@ -1878,6 +1878,71 @@ ss:1FFE 3
 ss:2000 ??
 ```
 
+#### 远调用，retf
+
+- 远调用（Far Call） 指令用于调用位于不同代码段的子程序。远调用不仅保存当前的指令指针（IP），还保存当前的代码段选择子（CS），以便在返回时能够正确恢复。
+
+- 远调用需要搭配**远指针**使用
+
+```asm
+CALL FAR PTR segment:offset
+```
+
+- **RETF**（Return Far） 指令用于从远调用的子程序返回。RETF 指令从堆栈中弹出返回地址和代码段，并跳转到该地址继续执行。
+
+!!! tip "Example--远调用"
+
+    *1000:2000*   **call 1234:5678**
+
+    此时会**push** 1000h，再**push** 2005h（即下一条指令的offset）
+
+    最后**jmp** 1234:5678
+
+    *1000:2005*   **mov ah, 4Ch**
+
+    *1000:2007*   **int 21h**
+
+    ...
+
+    *1234:5678*   ...
+                
+    ...  **retf** 
+    
+    执行retf，就返回ip和cs；即**pop ip, pop cs**
+
+
+### int, iret
+
+- `int 21h` 对应的函数首地址保存在 0:84h(因为中断向量表从0:0h开始，然后每个是4，所以0:21*4h) 处, 该地址是一个远指针。
+
+- dword ptr 0:[84h] 称为 int 21h 的中断向量(其实是它的函数首地址)
+
+- $n$ 的取值范围是[00, FF], 所以 256 个中断向量会占用 0:0~0:3FF 之间共 400h 个字节的内存，这块区域称为 中断向量表。
+
+---
+
+**当我们执行`int 21h`时，发生了什么？**：
+
+- cpu做了一下4件事（和risc-v里的中断跳转有点像）：
+
+    1. pushf
+
+    2. push cs
+
+    3. push 下一条指令的offset
+
+    4. jmp dword ptr 0:[84h]
+
+- 当中断服务执行完后有一个**iret**指令（类似于`mret`），供我们返回中断位置的下一条指令
+
+- 当执行iret时，cpu做了一下3件事情
+
+    1. pop ip
+
+    2. pop cs
+
+    3. popf
+
 
 ## Lec 13
 
@@ -1896,6 +1961,7 @@ jnz msb_is_one ; 和8000h按位与之后不为0，则说明最高位是1
 ### 移位指令    
 
 |指令|功能|
+|----|----|
 |`shl`|逻辑左移|
 |`shr`|逻辑右移|
 |`sal`|算术左移|
@@ -1903,11 +1969,11 @@ jnz msb_is_one ; 和8000h按位与之后不为0，则说明最高位是1
 |`rol`|循环左移|
 |`ror`|循环右移|
 |`rcl`|将{CF,operand}一起循环左移|
-|`rcr`|将{CF,operand}一起循环右移|
+|`rcr`|将{operand,CF}一起循环右移|
 
 ```asm title="rcr"
-rcr ah, 1   ;CF=1  AH=1011 0110   移位前
-            ;CF=0  AH=1101 1011   移位后
+rcr ah, 1   ;AH=1011 0110   CF=1 移位前
+            ;AH=1101 1011   CF=0 移位后
 ```
 
 ```asm title="例：将1234ABCDh逻辑左移3位"
@@ -2038,7 +2104,7 @@ next:
     cmp al, es:[di]
     di++;
     cx--;
-    if(al == es:[di])
+    if(cmp is true)
         goto done;
     goto next;
 done:
@@ -2082,3 +2148,151 @@ si++ ; 当DF=1时，为si--
 ```
 
 ![alt text](asm_13.png)
+
+## Lec 14
+
+### __cdecl
+
+- 参数从右到左顺序压入堆栈，由调用者清理堆栈; 是 C 语言参数传递规范。
+
+```asm
+f:
+    push bp; (4)
+    mov bp, sp
+    mov ax, [bp+4]; arg0
+    add ax, [bp+6]; arg1
+    pop bp; (5)
+    ret; (6)
+main:
+    mov ax, 20; arg1
+    push ax; (1)
+    mov ax, 10; arg0
+    push ax; (2)
+    call f; (3)
+here:
+    add sp, 4; (7)
+```
+
+- __cdecl 堆栈布局:
+
+    ss:1FF8 old bp <- bp (4) 
+
+    ss:1FFA here <- (3)(5) 
+
+    ss:1FFC 10 <- (2)(6) 
+
+    ss:1FFE 20 <- (1)
+
+    ss:2000 <- (7)
+
+----
+
+### 动态变量
+
+```cpp
+int f(int a, int b){
+    int c; // c是局部动态变量
+    c = a + b;
+    return c;
+}
+```
+
+- 上述的C语言代码可以翻译成一下汇编代码：   
+
+```asm
+f:
+    push bp;
+    mov bp, sp
+    sub sp, 2   ; 这里挖的坑是给局部动态变量c的
+    mov ax, [bp+4]
+    add ax, [bp+6]
+    mov [bp-2], ax
+    mov ax, [bp-2]
+    mov sp, bp  ; 此时变量c死亡
+    pop bp
+    ret
+main:
+    mov ax, 20
+    push ax
+    mov ax, 10
+    push ax
+    call f
+here:
+    add sp, 4  ; 此时参数a,b死亡
+```
+
+- 执行上述代码时，堆栈布局如下：
+    
+    ss:1FF6 30 ; 变量c
+
+    ss:1FF8 old_bp  <- bp
+
+    ss:1FFA here
+
+    ss:1FFC 10
+
+    ss:1FFE 20
+
+    ss:2000 
+
+---
+
+### 递归
+
+- 形式和RISC-V差不多，都是反复堆栈来递归调用函数
+
+```cpp title="c代码"
+int f(int n){
+    if(n==1)
+        return 1;
+    return n+f(n-1);
+}
+```
+
+```asm title="递归"
+f:
+    push bp
+    mov bp, sp
+    mov ax, [bp+4]
+    cmp ax, 1
+    je done
+    dec ax
+    push ax
+    call f
+there:
+    add sp, 2
+    add ax, [bp+4]
+done:
+    pop bp
+    ret
+main:
+    mov ax, 3
+    push ax
+    call f
+here:
+    add sp, 2
+```
+
+    ss:1FF0 there<-(8)(10) 
+    
+    ss:1FF2 1<-(7)(11) 
+    
+    ss:1FF4 oldbp<-bp(6)(12) 
+    
+    ss:1FF6 there<-(5)(13) 
+    
+    ss:1FF8 2<-(4)(14) 
+    
+    ss:1FFA oldbp<-bp(3)(15) 
+    
+    ss:1FFC here <-(2)(16) 
+    
+    ss:1FFE 3 <-(1)(17) 
+    
+    ss:2000 <-(18)
+
+## 考试
+
+理论考 45min 10道判断 25道单选
+
+实验考 85min 2道函数题，2道填空题

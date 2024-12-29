@@ -69,4 +69,56 @@ int RandomizedHiring (EventType C[], int N){
 
 ---
 
+### Online Hiring Algorithm
+
 - Online Hiring Algorithm -- hire only once：每一个候选人马上决定雇佣与否，如果雇佣了一个人，那么在他之后的人都不再看
+
+- 那么我们就会很纠结，我怎么知道第一个人好不好呢？一开始好的标准是什么呢？
+
+- 所以，我们先拿先$K$个人进行练手，这些炮灰仅用来帮我恒量best的标准，并不会被雇佣；后面$K+1 \sim N$个人才是我正在开始选人的阶段
+
+```cpp
+int OnlineHiring (EventType C[], int N, int k){
+    int Best = N;
+    int BestQ = -∞;
+    for(int i=1; i<=k; i++){
+        Qi = interview();
+        if(Qi > BestQ) BestQ = Qi;
+    }
+    for (i=k+1;i<=N;i++){
+        Qi = interview();
+        if(Qi > BestQ){
+            Best = i;
+            break;
+        }
+    }
+    return Best;
+}
+```
+
+- 假设$S_i$是最优秀的人，如果我们想要雇佣到他，有两个条件：
+
+    1. 他不能在前$K$个人中，必须在$K+1\sim N$
+
+    2. $K+1\sim i-1$中，不能出现比前$K$个人优秀的存在
+
+- 这个算法经过一通概率和数学计算之后，可以算出，选出最优秀的人的概率为$\frac{1}{e}\sim 1-\frac{1}{e}$
+
+## 例：Quicksort
+
+- **确定性**的快排（**Deterministic Quicksort**）有着$O(N^2)$的worst-cast time；$O(N\text{log}N)$的average time
+
+- 快排中有一个worst case：当我们选择的pivot很差，导致pivot一侧的数太少，那么接下来的分治就会很差；所以我们就采用随机算法来优化快排
+
+---
+
+- **central splitter**: 好的pivot使得每一侧至少含有$\frac{4}{n}$的数据
+
+- **Modified Quicksort**: 在开始**分治之前**，我们要尽量选出一个**central splitter**
+
+- **Claim**：找到一个central splitter的迭代次数的期望**是2次**（因为central splitter落在$N/4 \sim 3N/4$之间）
+
+- 另一个结论：对于$type~j$子问题，每一类问题的总开销是$O(N)$，然后一共有$\text{log}_{4/3}N$个*type*，所以总的开销就是$O(N\text{log}N)$
+
+
+

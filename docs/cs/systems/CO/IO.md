@@ -72,3 +72,4 @@ bus在连续传递block的时候，可以在transfer word时就read in，就可�
 
 ---
 
+- 补如何计算disk的access time

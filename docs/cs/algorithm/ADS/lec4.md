@@ -1,9 +1,9 @@
 # lec4|Leftist Heaps & Skew Heaps
 
 !!! abstract "复杂度"
-    - Leftist Heap:Insert、DeleteMin、Merge在worst case和average case下均是$O(\text{logN})$
+    - **Leftist Heap**:Insert、DeleteMin、Merge在worst case和average case下均是$O(\text{logN})$
 
-    - Skew Heap:Insert、DeleteMin、Merge在worst case下为$O(N)$；average case下是$O(\text{logN})$
+    - **Skew Heap**:Insert、DeleteMin、Merge在worst case下为$O(N)$；average case下是$O(\text{logN})$
 
 ## Leftist Heaps
 

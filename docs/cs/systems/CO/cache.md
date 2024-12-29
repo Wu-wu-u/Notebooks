@@ -246,6 +246,25 @@
 
 ---
 
+#### 使用多级页表解决页表过大的问题
+
+- 我们不妨关注一下 page table 有多大。在我们之前的例子中，virtual address 有 48 bit，每个 page 的大小为 4KiB，所以 page table entry 的数目是 $\frac{2^{48}B}{4KiB}=2^{36}$，而 RISC-V 每个表项有 8 Byte，所以 page table 的总大小来到了 $2^{39}B=0.5TiB$，这是极其不合理的；尤其是每个进程都有一个 page table 的前提下。那么**页表过大**的问题，我们可以通过**多级页表**的方式解决。
+
+- 如我们之前所述，页表是一个数组， `page_table[i]` 中存储的是 virtual number 为 i 的 page 所对应的 physical number。考虑我们的逻辑地址结构：
+
+![alt text](cache_13.png)
+
+- 我们考虑将 p 再分为 p1 和 p2 ：
+
+![alt text](cache_14.png)
+
+![alt text](cache_15.png)
+
+- 我们使用一个两级页表，这里，我们称 p1 为 **page directory number** ，p2 为 **page table number**，d 为 **page offset**。
+
+
+
+
 #### 使用TLB加快地址转换
 
 - 我们之前提到，使用页表时，我们根据 virtual page number 找到对应 page table entry 在 page table 中的偏移，然后与 page table register 相加得到对应 entry 的 physical address，从中读取对应的 entry。但是这种方法的**效率存在问题**。要访问 virtual address 对应的 physical address，我们首先要根据 page table register 和 virtual page number 来找到页表在内存的位置，并在其中得到 page 对应的 physical page number，这需要一次内存访问**；**然后我们根据 physical page number 和 page offset 算出真实的 physical address，并访问对应的字节内容。即，访问一个字节需要两次内存访问，这会加倍原本的内存访问的时间，这是难以接受的。
@@ -280,4 +299,12 @@
 
         - 然后就能算总大小了：$2^20 \times 4 Bytes = 4MB$
 
-- 补题目 5.6和5.10
+- 补题目 5.3 5.6，5.10，5.11，5.16（word address和byte address）
+
+- 补miss的类型：
+
+    - conflict miss：set容量不够，导致替换的miss
+
+    - cold/compulsory miss：第一次访问一定会miss
+
+    - capacity miss：cache满了的时候的miss

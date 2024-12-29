@@ -45,6 +45,16 @@ $$
 
 - 给定$N$个数，计算前缀和（前$k$个数的和）
 
+- 我们的工具是：**balanced binary tree**
+
+![alt text](para_7.png)
+
+- 先用summation相同的方式，并行地构建出这么一棵平衡二叉树，然后从上往下走，得到各个位置的前缀和
+
+- 引入一个新的量$C(h,i)$，表示的是$(h,i)$位置这个点，的最右分支的那个数，往前的所有前缀和，然后我们就可以按照$i$是**奇数**还是**偶数**进行一个倒的递推
+
+![alt text](para_8.png)
+
 
 
 ## 例：Merge Arrays
@@ -55,14 +65,29 @@ $$
 
 - 这个思路显然不能用于并行，所以我们提出一种新的思路来实现并行的merge
 
-- Merging -> Ranking，引入新的量**rank**
+- Merging -> Ranking，引入新的量**rank**：就是自己在对方序列里位于哪个位置，一旦我知道了所有数的rank，我就可以瞬间把整个序列排好
 
 ![alt text](para_4.png)
 
 ![alt text](para_5.png)
 
+--
+
+
+
 
 ## 例：Maximum Finding
+
+!!! abstract "有5个复杂度需要记住"
+    1. 使用和summation一样的方法：$D=T(n)=O(\text{log}n),W(n)=O(n)$
+
+    2. 使用两两比对的并行方法：$D=T(n)=O(1), W(n)=O(n^2)$
+
+    3. 采用$\sqrt{n}$划分：$T(n)=O(\text{loglog}n), W(n)=O(n\text{loglogn})$
+
+    4. 采用$\text{loglog}n$划分：$T(n)=O(\text{loglog}n),W(n)=O(n)$
+
+    5. 采用**Random Sampling**：$T(n)=O(1),W(n)=n$
 
 - 找到一堆数里面的最大数，本质和summation是一样的，只是把 ＋ 换成了 *max*
 
@@ -70,8 +95,24 @@ $$
 
 - 方法二，则是增加work量，来提高并行效率
 
-![alt text](image.png)
+![alt text](para_6.png)
 
 ### Doubly-logarithmic Paradigm
 
-- 
+!!! abstract
+    - partitioned by $\sqrt{n}$：$T(n)=O(\text{loglog}n), W(n)=O(n\text{loglogn})$
+
+    - partitioned by $\text{loglogn}$：$T(n)=O(\text{loglog}n),W(n)=O(n)$
+
+
+### Random Sampling 随机采样
+
+$$
+T(n)=O(1), W(n)=O(n)
+$$
+
+- **with very high probability, on an Arbitrary CRCW PRAM**
+
+![alt text](para_9.png)
+
+![alt text](para_10.png)

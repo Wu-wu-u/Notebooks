@@ -1266,7 +1266,7 @@ $$
 - 每条曲线都有一个峰值，随着温度升高，峰值对应的波长$\lambda_m$越短，即峰值位置往**短波**方向移动；同时各种波长的**单色辐出度**都随**温度的升高而迅速增大**
 
 $$
-\lambda_m = \frac{b}{T}, b=2.898\time 10^{-3}\cdot K
+\lambda_m = \frac{b}{T}, b=2.898\times 10^{-3}\cdot K
 $$
 
 !!! tip "Example"
@@ -1274,7 +1274,7 @@ $$
 
     $T=\frac{b}{\lambda_m}=5682K$
 
-    $M(T)=\sigma T^4 = 5.9\time 10^7 W\cdot m^{-2}$
+    $M(T)=\sigma T^4 = 5.9\times 10^7 W\cdot m^{-2}$
 
 ### 光电效应
 
@@ -1322,9 +1322,9 @@ $$
 
 $$
 \begin{aligned}
-E&=h\nu=\frac{1}{2}mv_m^2+A, A是逸出功
-E&=h\nu=pc
-p&=\frac{h\nu}{c}=\frac{h}{\lambda}
+E&=h\nu=\frac{1}{2}mv_m^2+A, A是逸出功\\
+E&=h\nu=pc\\
+p&=\frac{h\nu}{c}=\frac{h}{\lambda}\\
 \end{aligned}
 $$
 
@@ -1445,5 +1445,9 @@ $$
 
 ## 原子的玻尔理论
 
+<embed src="../H_atom.pdf" width="750px" height="2100px" />
 
-24-1，24-3，24-5，24-7，24-10，24-11
+
+## 总复习
+
+<embed src="../keyPoint.pdf" width="750px" height="2100px" />

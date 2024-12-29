@@ -28,75 +28,75 @@
 
 - 剪枝(pruning) 就是优化解空间，排除掉不必要的计算，减少搜索量
 
-!!! note "八皇后"
+## 例：八皇后
     
-    - 八皇后是一个用回溯算法来解决的经典问题
+- 八皇后是一个用回溯算法来解决的经典问题
 
-    - 我们通过约束条件剪枝，可以把复杂度从$n^n$降到$n!$
+- 我们通过约束条件剪枝，可以把复杂度从$n^n$降到$n!$
 
-    - 下面以四皇后为例来找到可行解
+- 下面以四皇后为例来找到可行解
 
-    ![alt text](bt_3.png)
+![alt text](bt_3.png)
 
-    ![alt text](bt_4.png)
+![alt text](bt_4.png)
 
-    - 在进行DFS的同时，判断是否满足四皇后的条件，就不用遍历到`leaf`了
+- 在进行DFS的同时，判断是否满足四皇后的条件，就不用遍历到`leaf`了
 
 
 
 ---
 
-!!! note "收费站重建问题"
+## 例：收费站重建问题
     
-    - 在$x$轴上给定$N$个点，并且它们的坐标满足$x_1 < x_2 <...< x_N$，假设$x_1=0$，那么两两点之间共有$\frac{N(N-1)}{2}$个距离值
+- 在$x$轴上给定$N$个点，并且它们的坐标满足$x_1 < x_2 <...< x_N$，假设$x_1=0$，那么两两点之间共有$\frac{N(N-1)}{2}$个距离值
 
-    - 给定距离的集合$D$
+- 给定距离的集合$D$
 
-    - 我们一定能确定$x_1$和$x_N$的坐标，然后下面就是通过剩余的距离值，来确定剩下的$N-2$个点，保证他们之间能满足$D$集合
+- 我们一定能确定$x_1$和$x_N$的坐标，然后下面就是通过剩余的距离值，来确定剩下的$N-2$个点，保证他们之间能满足$D$集合
 
-    - 然后我们可以构建一个树来求解，每个节点的子节点一定是当前剩余的**最近的点**和**最远的点**
+- 然后我们可以构建一个树来求解，每个节点的子节点一定是当前剩余的**最近的点**和**最远的点**
 
-    ![alt text](search_1.png)
+![alt text](search_1.png)
 
-    ```cpp title="Reconstruct"
-    bool Reconstruct(DistType X[], DistSet D, int N, int left, int right){
-    // D是dist中剩余可用的距离
-    // 这是x[1]~x[left-1] 和x[right]~x[N]都已经解出来的情况下
-        
-        bool Found = false;
-        if(Is_Empty(D))
-            return true;
-        D_max = Find_Max(D)
-        // 选择一：X[right]=D_max
-        // 检查一下这种选择下，dist是不是合理
-        OK = Check(D_max, N, left, right);
-        if(OK){ // 添加x[right] 并且更新 D
-            X[right] = D_max;
-            for (i=1;i<left;i++) Delete(X[right]-X[i],D);
-            for (i=right+1;i<=N;i++) Delete(X[i]-X[right],D);
-            Found = Reconstruct(X,D,N,left,right-1);
-            // 看看是不是正确的路
-            // 如果不是那就回溯（撤销）
-            if(!Found){
-            for (i=1;i<left;i++) Insert(X[right]-X[i],D);
-            for (i=right+1;i<=N;i++) Insert(X[i]-X[right],D);     
-            }
-        }
-        // 当选择1没有走成功时
-        // 走选择2：x[left]=x[N]-D_max
+```cpp title="Reconstruct"
+bool Reconstruct(DistType X[], DistSet D, int N, int left, int right){
+// D是dist中剩余可用的距离
+// 这是x[1]~x[left-1] 和x[right]~x[N]都已经解出来的情况下
+    
+    bool Found = false;
+    if(Is_Empty(D))
+        return true;
+    D_max = Find_Max(D)
+    // 选择一：X[right]=D_max
+    // 检查一下这种选择下，dist是不是合理
+    OK = Check(D_max, N, left, right);
+    if(OK){ // 添加x[right] 并且更新 D
+        X[right] = D_max;
+        for (i=1;i<left;i++) Delete(X[right]-X[i],D);
+        for (i=right+1;i<=N;i++) Delete(X[i]-X[right],D);
+        Found = Reconstruct(X,D,N,left,right-1);
+        // 看看是不是正确的路
+        // 如果不是那就回溯（撤销）
         if(!Found){
-            X[left] = X[N] - D_max;
-            for (i=1;i<left;i++) Delete(X[left]-X[i],D);
-            for (i=right+1;i<=N;i++) Delete(X[i]-X[left],D);
-            Found = Reconstruct(X,D,N,left+1,right);
-            if(!Found){
-            for (i=1;i<left;i++) Insert(X[right]-X[i],D);
-            for (i=right+1;i<=N;i++) Insert(X[i]-X[right],D);    
-            }
+        for (i=1;i<left;i++) Insert(X[right]-X[i],D);
+        for (i=right+1;i<=N;i++) Insert(X[i]-X[right],D);     
         }
-        return Found;
     }
-    ```
+    // 当选择1没有走成功时
+    // 走选择2：x[left]=x[N]-D_max
+    if(!Found){
+        X[left] = X[N] - D_max;
+        for (i=1;i<left;i++) Delete(X[left]-X[i],D);
+        for (i=right+1;i<=N;i++) Delete(X[i]-X[left],D);
+        Found = Reconstruct(X,D,N,left+1,right);
+        if(!Found){
+        for (i=1;i<left;i++) Insert(X[right]-X[i],D);
+        for (i=right+1;i<=N;i++) Insert(X[i]-X[right],D);    
+        }
+    }
+    return Found;
+}
+```
 
 ## 博弈
 

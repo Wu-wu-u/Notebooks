@@ -60,6 +60,7 @@
 
 - 那么对于每个单独的点只需要和临近的6个点比较就好了，一共是$6n/2$；得到$O(N)的复杂度$
 
+- 最终复杂度就满足$T(N)=2T(N/2)+cN$，得到$T(N)=O(\text{log}N)$
 
 
 ## 复杂度分析
@@ -133,7 +134,14 @@ $$
 
         - 因此$T(n)=O(logn+logn\cdot loglogn)=O(logn\cdot loglogn)$
 
+!!! note "一道例题"
+    - $T(N)=T(N/3)+T(2N/3)+cN$
 
+    - 这个题就是**递归树**和**主定理**都用不了（因为递归树画出来不是一棵complete的树，主定理也不满足形式），只能靠猜测最后的$T(N)$
 
+    ??? tip "答案"
+        - 我们猜测$T(N)=O(N\text{log}N)$
 
+        - $T(N)\leq d(N/3)log(N/3)+d(2N/3)log(2N/3)+cN$
 
+        - $T(N)\leq dNlogN -dN(log_23-2/3) + cN\leq dNlogN$
