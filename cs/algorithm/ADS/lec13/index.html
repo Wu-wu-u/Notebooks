@@ -52,11 +52,9 @@
     
       <link rel="stylesheet" href="../../../../css/custom.css">
     
-      <link rel="stylesheet" href="https://cdn.tonycrane.cc/jbmono/jetbrainsmono.css">
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lxgw-wenkai-screen-webfont@1.1.0/style.css">
     
-      <link rel="stylesheet" href="https://cdn.tonycrane.cc/lxgw/lxgwscreen.css">
-    
-      <link rel="stylesheet" href="https://cdn.tonycrane.cc/utils/katex.min.css">
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.18/dist/katex.min.css">
     
     <script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
@@ -1114,6 +1112,8 @@
       
         
       
+        
+      
     
     
       
@@ -1251,6 +1251,27 @@
   
   <span class="md-ellipsis">
     5.Cache
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../systems/CO/IO/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    6.I/O
   </span>
   
 
@@ -1604,6 +1625,8 @@
       
         
           
+        
+      
         
       
         
@@ -2009,6 +2032,30 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="例：The Hiring Problem">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#online-hiring-algorithm" class="md-nav__link">
+    <span class="md-ellipsis">
+      Online Hiring Algorithm
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#quicksort" class="md-nav__link">
+    <span class="md-ellipsis">
+      例：Quicksort
+    </span>
+  </a>
+  
 </li>
       
     </ul>
@@ -2032,6 +2079,27 @@
   
   <span class="md-ellipsis">
     lec14|Parallel
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lec15/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    lec15|External Sort
   </span>
   
 
@@ -3357,6 +3425,30 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="例：The Hiring Problem">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#online-hiring-algorithm" class="md-nav__link">
+    <span class="md-ellipsis">
+      Online Hiring Algorithm
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#quicksort" class="md-nav__link">
+    <span class="md-ellipsis">
+      例：Quicksort
+    </span>
+  </a>
+  
 </li>
       
     </ul>
@@ -3379,7 +3471,7 @@
 
 <h1 id="randomized-algorithm">Randomized Algorithm<a class="headerlink" href="#randomized-algorithm" title="Permanent link">&para;</a></h1>
 <div style="margin-top: -30px; font-size: 0.75em; opacity: 0.7;">
-<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2A10 10 0 0 0 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10h-2a8 8 0 0 1-8 8 8 8 0 0 1-8-8 8 8 0 0 1 8-8zm6.78 1a.7.7 0 0 0-.48.2l-1.22 1.21 2.5 2.5L20.8 5.7c.26-.26.26-.7 0-.95L19.25 3.2c-.13-.13-.3-.2-.47-.2m-2.41 2.12L9 12.5V15h2.5l7.37-7.38z"/></svg></span> 约 309 个字 <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><!--! Font Awesome Free 6.7.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M392.8 1.2c-17-4.9-34.7 5-39.6 22l-128 448c-4.9 17 5 34.7 22 39.6s34.7-5 39.6-22l128-448c4.9-17-5-34.7-22-39.6m80.6 120.1c-12.5 12.5-12.5 32.8 0 45.3l89.3 89.4-89.4 89.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l112-112c12.5-12.5 12.5-32.8 0-45.3l-112-112c-12.5-12.5-32.8-12.5-45.3 0zm-306.7 0c-12.5-12.5-32.8-12.5-45.3 0l-112 112c-12.5 12.5-12.5 32.8 0 45.3l112 112c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L77.3 256l89.4-89.4c12.5-12.5 12.5-32.8 0-45.3"/></svg></span> 35 行代码 <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 20c4.42 0 8-3.58 8-8s-3.58-8-8-8-8 3.58-8 8 3.58 8 8 8m0-18c5.5 0 10 4.5 10 10s-4.5 10-10 10C6.47 22 2 17.5 2 12S6.5 2 12 2m.5 11H11V7h1.5v4.26l3.7-2.13.75 1.3z"/></svg></span> 预计阅读时间 1 分钟</p>
+<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2A10 10 0 0 0 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10h-2a8 8 0 0 1-8 8 8 8 0 0 1-8-8 8 8 0 0 1 8-8zm6.78 1a.7.7 0 0 0-.48.2l-1.22 1.21 2.5 2.5L20.8 5.7c.26-.26.26-.7 0-.95L19.25 3.2c-.13-.13-.3-.2-.47-.2m-2.41 2.12L9 12.5V15h2.5l7.37-7.38z"/></svg></span> 约 692 个字 <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><!--! Font Awesome Free 6.7.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M392.8 1.2c-17-4.9-34.7 5-39.6 22l-128 448c-4.9 17 5 34.7 22 39.6s34.7-5 39.6-22l128-448c4.9-17-5-34.7-22-39.6m80.6 120.1c-12.5 12.5-12.5 32.8 0 45.3l89.3 89.4-89.4 89.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l112-112c12.5-12.5 12.5-32.8 0-45.3l-112-112c-12.5-12.5-32.8-12.5-45.3 0zm-306.7 0c-12.5-12.5-32.8-12.5-45.3 0l-112 112c-12.5 12.5-12.5 32.8 0 45.3l112 112c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L77.3 256l89.4-89.4c12.5-12.5 12.5-32.8 0-45.3"/></svg></span> 51 行代码 <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 20c4.42 0 8-3.58 8-8s-3.58-8-8-8-8 3.58-8 8 3.58 8 8 8m0-18c5.5 0 10 4.5 10 10s-4.5 10-10 10C6.47 22 2 17.5 2 12S6.5 2 12 2m.5 11H11V7h1.5v4.26l3.7-2.13.75 1.3z"/></svg></span> 预计阅读时间 3 分钟</p>
 </div>
 <h2 id="the-hiring-problem">例：The Hiring Problem<a class="headerlink" href="#the-hiring-problem" title="Permanent link">&para;</a></h2>
 <ul>
@@ -3455,8 +3547,74 @@
 </ul>
 </details>
 <hr />
+<h3 id="online-hiring-algorithm">Online Hiring Algorithm<a class="headerlink" href="#online-hiring-algorithm" title="Permanent link">&para;</a></h3>
 <ul>
-<li>Online Hiring Algorithm -- hire only once：每一个候选人马上决定雇佣与否，如果雇佣了一个人，那么在他之后的人都不再看</li>
+<li>
+<p>Online Hiring Algorithm -- hire only once：每一个候选人马上决定雇佣与否，如果雇佣了一个人，那么在他之后的人都不再看</p>
+</li>
+<li>
+<p>那么我们就会很纠结，我怎么知道第一个人好不好呢？一开始好的标准是什么呢？</p>
+</li>
+<li>
+<p>所以，我们先拿先<span class="arithmatex">\(K\)</span>个人进行练手，这些炮灰仅用来帮我恒量best的标准，并不会被雇佣；后面<span class="arithmatex">\(K+1 \sim N\)</span>个人才是我正在开始选人的阶段</p>
+</li>
+</ul>
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="kt">int</span><span class="w"> </span><span class="nf">OnlineHiring</span><span class="w"> </span><span class="p">(</span><span class="n">EventType</span><span class="w"> </span><span class="n">C</span><span class="p">[],</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">N</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">k</span><span class="p">){</span>
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">Best</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">N</span><span class="p">;</span>
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">BestQ</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">-</span><span class="err">∞</span><span class="p">;</span>
+</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="w">    </span><span class="k">for</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="o">=</span><span class="mi">1</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">&lt;=</span><span class="n">k</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">){</span>
+</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="w">        </span><span class="n">Qi</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">interview</span><span class="p">();</span>
+</span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a><span class="w">        </span><span class="k">if</span><span class="p">(</span><span class="n">Qi</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">BestQ</span><span class="p">)</span><span class="w"> </span><span class="n">BestQ</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Qi</span><span class="p">;</span>
+</span><span id="__span-3-7"><a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a><span class="w">    </span><span class="p">}</span>
+</span><span id="__span-3-8"><a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a><span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="n">i</span><span class="o">=</span><span class="n">k</span><span class="o">+</span><span class="mi">1</span><span class="p">;</span><span class="n">i</span><span class="o">&lt;=</span><span class="n">N</span><span class="p">;</span><span class="n">i</span><span class="o">++</span><span class="p">){</span>
+</span><span id="__span-3-9"><a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a><span class="w">        </span><span class="n">Qi</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">interview</span><span class="p">();</span>
+</span><span id="__span-3-10"><a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a><span class="w">        </span><span class="k">if</span><span class="p">(</span><span class="n">Qi</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">BestQ</span><span class="p">){</span>
+</span><span id="__span-3-11"><a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a><span class="w">            </span><span class="n">Best</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">i</span><span class="p">;</span>
+</span><span id="__span-3-12"><a id="__codelineno-3-12" name="__codelineno-3-12" href="#__codelineno-3-12"></a><span class="w">            </span><span class="k">break</span><span class="p">;</span>
+</span><span id="__span-3-13"><a id="__codelineno-3-13" name="__codelineno-3-13" href="#__codelineno-3-13"></a><span class="w">        </span><span class="p">}</span>
+</span><span id="__span-3-14"><a id="__codelineno-3-14" name="__codelineno-3-14" href="#__codelineno-3-14"></a><span class="w">    </span><span class="p">}</span>
+</span><span id="__span-3-15"><a id="__codelineno-3-15" name="__codelineno-3-15" href="#__codelineno-3-15"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">Best</span><span class="p">;</span>
+</span><span id="__span-3-16"><a id="__codelineno-3-16" name="__codelineno-3-16" href="#__codelineno-3-16"></a><span class="p">}</span>
+</span></code></pre></div>
+<ul>
+<li>
+<p>假设<span class="arithmatex">\(S_i\)</span>是最优秀的人，如果我们想要雇佣到他，有两个条件：</p>
+<ol>
+<li>
+<p>他不能在前<span class="arithmatex">\(K\)</span>个人中，必须在<span class="arithmatex">\(K+1\sim N\)</span></p>
+</li>
+<li>
+<p><span class="arithmatex">\(K+1\sim i-1\)</span>中，不能出现比前<span class="arithmatex">\(K\)</span>个人优秀的存在</p>
+</li>
+</ol>
+</li>
+<li>
+<p>这个算法经过一通概率和数学计算之后，可以算出，选出最优秀的人的概率为<span class="arithmatex">\(\frac{1}{e}\sim 1-\frac{1}{e}\)</span></p>
+</li>
+</ul>
+<h2 id="quicksort">例：Quicksort<a class="headerlink" href="#quicksort" title="Permanent link">&para;</a></h2>
+<ul>
+<li>
+<p><strong>确定性</strong>的快排（<strong>Deterministic Quicksort</strong>）有着<span class="arithmatex">\(O(N^2)\)</span>的worst-cast time；<span class="arithmatex">\(O(N\text{log}N)\)</span>的average time</p>
+</li>
+<li>
+<p>快排中有一个worst case：当我们选择的pivot很差，导致pivot一侧的数太少，那么接下来的分治就会很差；所以我们就采用随机算法来优化快排</p>
+</li>
+</ul>
+<hr />
+<ul>
+<li>
+<p><strong>central splitter</strong>: 好的pivot使得每一侧至少含有<span class="arithmatex">\(\frac{4}{n}\)</span>的数据</p>
+</li>
+<li>
+<p><strong>Modified Quicksort</strong>: 在开始<strong>分治之前</strong>，我们要尽量选出一个<strong>central splitter</strong></p>
+</li>
+<li>
+<p><strong>Claim</strong>：找到一个central splitter的迭代次数的期望<strong>是2次</strong>（因为central splitter落在<span class="arithmatex">\(N/4 \sim 3N/4\)</span>之间）</p>
+</li>
+<li>
+<p>另一个结论：对于<span class="arithmatex">\(type~j\)</span>子问题，每一类问题的总开销是<span class="arithmatex">\(O(N)\)</span>，然后一共有<span class="arithmatex">\(\text{log}_{4/3}N\)</span>个<em>type</em>，所以总的开销就是<span class="arithmatex">\(O(N\text{log}N)\)</span></p>
+</li>
 </ul>
 
 
@@ -3478,7 +3636,7 @@
     <span class="md-icon" title="最后更新">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">2024年12月19日</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">2024年12月29日</span>
   </span>
 
     

@@ -52,11 +52,9 @@
     
       <link rel="stylesheet" href="../../../../css/custom.css">
     
-      <link rel="stylesheet" href="https://cdn.tonycrane.cc/jbmono/jetbrainsmono.css">
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lxgw-wenkai-screen-webfont@1.1.0/style.css">
     
-      <link rel="stylesheet" href="https://cdn.tonycrane.cc/lxgw/lxgwscreen.css">
-    
-      <link rel="stylesheet" href="https://cdn.tonycrane.cc/utils/katex.min.css">
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.18/dist/katex.min.css">
     
     <script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
@@ -1114,6 +1112,8 @@
       
         
       
+        
+      
     
     
       
@@ -1251,6 +1251,27 @@
   
   <span class="md-ellipsis">
     5.Cache
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../systems/CO/IO/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    6.I/O
   </span>
   
 
@@ -1636,6 +1657,8 @@
       
         
       
+        
+      
     
     
       
@@ -1876,6 +1899,24 @@
         <li class="md-nav__item">
   <a href="#_1" class="md-nav__link">
     <span class="md-ellipsis">
+      例：八皇后
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      例：收费站重建问题
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
       博弈
     </span>
   </a>
@@ -1884,7 +1925,7 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
+  <a href="#_4" class="md-nav__link">
     <span class="md-ellipsis">
       α&amp;β剪枝
     </span>
@@ -2065,6 +2106,27 @@
   
   <span class="md-ellipsis">
     lec14|Parallel
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lec15/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    lec15|External Sort
   </span>
   
 
@@ -3404,6 +3466,24 @@
         <li class="md-nav__item">
   <a href="#_1" class="md-nav__link">
     <span class="md-ellipsis">
+      例：八皇后
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      例：收费站重建问题
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
       博弈
     </span>
   </a>
@@ -3412,7 +3492,7 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
+  <a href="#_4" class="md-nav__link">
     <span class="md-ellipsis">
       α&amp;β剪枝
     </span>
@@ -3493,8 +3573,7 @@
 <p>剪枝(pruning) 就是优化解空间，排除掉不必要的计算，减少搜索量</p>
 </li>
 </ul>
-<div class="admonition note">
-<p class="admonition-title">八皇后</p>
+<h2 id="_1">例：八皇后<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
 <ul>
 <li>
 <p>八皇后是一个用回溯算法来解决的经典问题</p>
@@ -3511,10 +3590,8 @@
 <ul>
 <li>在进行DFS的同时，判断是否满足四皇后的条件，就不用遍历到<code>leaf</code>了</li>
 </ul>
-</div>
 <hr />
-<div class="admonition note">
-<p class="admonition-title">收费站重建问题</p>
+<h2 id="_2">例：收费站重建问题<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
 <ul>
 <li>
 <p>在<span class="arithmatex">\(x\)</span>轴上给定<span class="arithmatex">\(N\)</span>个点，并且它们的坐标满足<span class="arithmatex">\(x_1 &lt; x_2 &lt;...&lt; x_N\)</span>，假设<span class="arithmatex">\(x_1=0\)</span>，那么两两点之间共有<span class="arithmatex">\(\frac{N(N-1)}{2}\)</span>个距离值</p>
@@ -3568,8 +3645,7 @@
 </span><span id="__span-0-36"><a id="__codelineno-0-36" name="__codelineno-0-36" href="#__codelineno-0-36"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">Found</span><span class="p">;</span>
 </span><span id="__span-0-37"><a id="__codelineno-0-37" name="__codelineno-0-37" href="#__codelineno-0-37"></a><span class="p">}</span>
 </span></code></pre></div>
-</div>
-<h2 id="_1">博弈<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
+<h2 id="_3">博弈<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
 <ul>
 <li>下面以井字棋（tic-tac-toe）为例，来分析一个博弈模型</li>
 </ul>
@@ -3609,7 +3685,7 @@
 <p>博弈树的<code>root</code>，其实就是<strong>起手</strong>的这个人（在双方都最聪明的情况下）所能拿到的最优解（最高分或者最低分）</p>
 </li>
 </ul>
-<h3 id="_2">α&amp;β剪枝<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
+<h3 id="_4">α&amp;β剪枝<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h3>
 <div class="admonition info">
 <p class="admonition-title">Reference</p>
 <p><a href="https://www.bilibili.com/video/BV1yG411o7uH?spm_id_from=333.788.player.switch&amp;vd_source=09de771bb3c2015589e30290692baf80">从minimax到alpha-beta剪枝算法(中)：alpha-beta剪枝原理详解</a></p>
@@ -3667,7 +3743,7 @@
     <span class="md-icon" title="最后更新">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">2024年10月27日</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">2024年12月29日</span>
   </span>
 
     

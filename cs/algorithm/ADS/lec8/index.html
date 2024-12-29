@@ -52,11 +52,9 @@
     
       <link rel="stylesheet" href="../../../../css/custom.css">
     
-      <link rel="stylesheet" href="https://cdn.tonycrane.cc/jbmono/jetbrainsmono.css">
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lxgw-wenkai-screen-webfont@1.1.0/style.css">
     
-      <link rel="stylesheet" href="https://cdn.tonycrane.cc/lxgw/lxgwscreen.css">
-    
-      <link rel="stylesheet" href="https://cdn.tonycrane.cc/utils/katex.min.css">
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.18/dist/katex.min.css">
     
     <script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
@@ -1114,6 +1112,8 @@
       
         
       
+        
+      
     
     
       
@@ -1251,6 +1251,27 @@
   
   <span class="md-ellipsis">
     5.Cache
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../systems/CO/IO/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    6.I/O
   </span>
   
 
@@ -1636,6 +1657,8 @@
       
         
       
+        
+      
     
     
       
@@ -1909,7 +1932,7 @@
         <li class="md-nav__item">
   <a href="#_2" class="md-nav__link">
     <span class="md-ellipsis">
-      例：最优二叉搜索树
+      例：最优矩阵乘法顺序
     </span>
   </a>
   
@@ -1918,7 +1941,16 @@
         <li class="md-nav__item">
   <a href="#_3" class="md-nav__link">
     <span class="md-ellipsis">
-      例：背包问题
+      例：最优二叉搜索树
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#all-pairs" class="md-nav__link">
+    <span class="md-ellipsis">
+      例：All-Pairs 最短路径
     </span>
   </a>
   
@@ -1927,7 +1959,7 @@
         <li class="md-nav__item">
   <a href="#_4" class="md-nav__link">
     <span class="md-ellipsis">
-      例：矩阵连乘
+      例：背包问题
     </span>
   </a>
   
@@ -2068,6 +2100,27 @@
   
   <span class="md-ellipsis">
     lec14|Parallel
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lec15/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    lec15|External Sort
   </span>
   
 
@@ -3398,7 +3451,7 @@
         <li class="md-nav__item">
   <a href="#_2" class="md-nav__link">
     <span class="md-ellipsis">
-      例：最优二叉搜索树
+      例：最优矩阵乘法顺序
     </span>
   </a>
   
@@ -3407,7 +3460,16 @@
         <li class="md-nav__item">
   <a href="#_3" class="md-nav__link">
     <span class="md-ellipsis">
-      例：背包问题
+      例：最优二叉搜索树
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#all-pairs" class="md-nav__link">
+    <span class="md-ellipsis">
+      例：All-Pairs 最短路径
     </span>
   </a>
   
@@ -3416,7 +3478,7 @@
         <li class="md-nav__item">
   <a href="#_4" class="md-nav__link">
     <span class="md-ellipsis">
-      例：矩阵连乘
+      例：背包问题
     </span>
   </a>
   
@@ -3451,7 +3513,7 @@
 
 <h1 id="lec8dynamic-programming">lec8|Dynamic Programming<a class="headerlink" href="#lec8dynamic-programming" title="Permanent link">&para;</a></h1>
 <div style="margin-top: -30px; font-size: 0.75em; opacity: 0.7;">
-<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2A10 10 0 0 0 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10h-2a8 8 0 0 1-8 8 8 8 0 0 1-8-8 8 8 0 0 1 8-8zm6.78 1a.7.7 0 0 0-.48.2l-1.22 1.21 2.5 2.5L20.8 5.7c.26-.26.26-.7 0-.95L19.25 3.2c-.13-.13-.3-.2-.47-.2m-2.41 2.12L9 12.5V15h2.5l7.37-7.38z"/></svg></span> 约 468 个字 <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><!--! Font Awesome Free 6.7.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M392.8 1.2c-17-4.9-34.7 5-39.6 22l-128 448c-4.9 17 5 34.7 22 39.6s34.7-5 39.6-22l128-448c4.9-17-5-34.7-22-39.6m80.6 120.1c-12.5 12.5-12.5 32.8 0 45.3l89.3 89.4-89.4 89.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l112-112c12.5-12.5 12.5-32.8 0-45.3l-112-112c-12.5-12.5-32.8-12.5-45.3 0zm-306.7 0c-12.5-12.5-32.8-12.5-45.3 0l-112 112c-12.5 12.5-12.5 32.8 0 45.3l112 112c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L77.3 256l89.4-89.4c12.5-12.5 12.5-32.8 0-45.3"/></svg></span> 16 行代码 <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 17H7V3h14m0-2H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V3a2 2 0 0 0-2-2M3 5H1v16a2 2 0 0 0 2 2h16v-2H3m12.96-10.71-2.75 3.54-1.96-2.36L8.5 15h11z"/></svg></span> 2 张图片 <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 20c4.42 0 8-3.58 8-8s-3.58-8-8-8-8 3.58-8 8 3.58 8 8 8m0-18c5.5 0 10 4.5 10 10s-4.5 10-10 10C6.47 22 2 17.5 2 12S6.5 2 12 2m.5 11H11V7h1.5v4.26l3.7-2.13.75 1.3z"/></svg></span> 预计阅读时间 2 分钟</p>
+<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2A10 10 0 0 0 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10h-2a8 8 0 0 1-8 8 8 8 0 0 1-8-8 8 8 0 0 1 8-8zm6.78 1a.7.7 0 0 0-.48.2l-1.22 1.21 2.5 2.5L20.8 5.7c.26-.26.26-.7 0-.95L19.25 3.2c-.13-.13-.3-.2-.47-.2m-2.41 2.12L9 12.5V15h2.5l7.37-7.38z"/></svg></span> 约 365 个字 <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><!--! Font Awesome Free 6.7.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M392.8 1.2c-17-4.9-34.7 5-39.6 22l-128 448c-4.9 17 5 34.7 22 39.6s34.7-5 39.6-22l128-448c4.9-17-5-34.7-22-39.6m80.6 120.1c-12.5 12.5-12.5 32.8 0 45.3l89.3 89.4-89.4 89.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l112-112c12.5-12.5 12.5-32.8 0-45.3l-112-112c-12.5-12.5-32.8-12.5-45.3 0zm-306.7 0c-12.5-12.5-32.8-12.5-45.3 0l-112 112c-12.5 12.5-12.5 32.8 0 45.3l112 112c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L77.3 256l89.4-89.4c12.5-12.5 12.5-32.8 0-45.3"/></svg></span> 16 行代码 <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 17H7V3h14m0-2H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V3a2 2 0 0 0-2-2M3 5H1v16a2 2 0 0 0 2 2h16v-2H3m12.96-10.71-2.75 3.54-1.96-2.36L8.5 15h11z"/></svg></span> 3 张图片 <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 20c4.42 0 8-3.58 8-8s-3.58-8-8-8-8 3.58-8 8 3.58 8 8 8m0-18c5.5 0 10 4.5 10 10s-4.5 10-10 10C6.47 22 2 17.5 2 12S6.5 2 12 2m.5 11H11V7h1.5v4.26l3.7-2.13.75 1.3z"/></svg></span> 预计阅读时间 1 分钟</p>
 </div>
 <blockquote>
 <p>"Those who cannot remember the past are condemned to repeat it."</p>
@@ -3484,17 +3546,84 @@
 </span><span id="__span-1-10"><a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a><span class="p">}</span>
 </span></code></pre></div>
 <hr />
-<h2 id="_2">例：最优二叉搜索树<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
+<h2 id="_2">例：最优矩阵乘法顺序<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
+<ul>
+<li>给定好几个矩阵相乘的式子，不同顺序的矩阵先后运算会极大影响矩阵乘法的<strong>计算量</strong></li>
+</ul>
+<p><a class="glightbox" href="../dp_3.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../dp_3.png" /></a></p>
+<hr />
+<ul>
+<li>
+<p>为了解决这个问题，我们先来研究<span class="arithmatex">\(N\)</span>个矩阵之间，到底有多少种相乘的方式；这其实就变成了一个<strong>打括号</strong>的问题，我们着眼于最后一个括号怎么打，它一定是在<span class="arithmatex">\(M_1\)</span>左侧，<span class="arithmatex">\(M_n\)</span>右侧；也就是<span class="arithmatex">\((M_1,M_2...M_n)\)</span></p>
+</li>
+<li>
+<p>那么它的子问题，可以划分成，在中间再打上两个括号，比如<span class="arithmatex">\((M_1,M_2)(M_3...M_n)\)</span></p>
+</li>
+<li>
+<p>所以，我们引入一个量<span class="arithmatex">\(b_n\)</span>表示<span class="arithmatex">\(N\)</span>个矩阵相乘的运算方式数量；由上面的推导可以得知：<span class="arithmatex">\(b_n=\sum_{i=1}^{n-1}b_i\cdot b_{n-i}\)</span></p>
+</li>
+</ul>
+<details class="tip">
+<summary>结论：卡特兰数</summary>
+<div class="arithmatex">\[
+b_n = O(\frac{4^n}{n\sqrt{n}})
+\]</div>
+</details>
+<ul>
+<li>很好，我们现在知道了矩阵乘法的划分方式，其实按照同样思路就可以构造出<strong>计算量</strong>的dp方程</li>
+</ul>
+<div class="arithmatex">\[
+dp[i][j]=min_{i\leq l &lt; j}\{dp[i][l]+dp[l+1][j]+w_{最后这两个矩阵相乘的计算量}\}
+\]</div>
+<h2 id="_3">例：最优二叉搜索树<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
 <details class="note">
 <summary>概念</summary>
 <ul>
 <li>最优二叉搜索树(Optimal Binary Search Tree)是仅用于<strong>静态搜索</strong>的最佳的二叉搜索树（它不能insert和delete）</li>
 </ul>
 </details>
-<p>？？？ 没听懂 搜视频看；好像是在连续的一坨点中，拿出一个作根，然后左右都是已经最优的子树，然后求出min；然后慢慢拆成了小的</p>
-<p>也是可以调用先前的结果 P21</p>
+<ul>
+<li>
+<p>给定<span class="arithmatex">\(N\)</span>个按字典序排列的词<span class="arithmatex">\(w_1&lt; w_2&lt;...&lt; w_n <span class="arithmatex">\(，然后访问某个词的概率是\)</span>p_i\)</span>，现在我们要把这些词安放在二叉搜索树中，使得查找某个词所花的期望时间最小</p>
+</li>
+<li>
+<p><strong>expected total access time</strong>：<span class="arithmatex">\(T(N)\sum p_i(1+d_i)\)</span>，和这个词的深度有关</p>
+</li>
+<li>
+<p>现在我们开始尝试构造最优的树，ppt上给了两个例子分别是用greedy的方法和avl的方法，但都不是最优解</p>
+</li>
+<li>
+<p>我们尝试用dp的方式：这个dp方程怎么构造，可以思考一下最后状态的转移，就是转移到<strong>左右子树</strong>上，谁作<strong>根</strong>又是一个待定，于是就可以想出这么一个方程</p>
+</li>
+</ul>
+<div class="arithmatex">\[
+dp[i][j] = min_{i\leq l &lt; j}\{dp[i][l-1]+dp[l+1][j] + w_{ij}  \}, w_{ij}=\sum_{i}^j p_i
+\]</div>
 <hr />
-<h2 id="_3">例：背包问题<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
+<h2 id="all-pairs">例：All-Pairs 最短路径<a class="headerlink" href="#all-pairs" title="Permanent link">&para;</a></h2>
+<ul>
+<li>
+<p>以前我们学过<strong>dijkstra</strong>算法，是解决给定起点的最短路径问题；现在我们欲计算<strong>所有节点间</strong>的最短距离，那么naive的思路就是用n次dijkstra，这不是这次的重点，我们采用dp的思想来解决，也就是<strong>Floyd</strong>算法</p>
+</li>
+<li>
+<p>我们试图沿用之前的思路，在两个节点间找一个中间节点作为跳板，得到状态方程：</p>
+</li>
+</ul>
+<div class="arithmatex">\[
+dp[i][j] = min_{i\leq l &lt; j}\{dp[i][l]+dp[l][j]\}
+\]</div>
+<ul>
+<li>
+<p>但是很可惜，这个算法是<strong>错误</strong>的，因为我们并没有把问题规模划分为更小的子问题；我在计算这个状态时，可能需要的上个状态根本没有计算出来！！！</p>
+</li>
+<li>
+<p>问题就出在，作为中间跳台的节点个数是不定的，两两之间皆是如此，问题规模不定，并没有随着转移而变小；所以我们限定好作为中间跳台的节点，添加一维状态量<span class="arithmatex">\(k\)</span>，表示使用的节点都是<span class="arithmatex">\(v_l, l\leq k\)</span></p>
+</li>
+</ul>
+<div class="arithmatex">\[
+dp[k][i][j] = 
+\]</div>
+<h2 id="_4">例：背包问题<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
 <details class="tip">
 <summary>概念</summary>
 <ul>
@@ -3511,13 +3640,6 @@
 <a class="glightbox" href="../dp_2.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../dp_2.png" /></a></p>
 <p>？？？为什么<span class="arithmatex">\(O(nW)\)</span>是伪多项式时间</p>
 <hr />
-<h2 id="_4">例：矩阵连乘<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
-<details class="tip">
-<summary>概念</summary>
-<p>p40</p>
-</details>
-<p>p42，原理和optimal bst差不多</p>
-<p>补代码p43</p>
 <h2 id="rod-cutting-problem">例：Rod-cutting Problem<a class="headerlink" href="#rod-cutting-problem" title="Permanent link">&para;</a></h2>
 <ul>
 <li>
@@ -3583,7 +3705,7 @@
     <span class="md-icon" title="最后更新">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">2024年12月19日</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">2024年12月29日</span>
   </span>
 
     
