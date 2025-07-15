@@ -189,6 +189,16 @@ nav:
           - 4.Processor: cs/systems/CO/processor.md
           - 5.Cache: cs/systems/CO/cache.md
           - 6.I/O: cs/systems/CO/IO.md
+        - 计算机体系结构:
+          - cs/systems/CA/index.md
+          - Ch1 导论: cs/systems/CA/ch1.md
+          - Ch2 Cache: cs/systems/CA/ch2.md
+          - Ch3 指令级并行: cs/systems/CA/ch3.md
+          - Ch4 DLP: cs/systems/CA/ch4.md
+          - Ch5 TLP: cs/systems/CA/ch5.md
+        - 操作系统原理(NJU):
+          - 绪论: cs/systems/OS/intro.md
+          - 虚拟化: cs/systems/OS/virtualization.md
     - 算法相关:
       - 数据结构基础: 
         - cs/algorithm/FDS/index.md
@@ -232,7 +242,19 @@ nav:
         - Chapter 10 Graphs: cs/theories/Discrete_Math/chapter10.md
         - Chapter 11 Trees: cs/theories/Discrete_Math/chapter11.md
     - 人工智能:
-      - 基础库的使用: cs/AI/basic_module.md  
+      - 基础库的使用: cs/AI/basic_module.md
+    - 其他课程:
+      - 数据库系统:
+        - Introduction: cs/others/DB/intro.md
+        - Relational Model: cs/others/DB/relationalModel.md
+        - Introduction to SQL: cs/others/DB/sql_intro.md
+        - 中级SQL: cs/others/DB/intermediate_sql.md
+        - 高级SQL: cs/others/DB/advanced_sql.md
+        - ODBC使用: cs/others/DB/ODBC.md
+        - 实体-关系模型: cs/others/DB/ER_model.md
+        - 关系数据库设计: cs/others/DB/design.md
+        - 并发控制: cs/others/DB/concurrency.md
+        - 故障恢复: cs/others/DB/recovery.md
     - 工具相关:
       - Git: cs/tools/git/git.md
       - Latex: cs/tools/latex/latex.md

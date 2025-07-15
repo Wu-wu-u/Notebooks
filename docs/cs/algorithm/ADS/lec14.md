@@ -85,7 +85,7 @@ $$
 
     3. 采用$\sqrt{n}$划分：$T(n)=O(\text{loglog}n), W(n)=O(n\text{loglogn})$
 
-    4. 采用$\text{loglog}n$划分：$T(n)=O(\text{loglog}n),W(n)=O(n)$
+    4. 采用$\text{loglog}n$划分：$T(n)=O(n\text{loglog}n),W(n)=O(n)$
 
     5. 采用**Random Sampling**：$T(n)=O(1),W(n)=n$
 
@@ -102,7 +102,7 @@ $$
 !!! abstract
     - partitioned by $\sqrt{n}$：$T(n)=O(\text{loglog}n), W(n)=O(n\text{loglogn})$
 
-    - partitioned by $\text{loglogn}$：$T(n)=O(\text{loglog}n),W(n)=O(n)$
+    - partitioned by $\text{loglogn}$：$T(n)=O(n\text{loglog}n),W(n)=O(n)$
 
 
 ### Random Sampling 随机采样

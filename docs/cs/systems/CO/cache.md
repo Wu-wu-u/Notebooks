@@ -281,15 +281,7 @@
     ![alt text](cache_11.png)
 
 
-
-
-
-
-
-
-
-
-
+## Review
 
 !!! tip "计算page table大小"
     - 假设Virtual address = 32bits;page size = 4KB; Entry size = 4 Bytes
@@ -299,12 +291,25 @@
 
         - 然后就能算总大小了：$2^20 \times 4 Bytes = 4MB$
 
-- 补题目 5.3 5.6，5.10，5.11，5.16（word address和byte address）
+!!! tip "优质的作业题"
+    5.3，5.6，5.10，5.11，5.16
 
-- 补miss的类型：
+!!! tip "各类参数的改变对miss的影响"
 
-    - conflict miss：set容量不够，导致替换的miss
+    miss类型分为三类：
 
-    - cold/compulsory miss：第一次访问一定会miss
+    - conflict miss：set容量不够导致替换而产生的miss
 
-    - capacity miss：cache满了的时候的miss
+    - compulsory miss(cold start)：第一次访问cache一定会造成的miss
+
+    - capacity miss：cache满了之后而产生的miss
+
+    - 还有一个常见的概念叫miss penalty：指的是miss之后，为了弥补而造成的cost
+
+    ---
+
+    - 当**block size**增大时：**compulsory miss**减少，**miss penalty**增大
+
+    - 当**set-associativity**增大时：**conflict miss**减少，**hit time**增大
+
+    - 当**cache size**增大时：**capacity miss**减少，**hit time**增大

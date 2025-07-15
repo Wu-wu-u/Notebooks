@@ -1443,9 +1443,15 @@ $$
 \psi_n(x) = \sqrt{\frac{2}{n}}sin\frac{n\pi x}{a}
 $$
 
-## 原子的玻尔理论
+## 原子的玻尔理论，量子力学氢原子原理
+
+![alt text](image-63.png)
+![alt text](image-64.png)
+![alt text](image-65.png)
+![alt text](image-66.png)
 
 <embed src="../H_atom.pdf" width="750px" height="2100px" />
+
 
 
 ## 总复习

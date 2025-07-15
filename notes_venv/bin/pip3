@@ -1,4 +1,4 @@
-#!/Users/mac/Code/Notebooks/notes_venv/bin/python3
+#!/Users/mac/Code/Notebooks/notes_venv/bin/python
 # -*- coding: utf-8 -*-
 import re
 import sys

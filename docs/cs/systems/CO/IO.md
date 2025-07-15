@@ -72,4 +72,6 @@ bus在连续传递block的时候，可以在transfer word时就read in，就可�
 
 ---
 
-- 补如何计算disk的access time
+## Review
+
+- 历年卷中主要考察了：disk的access time；polling,interrupt,DMA之间的区别；各类RAID之间的特点（允许坏几个，需要几个盘，large write/small write）

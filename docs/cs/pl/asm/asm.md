@@ -1270,7 +1270,7 @@ xchg ax, ds:[bx]
 
 ### 乘除法
 
-!!! warning "`mul`和`div`指令都是无符号数的乘除法操作"
+!!! warning "`mul`和`div`指令都是无符号数的乘除法操作，`imul`,`idiv`用于有符号数的乘除法"
 
 #### mul
 
@@ -1422,11 +1422,11 @@ mov es, ds:[bx+2] ;es=1234h
 
 - `LES`（Load Pointer Using ES）指令用于将内存中的数据加载到指定的通用寄存器和 `ES`（附加段寄存器）中。
 
-    - 例如，`les bx, [ptr]` 将内存地址 ptr 处的 32 位数据（16 位偏移地址和 16 位段地址）加载到 `BX` 和 `ES` 中。
+    - 例如，`les bx, [ptr]` 将内存地址 ptr （16 位偏移地址和 16 位段地址）加载到 `BX` 和 `ES` 中。
 
 - `LDS`（Load Pointer Using DS）指令用于将内存中的数据加载到指定的通用寄存器和`DS`中
 
-    - 例如，`lds bx, [ptr]` 将内存地址 ptr 处的 32 位数据（16 位偏移地址和 16 位段地址）加载到 `BX` 和 `DS` 中。
+    - 例如，`lds bx, [ptr]` 将内存地址 ptr （16 位偏移地址和 16 位段地址）加载到 `BX` 和 `DS` 中。
 
 ```asm
 les di, ds:[bx]; 高16位分配给es，低16位分配给di

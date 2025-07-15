@@ -189,6 +189,8 @@
 
     - 那么我们就必须让下一条指令**stall**，**见"如何让流水线stall"**
 
+    ![alt text](pr_29.png)
+
 !!! abstract "Forwarding公式"
     - 以01的情况为例
 
