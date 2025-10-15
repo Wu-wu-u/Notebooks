@@ -1,7 +1,4 @@
-
-<!doctype html>
-<html lang="zh" class="no-js">
-  <head>
+<!DOCTYPE html><html lang="zh" class="no-js"><head>
     
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
@@ -16,11 +13,11 @@
         <link rel="prev" href="../../theories/Discrete_Math/chapter11/">
       
       
-        <link rel="next" href="../../tools/git/git/">
+        <link rel="next" href="../../others/DB/intro/">
       
       
       <link rel="icon" href="../../../assets/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.49">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.22">
     
     
       
@@ -28,7 +25,7 @@
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.6f8fc17f.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.84d31ad4.min.css">
       
         
         <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
@@ -39,7 +36,7 @@
   
   
   
-  <style>:root{--md-annotation-icon:url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M22 12a10 10 0 0 1-10 10A10 10 0 0 1 2 12 10 10 0 0 1 12 2a10 10 0 0 1 10 10M6 13h8l-3.5 3.5 1.42 1.42L17.84 12l-5.92-5.92L10.5 7.5 14 11H6z"/></svg>');}</style>
+  <style>:root{--md-annotation-icon:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2024%2024%22%3E%3Cpath%20d%3D%22M22%2012a10%2010%200%200%201-10%2010A10%2010%200%200%201%202%2012%2010%2010%200%200%201%2012%202a10%2010%200%200%201%2010%2010M6%2013h8l-3.5%203.5%201.42%201.42L17.84%2012l-5.92-5.92L10.5%207.5%2014%2011H6z%22/%3E%3C/svg%3E');}</style>
 
 
     
@@ -63,16 +60,17 @@
     
     
     
-   <link href="../../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
-    html.glightbox-open { overflow: initial; height: 100%; }
-    .gslide-title { margin-top: 0px; user-select: text; }
-    .gslide-desc { color: #666; user-select: text; }
-    .gslide-image img { background: white; }
-    .gscrollbar-fixer { padding-right: 15px; }
-    .gdesc-inner { font-size: 0.75rem; }
-    body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
-    body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
-    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="../../../assets/javascripts/glightbox.min.js"></script></head>
+  <link href="../../../assets/stylesheets/glightbox.min.css" rel="stylesheet"><script src="../../../assets/javascripts/glightbox.min.js"></script><style id="glightbox-style">
+            html.glightbox-open { overflow: initial; height: 100%; }
+            .gslide-title { margin-top: 0px; user-select: text; }
+            .gslide-desc { color: #666; user-select: text; }
+            .gslide-image img { background: white; }
+            .gscrollbar-fixer { padding-right: 15px; }
+            .gdesc-inner { font-size: 0.75rem; }
+            body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color); }
+            body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color); }
+            body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color); }
+        </style></head>
   
   
     
@@ -105,15 +103,15 @@
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="页眉">
-    <a href="../../.." title="Wu-wu-u&#39;s Notebooks" class="md-header__button md-logo" aria-label="Wu-wu-u's Notebooks" data-md-component="logo">
+    <a href="../../.." title="Wu-wu-u's Notebooks" class="md-header__button md-logo" aria-label="Wu-wu-u's Notebooks" data-md-component="logo">
       
   
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 4v6l-2-2-2 2V4H9v16h10V4zM3 7V5h2V4a2 2 0 0 1 2-2h12c1.05 0 2 .95 2 2v16c0 1.05-.95 2-2 2H7c-1.05 0-2-.95-2-2v-1H3v-2h2v-4H3v-2h2V7zm2-2v2h2V5zm0 14h2v-2H5zm0-6h2v-2H5z"/></svg>
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 4v6l-2-2-2 2V4H9v16h10V4zM3 7V5h2V4a2 2 0 0 1 2-2h12c1.05 0 2 .95 2 2v16c0 1.05-.95 2-2 2H7c-1.05 0-2-.95-2-2v-1H3v-2h2v-4H3v-2h2V7zm2-2v2h2V5zm0 14h2v-2H5zm0-6h2v-2H5z"></path></svg>
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
       
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg>
     </label>
     <div class="md-header__title" data-md-component="header-title">
       <div class="md-header__ellipsis">
@@ -138,7 +136,7 @@
     
     
     
-    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="white" data-md-color-accent="indigo"  aria-hidden="true"  type="radio" name="__palette" id="__palette_0">
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="white" data-md-color-accent="indigo" aria-hidden="true" type="radio" name="__palette" id="__palette_0">
     
   
 </form>
@@ -149,26 +147,28 @@
     
     
     
-      <label class="md-header__button md-icon" for="__search">
-        
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
-      </label>
-      <div class="md-search" data-md-component="search" role="dialog">
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
   <label class="md-search__overlay" for="__search"></label>
   <div class="md-search__inner" role="search">
     <form class="md-search__form" name="search">
       <input type="text" class="md-search__input" name="query" aria-label="搜索" placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
       <label class="md-search__icon md-icon" for="__search">
         
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
         
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
       </label>
       <nav class="md-search__options" aria-label="查找">
         
         <button type="reset" class="md-search__icon md-icon" title="清空当前内容" aria-label="清空当前内容" tabindex="-1">
           
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path></svg>
         </button>
       </nav>
       
@@ -187,13 +187,14 @@
     </div>
   </div>
 </div>
+      
     
     
       <div class="md-header__source">
         <a href="https://github.com/Wu-wu-u/Notebooks" title="前往仓库" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.7.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8M97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"></path></svg>
   </div>
   <div class="md-source__repository">
     Wu-wu-u/Notebooks
@@ -219,11 +220,13 @@
   
   
   
+  
     
     
       <li class="md-tabs__item">
         <a href="../../.." class="md-tabs__link">
           
+  
   
     
   
@@ -238,6 +241,7 @@
         
   
   
+  
     
   
   
@@ -246,6 +250,7 @@
       <li class="md-tabs__item md-tabs__item--active">
         <a href="../../" class="md-tabs__link">
           
+  
   
     
   
@@ -261,11 +266,13 @@
   
   
   
+  
     
     
       <li class="md-tabs__item">
         <a href="../../../others/" class="md-tabs__link">
           
+  
   
     
   
@@ -288,7 +295,7 @@
           
             
               
-              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
                     
@@ -299,10 +306,10 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="导航栏" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../../.." title="Wu-wu-u&#39;s Notebooks" class="md-nav__button md-logo" aria-label="Wu-wu-u's Notebooks" data-md-component="logo">
+    <a href="../../.." title="Wu-wu-u's Notebooks" class="md-nav__button md-logo" aria-label="Wu-wu-u's Notebooks" data-md-component="logo">
       
   
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 4v6l-2-2-2 2V4H9v16h10V4zM3 7V5h2V4a2 2 0 0 1 2-2h12c1.05 0 2 .95 2 2v16c0 1.05-.95 2-2 2H7c-1.05 0-2-.95-2-2v-1H3v-2h2v-4H3v-2h2V7zm2-2v2h2V5zm0 14h2v-2H5zm0-6h2v-2H5z"/></svg>
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 4v6l-2-2-2 2V4H9v16h10V4zM3 7V5h2V4a2 2 0 0 1 2-2h12c1.05 0 2 .95 2 2v16c0 1.05-.95 2-2 2H7c-1.05 0-2-.95-2-2v-1H3v-2h2v-4H3v-2h2V7zm2-2v2h2V5zm0 14h2v-2H5zm0-6h2v-2H5z"></path></svg>
 
     </a>
     Wu-wu-u's Notebooks
@@ -312,7 +319,7 @@
       <a href="https://github.com/Wu-wu-u/Notebooks" title="前往仓库" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.7.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8M97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"></path></svg>
   </div>
   <div class="md-source__repository">
     Wu-wu-u/Notebooks
@@ -337,6 +344,7 @@
       
     
     
+    
       
       
     
@@ -345,16 +353,17 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1">
         
-          
           
           <div class="md-nav__link md-nav__container">
             <a href="../../.." class="md-nav__link ">
               
   
+  
   <span class="md-ellipsis">
     Home
+    
   </span>
   
 
@@ -405,6 +414,9 @@
       
         
       
+        
+      
+    
     
     
       
@@ -421,13 +433,14 @@
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
         
           
-          
           <div class="md-nav__link md-nav__container">
             <a href="../../" class="md-nav__link ">
               
   
+  
   <span class="md-ellipsis">
     Computer Science
+    
   </span>
   
 
@@ -466,6 +479,7 @@
       
     
     
+    
       
       
     
@@ -474,14 +488,16 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2">
         
           
           <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
             
   
+  
   <span class="md-ellipsis">
     编程语言
+    
   </span>
   
 
@@ -510,6 +526,7 @@
       
     
     
+    
       
       
     
@@ -518,14 +535,16 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2_1" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2_1">
         
           
           <label class="md-nav__link" for="__nav_2_2_1" id="__nav_2_2_1_label" tabindex="0">
             
   
+  
   <span class="md-ellipsis">
     C/C++
+    
   </span>
   
 
@@ -549,8 +568,10 @@
       <a href="../../pl/c_cpp/C/c/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     C语言
+    
   </span>
   
 
@@ -570,8 +591,10 @@
       <a href="../../pl/c_cpp/CPP/cpp/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     C++
+    
   </span>
   
 
@@ -604,6 +627,7 @@
       
     
     
+    
       
       
     
@@ -612,14 +636,16 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2_2">
         
           
           <label class="md-nav__link" for="__nav_2_2_2" id="__nav_2_2_2_label" tabindex="0">
             
   
+  
   <span class="md-ellipsis">
     python
+    
   </span>
   
 
@@ -643,8 +669,10 @@
       <a href="../../pl/python/Syntax/syntax/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     基础语法
+    
   </span>
   
 
@@ -673,6 +701,7 @@
       
     
     
+    
       
       
     
@@ -681,16 +710,17 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2_2_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2_2_2">
         
-          
           
           <div class="md-nav__link md-nav__container">
             <a href="../../pl/python/CS61A/" class="md-nav__link ">
               
   
+  
   <span class="md-ellipsis">
     CS61A
+    
   </span>
   
 
@@ -722,8 +752,10 @@
       <a href="../../pl/python/CS61A/cs61a/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     函数与列表
+    
   </span>
   
 
@@ -743,8 +775,10 @@
       <a href="../../pl/python/CS61A/object/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     面向对象编程
+    
   </span>
   
 
@@ -780,8 +814,10 @@
       <a href="../../pl/asm/asm/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     x86 汇编语言
+    
   </span>
   
 
@@ -814,6 +850,11 @@
       
         
       
+        
+      
+        
+      
+    
     
     
       
@@ -824,14 +865,16 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3">
         
           
           <label class="md-nav__link" for="__nav_2_3" id="__nav_2_3_label" tabindex="0">
             
   
+  
   <span class="md-ellipsis">
     计算机系统
+    
   </span>
   
 
@@ -855,8 +898,10 @@
       <a href="../../systems/Verilog/verilog/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Verilog
+    
   </span>
   
 
@@ -895,6 +940,7 @@
       
     
     
+    
       
       
     
@@ -903,16 +949,17 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3_2">
         
-          
           
           <div class="md-nav__link md-nav__container">
             <a href="../../systems/LCDF/" class="md-nav__link ">
               
   
+  
   <span class="md-ellipsis">
     数字逻辑设计
+    
   </span>
   
 
@@ -944,8 +991,10 @@
       <a href="../../systems/LCDF/Chapter1/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Chapter1  Digital Systems and Information
+    
   </span>
   
 
@@ -965,8 +1014,10 @@
       <a href="../../systems/LCDF/Chapter2/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Chapter2  Combinational Logic Circuits
+    
   </span>
   
 
@@ -986,8 +1037,10 @@
       <a href="../../systems/LCDF/Chapter3/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Chapter3  Combinational Logic Design
+    
   </span>
   
 
@@ -1007,8 +1060,10 @@
       <a href="../../systems/LCDF/Chapter4/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Chapter4  Sequential Circuits
+    
   </span>
   
 
@@ -1028,8 +1083,10 @@
       <a href="../../systems/LCDF/Chapter5/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Chapter5  Digital Hardware Implementation
+    
   </span>
   
 
@@ -1049,8 +1106,10 @@
       <a href="../../systems/LCDF/Chapter6/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
-    Chapter6  Registers & Register Transfers
+    Chapter6  Registers &amp; Register Transfers
+    
   </span>
   
 
@@ -1070,8 +1129,10 @@
       <a href="../../systems/LCDF/Chapter7/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Chapter7  Memory Basics
+    
   </span>
   
 
@@ -1116,6 +1177,7 @@
       
     
     
+    
       
       
     
@@ -1124,16 +1186,17 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3_3" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3_3">
         
-          
           
           <div class="md-nav__link md-nav__container">
             <a href="../../systems/CO/" class="md-nav__link ">
               
   
+  
   <span class="md-ellipsis">
     计算机组成
+    
   </span>
   
 
@@ -1165,8 +1228,10 @@
       <a href="../../systems/CO/preface/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     1.Preface
+    
   </span>
   
 
@@ -1186,8 +1251,10 @@
       <a href="../../systems/CO/instruction/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     2.Instructions
+    
   </span>
   
 
@@ -1207,8 +1274,10 @@
       <a href="../../systems/CO/arithmetic/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     3.Arithmetic
+    
   </span>
   
 
@@ -1228,8 +1297,10 @@
       <a href="../../systems/CO/processor/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     4.Processor
+    
   </span>
   
 
@@ -1249,8 +1320,10 @@
       <a href="../../systems/CO/cache/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     5.Cache
+    
   </span>
   
 
@@ -1270,8 +1343,300 @@
       <a href="../../systems/CO/IO/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     6.I/O
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3_4">
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../systems/CA/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    计算机体系结构
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_3_4" id="__nav_2_3_4_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_3_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_3_4">
+            <span class="md-nav__icon md-icon"></span>
+            计算机体系结构
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../systems/CA/ch1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Ch1 导论
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../systems/CA/ch2.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Ch2 Cache
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../systems/CA/ch3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Ch3 指令级并行
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../systems/CA/ch4/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Ch4 DLP
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../systems/CA/ch5/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Ch5 TLP
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3_5">
+        
+          
+          <label class="md-nav__link" for="__nav_2_3_5" id="__nav_2_3_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    操作系统原理(NJU)
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_3_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_3_5">
+            <span class="md-nav__icon md-icon"></span>
+            操作系统原理(NJU)
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../systems/OS/intro/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    绪论
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../systems/OS/virtualization/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    虚拟化
+    
   </span>
   
 
@@ -1312,6 +1677,7 @@
       
     
     
+    
       
       
     
@@ -1320,14 +1686,16 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_4" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_4">
         
           
           <label class="md-nav__link" for="__nav_2_4" id="__nav_2_4_label" tabindex="0">
             
   
+  
   <span class="md-ellipsis">
     算法相关
+    
   </span>
   
 
@@ -1374,6 +1742,7 @@
       
     
     
+    
       
       
     
@@ -1382,16 +1751,17 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_4_1" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_4_1">
         
-          
           
           <div class="md-nav__link md-nav__container">
             <a href="../../algorithm/FDS/" class="md-nav__link ">
               
   
+  
   <span class="md-ellipsis">
     数据结构基础
+    
   </span>
   
 
@@ -1423,8 +1793,10 @@
       <a href="../../algorithm/FDS/chapter2/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Chapter 2 Algorithm Analysis
+    
   </span>
   
 
@@ -1444,8 +1816,10 @@
       <a href="../../algorithm/FDS/chapter3/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Chapter 3 Lists,Stacks,and Queues
+    
   </span>
   
 
@@ -1465,8 +1839,10 @@
       <a href="../../algorithm/FDS/chapter4/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Chapter 4 Trees
+    
   </span>
   
 
@@ -1486,8 +1862,10 @@
       <a href="../../algorithm/FDS/chapter5/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Chapter 5 Priority Queues
+    
   </span>
   
 
@@ -1507,8 +1885,10 @@
       <a href="../../algorithm/FDS/chapter6/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Chapter 6 Sorting
+    
   </span>
   
 
@@ -1528,8 +1908,10 @@
       <a href="../../algorithm/FDS/chapter7/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Chapter 7 Hashing
+    
   </span>
   
 
@@ -1549,8 +1931,10 @@
       <a href="../../algorithm/FDS/chapter8/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Chapter 8 The Disjoint Set
+    
   </span>
   
 
@@ -1570,8 +1954,10 @@
       <a href="../../algorithm/FDS/chapter9/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Chapter 9 Graph Algorithms
+    
   </span>
   
 
@@ -1591,8 +1977,10 @@
       <a href="../../algorithm/FDS/problems/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     题目集
+    
   </span>
   
 
@@ -1657,6 +2045,7 @@
       
     
     
+    
       
       
     
@@ -1665,16 +2054,17 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_4_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_4_2">
         
-          
           
           <div class="md-nav__link md-nav__container">
             <a href="../../algorithm/ADS/" class="md-nav__link ">
               
   
+  
   <span class="md-ellipsis">
     高级数据结构
+    
   </span>
   
 
@@ -1706,8 +2096,10 @@
       <a href="../../algorithm/ADS/amortized/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Amortized analysis
+    
   </span>
   
 
@@ -1727,8 +2119,10 @@
       <a href="../../algorithm/ADS/lec1/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
-    lec1|Avl Trees & Splay Trees
+    lec1|Avl Trees &amp; Splay Trees
+    
   </span>
   
 
@@ -1748,8 +2142,10 @@
       <a href="../../algorithm/ADS/lec2/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
-    lec2|Red Black Trees & B+ Trees
+    lec2|Red Black Trees &amp; B+ Trees
+    
   </span>
   
 
@@ -1769,8 +2165,10 @@
       <a href="../../algorithm/ADS/lec3/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     lec3|Inverted File Index
+    
   </span>
   
 
@@ -1790,8 +2188,10 @@
       <a href="../../algorithm/ADS/lec4/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
-    lec4|Leftise Heaps & Skew Heaps
+    lec4|Leftise Heaps &amp; Skew Heaps
+    
   </span>
   
 
@@ -1811,8 +2211,10 @@
       <a href="../../algorithm/ADS/lec5/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     lec5|Binomial Queue
+    
   </span>
   
 
@@ -1832,8 +2234,10 @@
       <a href="../../algorithm/ADS/lec6/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
-    lec6|Search & Backtracing
+    lec6|Search &amp; Backtracing
+    
   </span>
   
 
@@ -1853,8 +2257,10 @@
       <a href="../../algorithm/ADS/lec7/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
-    lec7|Divide & Conquer
+    lec7|Divide &amp; Conquer
+    
   </span>
   
 
@@ -1874,8 +2280,10 @@
       <a href="../../algorithm/ADS/lec8/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     lec8|Dynamic Programming
+    
   </span>
   
 
@@ -1895,8 +2303,10 @@
       <a href="../../algorithm/ADS/lec9/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     lec9|Greedy Algorithm
+    
   </span>
   
 
@@ -1916,8 +2326,10 @@
       <a href="../../algorithm/ADS/lec10/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     lec10|NP completeness
+    
   </span>
   
 
@@ -1937,8 +2349,10 @@
       <a href="../../algorithm/ADS/lec11/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     lec11|Approximation
+    
   </span>
   
 
@@ -1958,8 +2372,10 @@
       <a href="../../algorithm/ADS/lec12/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     lec12|Local Search
+    
   </span>
   
 
@@ -1979,8 +2395,10 @@
       <a href="../../algorithm/ADS/lec13/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     lec13|Randomized Algorithm
+    
   </span>
   
 
@@ -2000,8 +2418,10 @@
       <a href="../../algorithm/ADS/lec14/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     lec14|Parallel
+    
   </span>
   
 
@@ -2021,8 +2441,10 @@
       <a href="../../algorithm/ADS/lec15/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     lec15|External Sort
+    
   </span>
   
 
@@ -2061,6 +2483,7 @@
       
     
     
+    
       
       
     
@@ -2069,14 +2492,16 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_5" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_5">
         
           
           <label class="md-nav__link" for="__nav_2_5" id="__nav_2_5_label" tabindex="0">
             
   
+  
   <span class="md-ellipsis">
     理论相关
+    
   </span>
   
 
@@ -2121,6 +2546,7 @@
       
     
     
+    
       
       
     
@@ -2129,14 +2555,16 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_5_1" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_5_1">
         
           
           <label class="md-nav__link" for="__nav_2_5_1" id="__nav_2_5_1_label" tabindex="0">
             
   
+  
   <span class="md-ellipsis">
     离散数学
+    
   </span>
   
 
@@ -2160,8 +2588,10 @@
       <a href="../../theories/Discrete_Math/chapter1/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Chapter 1 Logic and Proofs
+    
   </span>
   
 
@@ -2181,8 +2611,10 @@
       <a href="../../theories/Discrete_Math/chapter2/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Chapter 2 Basic Structures
+    
   </span>
   
 
@@ -2202,8 +2634,10 @@
       <a href="../../theories/Discrete_Math/chapter3/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Chapter 3 Algorithm
+    
   </span>
   
 
@@ -2223,8 +2657,10 @@
       <a href="../../theories/Discrete_Math/chapter4/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Chapter 4 Number Theory and Cryptography
+    
   </span>
   
 
@@ -2244,8 +2680,10 @@
       <a href="../../theories/Discrete_Math/chapter5/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Chapter 5 Induction and Recursion
+    
   </span>
   
 
@@ -2265,8 +2703,10 @@
       <a href="../../theories/Discrete_Math/chapter6/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Chapter 6 Counting
+    
   </span>
   
 
@@ -2286,8 +2726,10 @@
       <a href="../../theories/Discrete_Math/chapter8/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Chapter 8 Advanced Counting Techniques
+    
   </span>
   
 
@@ -2307,8 +2749,10 @@
       <a href="../../theories/Discrete_Math/chapter9/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Chapter 9 Relations
+    
   </span>
   
 
@@ -2328,8 +2772,10 @@
       <a href="../../theories/Discrete_Math/chapter10/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Chapter 10 Graphs
+    
   </span>
   
 
@@ -2349,8 +2795,10 @@
       <a href="../../theories/Discrete_Math/chapter11/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Chapter 11 Trees
+    
   </span>
   
 
@@ -2391,6 +2839,7 @@
       
     
     
+    
       
       
     
@@ -2405,8 +2854,10 @@
           <label class="md-nav__link" for="__nav_2_6" id="__nav_2_6_label" tabindex="0">
             
   
+  
   <span class="md-ellipsis">
     人工智能
+    
   </span>
   
 
@@ -2439,8 +2890,10 @@
         <label class="md-nav__link md-nav__link--active" for="__toc">
           
   
+  
   <span class="md-ellipsis">
     基础库的使用
+    
   </span>
   
 
@@ -2450,8 +2903,10 @@
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
+  
   <span class="md-ellipsis">
     基础库的使用
+    
   </span>
   
 
@@ -2698,18 +3153,7 @@
       
         
       
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
+    
     
     
       
@@ -2720,14 +3164,16 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_7" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_7">
         
           
           <label class="md-nav__link" for="__nav_2_7" id="__nav_2_7_label" tabindex="0">
             
   
+  
   <span class="md-ellipsis">
-    工具相关
+    其他课程
+    
   </span>
   
 
@@ -2736,6 +3182,372 @@
         
         <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_7_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_2_7">
+            <span class="md-nav__icon md-icon"></span>
+            其他课程
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_7_1">
+        
+          
+          <label class="md-nav__link" for="__nav_2_7_1" id="__nav_2_7_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    数据库系统
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_7_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_7_1">
+            <span class="md-nav__icon md-icon"></span>
+            数据库系统
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../others/DB/intro/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Introduction
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../others/DB/relationalModel/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Relational Model
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../others/DB/sql_intro/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Introduction to SQL
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../others/DB/intermediate_sql/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    中级SQL
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../others/DB/advanced_sql/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    高级SQL
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../others/DB/ODBC/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    ODBC使用
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../others/DB/ER_model/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    实体-关系模型
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../others/DB/design/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    关系数据库设计
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../others/DB/concurrency/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    并发控制
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../others/DB/recovery/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    故障恢复
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_8">
+        
+          
+          <label class="md-nav__link" for="__nav_2_8" id="__nav_2_8_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    工具相关
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_8">
             <span class="md-nav__icon md-icon"></span>
             工具相关
           </label>
@@ -2751,8 +3563,10 @@
       <a href="../../tools/git/git/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Git
+    
   </span>
   
 
@@ -2772,8 +3586,10 @@
       <a href="../../tools/latex/latex/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Latex
+    
   </span>
   
 
@@ -2793,8 +3609,10 @@
       <a href="../../tools/vim/vim/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Vim
+    
   </span>
   
 
@@ -2814,8 +3632,10 @@
       <a href="../../tools/gdb/gdb/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     GDB
+    
   </span>
   
 
@@ -2835,8 +3655,10 @@
       <a href="../../tools/make/make/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Make
+    
   </span>
   
 
@@ -2856,8 +3678,10 @@
       <a href="../../tools/docker/docker/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Docker
+    
   </span>
   
 
@@ -2882,6 +3706,7 @@
       
     
     
+    
       
       
     
@@ -2890,22 +3715,24 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_7_7" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_8_7">
         
           
-          <label class="md-nav__link" for="__nav_2_7_7" id="__nav_2_7_7_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_2_8_7" id="__nav_2_8_7_label" tabindex="0">
             
+  
   
   <span class="md-ellipsis">
     Mkdocs
+    
   </span>
   
 
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_7_7_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_2_7_7">
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_8_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_8_7">
             <span class="md-nav__icon md-icon"></span>
             Mkdocs
           </label>
@@ -2921,8 +3748,10 @@
       <a href="../../tools/mkdocs/Build_Website/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Build Website
+    
   </span>
   
 
@@ -2942,8 +3771,10 @@
       <a href="../../tools/mkdocs/mkdocs/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     配置
+    
   </span>
   
 
@@ -2993,6 +3824,7 @@
       
     
     
+    
       
       
     
@@ -3001,16 +3833,17 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3">
         
-          
           
           <div class="md-nav__link md-nav__container">
             <a href="../../../others/" class="md-nav__link ">
               
   
+  
   <span class="md-ellipsis">
     Others
+    
   </span>
   
 
@@ -3049,6 +3882,7 @@
       
     
     
+    
       
       
     
@@ -3057,14 +3891,16 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2">
         
           
           <label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="0">
             
   
+  
   <span class="md-ellipsis">
     课程记录
+    
   </span>
   
 
@@ -3103,6 +3939,7 @@
       
     
     
+    
       
       
     
@@ -3111,16 +3948,17 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2_1" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2_1">
         
-          
           
           <div class="md-nav__link md-nav__container">
             <a href="../../../others/lessons/CTF/" class="md-nav__link ">
               
   
+  
   <span class="md-ellipsis">
     CTF101
+    
   </span>
   
 
@@ -3152,8 +3990,10 @@
       <a href="../../../others/lessons/CTF/web/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Web
+    
   </span>
   
 
@@ -3173,8 +4013,10 @@
       <a href="../../../others/lessons/CTF/crypto/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Crypto
+    
   </span>
   
 
@@ -3194,8 +4036,10 @@
       <a href="../../../others/lessons/CTF/reverse/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Reverse
+    
   </span>
   
 
@@ -3215,8 +4059,10 @@
       <a href="../../../others/lessons/CTF/pwn/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Pwn
+    
   </span>
   
 
@@ -3236,8 +4082,10 @@
       <a href="../../../others/lessons/CTF/misc/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Misc
+    
   </span>
   
 
@@ -3282,6 +4130,7 @@
       
     
     
+    
       
       
     
@@ -3290,16 +4139,17 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2_2">
         
-          
           
           <div class="md-nav__link md-nav__container">
             <a href="../../../others/lessons/WX/" class="md-nav__link ">
               
   
+  
   <span class="md-ellipsis">
     微信小程序开发
+    
   </span>
   
 
@@ -3331,8 +4181,10 @@
       <a href="../../../others/lessons/WX/basic/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     HTML基础
+    
   </span>
   
 
@@ -3352,8 +4204,10 @@
       <a href="../../../others/lessons/WX/css/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     CSS基础
+    
   </span>
   
 
@@ -3373,8 +4227,10 @@
       <a href="../../../others/lessons/WX/js/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     JavaScript基础
+    
   </span>
   
 
@@ -3394,8 +4250,10 @@
       <a href="../../../others/lessons/WX/reg/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     JS RegExp
+    
   </span>
   
 
@@ -3415,8 +4273,10 @@
       <a href="../../../others/lessons/WX/tips/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Tips
+    
   </span>
   
 
@@ -3436,8 +4296,10 @@
       <a href="../../../others/lessons/WX/dev/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     微信开发者工具
+    
   </span>
   
 
@@ -3472,6 +4334,7 @@
       
     
     
+    
       
       
     
@@ -3480,16 +4343,17 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2_3" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2_3">
         
-          
           
           <div class="md-nav__link md-nav__container">
             <a href="../../../others/lessons/WLAN/" class="md-nav__link ">
               
   
+  
   <span class="md-ellipsis">
     无线网络应用
+    
   </span>
   
 
@@ -3521,8 +4385,10 @@
       <a href="../../../others/lessons/WLAN/wlan/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     课程知识
+    
   </span>
   
 
@@ -3563,7 +4429,7 @@
             
             
               
-              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc">
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
                     
@@ -3793,15 +4659,16 @@
                 
                   
 
+
   
   
 
 
-<h1 id="_1">常用库<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
+<h1 id="_1">常用库<a class="headerlink" href="#_1" title="Permanent link">¶</a></h1>
 <div style="margin-top: -30px; font-size: 0.75em; opacity: 0.7;">
-<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2A10 10 0 0 0 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10h-2a8 8 0 0 1-8 8 8 8 0 0 1-8-8 8 8 0 0 1 8-8zm6.78 1a.7.7 0 0 0-.48.2l-1.22 1.21 2.5 2.5L20.8 5.7c.26-.26.26-.7 0-.95L19.25 3.2c-.13-.13-.3-.2-.47-.2m-2.41 2.12L9 12.5V15h2.5l7.37-7.38z"/></svg></span> 约 3101 个字 <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><!--! Font Awesome Free 6.7.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M392.8 1.2c-17-4.9-34.7 5-39.6 22l-128 448c-4.9 17 5 34.7 22 39.6s34.7-5 39.6-22l128-448c4.9-17-5-34.7-22-39.6m80.6 120.1c-12.5 12.5-12.5 32.8 0 45.3l89.3 89.4-89.4 89.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l112-112c12.5-12.5 12.5-32.8 0-45.3l-112-112c-12.5-12.5-32.8-12.5-45.3 0zm-306.7 0c-12.5-12.5-32.8-12.5-45.3 0l-112 112c-12.5 12.5-12.5 32.8 0 45.3l112 112c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L77.3 256l89.4-89.4c12.5-12.5 12.5-32.8 0-45.3"/></svg></span> 239 行代码 <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 17H7V3h14m0-2H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V3a2 2 0 0 0-2-2M3 5H1v16a2 2 0 0 0 2 2h16v-2H3m12.96-10.71-2.75 3.54-1.96-2.36L8.5 15h11z"/></svg></span> 1 张图片 <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 20c4.42 0 8-3.58 8-8s-3.58-8-8-8-8 3.58-8 8 3.58 8 8 8m0-18c5.5 0 10 4.5 10 10s-4.5 10-10 10C6.47 22 2 17.5 2 12S6.5 2 12 2m.5 11H11V7h1.5v4.26l3.7-2.13.75 1.3z"/></svg></span> 预计阅读时间 13 分钟</p>
+<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2A10 10 0 0 0 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10h-2a8 8 0 0 1-8 8 8 8 0 0 1-8-8 8 8 0 0 1 8-8zm6.78 1a.7.7 0 0 0-.48.2l-1.22 1.21 2.5 2.5L20.8 5.7c.26-.26.26-.7 0-.95L19.25 3.2c-.13-.13-.3-.2-.47-.2m-2.41 2.12L9 12.5V15h2.5l7.37-7.38z"></path></svg></span> 约 3101 个字 <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M360.8 1.2c-17-4.9-34.7 5-39.6 22l-128 448c-4.9 17 5 34.7 22 39.6s34.7-5 39.6-22l128-448c4.9-17-5-34.7-22-39.6m64.6 136.1c-12.5 12.5-12.5 32.8 0 45.3l73.4 73.4-73.4 73.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l96-96c12.5-12.5 12.5-32.8 0-45.3l-96-96c-12.5-12.5-32.8-12.5-45.3 0zm-274.7 0c-12.5-12.5-32.8-12.5-45.3 0l-96 96c-12.5 12.5-12.5 32.8 0 45.3l96 96c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L77.3 256l73.3-73.4c12.5-12.5 12.5-32.8 0-45.3z"></path></svg></span> 239 行代码 <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 17H7V3h14m0-2H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V3a2 2 0 0 0-2-2M3 5H1v16a2 2 0 0 0 2 2h16v-2H3m12.96-10.71-2.75 3.54-1.96-2.36L8.5 15h11z"></path></svg></span> 1 张图片 <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 20c4.42 0 8-3.58 8-8s-3.58-8-8-8-8 3.58-8 8 3.58 8 8 8m0-18c5.5 0 10 4.5 10 10s-4.5 10-10 10C6.47 22 2 17.5 2 12S6.5 2 12 2m.5 11H11V7h1.5v4.26l3.7-2.13.75 1.3z"></path></svg></span> 预计阅读时间 13 分钟</p>
 </div>
-<h2 id="pandas">Pandas<a class="headerlink" href="#pandas" title="Permanent link">&para;</a></h2>
+<h2 id="pandas">Pandas<a class="headerlink" href="#pandas" title="Permanent link">¶</a></h2>
 <ul>
 <li>
 <p>Pandas 应用  </p>
@@ -3826,7 +4693,7 @@
 </ul>
 </li>
 </ul>
-<h3 id="series">Series<a class="headerlink" href="#series" title="Permanent link">&para;</a></h3>
+<h3 id="series">Series<a class="headerlink" href="#series" title="Permanent link">¶</a></h3>
 <ul>
 <li>
 <p>Series 特点：  </p>
@@ -3852,7 +4719,7 @@
 </ul>
 </li>
 </ul>
-<h4 id="series_1">创建 Series<a class="headerlink" href="#series_1" title="Permanent link">&para;</a></h4>
+<h4 id="series_1">创建 Series<a class="headerlink" href="#series_1" title="Permanent link">¶</a></h4>
 <p><code>pandas.Series(data=None, index=None, dtype=None, name=None, copy=False, fastpath=False)</code></p>
 <ul>
 <li>data：Series 的<strong>数据部分</strong>，可以是列表、数组、字典、标量值等。如果不提供此参数，则创建一个空的 Series。  </li>
@@ -3864,28 +4731,28 @@
 </ul>
 <div class="admonition note">
 <p class="admonition-title">简单的实例</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="1:3"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><input id="__tabbed_1_3" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">单独data</label><label for="__tabbed_1_2">添加索引</label><label for="__tabbed_1_3">名称参数</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:3"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio"><input id="__tabbed_1_2" name="__tabbed_1" type="radio"><input id="__tabbed_1_3" name="__tabbed_1" type="radio"><div class="tabbed-labels"><label for="__tabbed_1_1">单独data</label><label for="__tabbed_1_2">添加索引</label><label for="__tabbed_1_3">名称参数</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
-<div class="language-python highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
 </span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="n">a</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span>
 </span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="n">myvar</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
 </span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="nb">print</span><span class="p">(</span><span class="n">myvar</span><span class="p">)</span>
 </span></code></pre></div>
-<p>0    1<br />
-1    2<br />
-2    3<br />
+<p>0    1<br>
+1    2<br>
+2    3<br>
 dtype: int64  </p>
 </div>
 <div class="tabbed-block">
-<div class="language-python highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
-</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="n">a</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;Google&quot;</span><span class="p">,</span> <span class="s2">&quot;Runoob&quot;</span><span class="p">,</span> <span class="s2">&quot;Wiki&quot;</span><span class="p">]</span>
-</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="n">myvar</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">index</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;x&quot;</span><span class="p">,</span> <span class="s2">&quot;y&quot;</span><span class="p">,</span> <span class="s2">&quot;z&quot;</span><span class="p">])</span>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="n">a</span> <span class="o">=</span> <span class="p">[</span><span class="s2">"Google"</span><span class="p">,</span> <span class="s2">"Runoob"</span><span class="p">,</span> <span class="s2">"Wiki"</span><span class="p">]</span>
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="n">myvar</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">index</span> <span class="o">=</span> <span class="p">[</span><span class="s2">"x"</span><span class="p">,</span> <span class="s2">"y"</span><span class="p">,</span> <span class="s2">"z"</span><span class="p">])</span>
 </span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="nb">print</span><span class="p">(</span><span class="n">myvar</span><span class="p">)</span>
 </span></code></pre></div>
-<p>x    Google<br />
-y    Runoob<br />
-z      Wiki<br />
+<p>x    Google<br>
+y    Runoob<br>
+z      Wiki<br>
 dtype: object  </p>
 <ul>
 <li>此时查找时也就变成了 <code>myvar["x"]</code>  </li>
@@ -3893,13 +4760,13 @@ dtype: object  </p>
 </ul>
 </div>
 <div class="tabbed-block">
-<div class="language-python highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
-</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="n">sites</span> <span class="o">=</span> <span class="p">{</span><span class="mi">1</span><span class="p">:</span> <span class="s2">&quot;Google&quot;</span><span class="p">,</span> <span class="mi">2</span><span class="p">:</span> <span class="s2">&quot;Runoob&quot;</span><span class="p">,</span> <span class="mi">3</span><span class="p">:</span> <span class="s2">&quot;Wiki&quot;</span><span class="p">}</span>
-</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="n">myvar</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">(</span><span class="n">sites</span><span class="p">,</span> <span class="n">index</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">],</span> <span class="n">name</span><span class="o">=</span><span class="s2">&quot;RUNOOB-Series-TEST&quot;</span> <span class="p">)</span>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="n">sites</span> <span class="o">=</span> <span class="p">{</span><span class="mi">1</span><span class="p">:</span> <span class="s2">"Google"</span><span class="p">,</span> <span class="mi">2</span><span class="p">:</span> <span class="s2">"Runoob"</span><span class="p">,</span> <span class="mi">3</span><span class="p">:</span> <span class="s2">"Wiki"</span><span class="p">}</span>
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="n">myvar</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">(</span><span class="n">sites</span><span class="p">,</span> <span class="n">index</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">],</span> <span class="n">name</span><span class="o">=</span><span class="s2">"RUNOOB-Series-TEST"</span> <span class="p">)</span>
 </span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="nb">print</span><span class="p">(</span><span class="n">myvar</span><span class="p">)</span>
 </span></code></pre></div>
-<p>1    Google<br />
-2    Runoob<br />
+<p>1    Google<br>
+2    Runoob<br>
 Name: RUNOOB-Series-TEST, dtype: object</p>
 </div>
 </div>
@@ -3914,41 +4781,41 @@ Name: RUNOOB-Series-TEST, dtype: object</p>
 </span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="n">s</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">]))</span>
 </span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a>
 </span><span id="__span-3-7"><a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a><span class="c1"># 使用字典创建 Series</span>
-</span><span id="__span-3-8"><a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a><span class="n">s</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">({</span><span class="s1">&#39;a&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;b&#39;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span> <span class="s1">&#39;c&#39;</span><span class="p">:</span> <span class="mi">3</span><span class="p">,</span> <span class="s1">&#39;d&#39;</span><span class="p">:</span> <span class="mi">4</span><span class="p">})</span>
+</span><span id="__span-3-8"><a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a><span class="n">s</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">({</span><span class="s1">'a'</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="s1">'b'</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span> <span class="s1">'c'</span><span class="p">:</span> <span class="mi">3</span><span class="p">,</span> <span class="s1">'d'</span><span class="p">:</span> <span class="mi">4</span><span class="p">})</span>
 </span></code></pre></div>
 <div class="language-python highlight"><span class="filename">基本操作</span><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="c1"># 指定索引创建 Series</span>
-</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="n">s</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">],</span> <span class="n">index</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;a&#39;</span><span class="p">,</span> <span class="s1">&#39;b&#39;</span><span class="p">,</span> <span class="s1">&#39;c&#39;</span><span class="p">,</span> <span class="s1">&#39;d&#39;</span><span class="p">])</span>
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="n">s</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">],</span> <span class="n">index</span><span class="o">=</span><span class="p">[</span><span class="s1">'a'</span><span class="p">,</span> <span class="s1">'b'</span><span class="p">,</span> <span class="s1">'c'</span><span class="p">,</span> <span class="s1">'d'</span><span class="p">])</span>
 </span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>
 </span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="c1"># 获取值</span>
 </span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a><span class="n">value</span> <span class="o">=</span> <span class="n">s</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span>  <span class="c1"># 获取索引为2的值</span>
-</span><span id="__span-4-6"><a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a><span class="nb">print</span><span class="p">(</span><span class="n">s</span><span class="p">[</span><span class="s1">&#39;a&#39;</span><span class="p">])</span>  <span class="c1"># 返回索引标签 &#39;a&#39; 对应的元素</span>
+</span><span id="__span-4-6"><a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a><span class="nb">print</span><span class="p">(</span><span class="n">s</span><span class="p">[</span><span class="s1">'a'</span><span class="p">])</span>  <span class="c1"># 返回索引标签 'a' 对应的元素</span>
 </span><span id="__span-4-7"><a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a>
 </span><span id="__span-4-8"><a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a><span class="c1"># 获取多个值</span>
 </span><span id="__span-4-9"><a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a><span class="n">subset</span> <span class="o">=</span> <span class="n">s</span><span class="p">[</span><span class="mi">1</span><span class="p">:</span><span class="mi">4</span><span class="p">]</span>  <span class="c1"># 获取索引为1到3的值</span>
 </span><span id="__span-4-10"><a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a>
 </span><span id="__span-4-11"><a id="__codelineno-4-11" name="__codelineno-4-11" href="#__codelineno-4-11"></a><span class="c1"># 使用自定义索引</span>
-</span><span id="__span-4-12"><a id="__codelineno-4-12" name="__codelineno-4-12" href="#__codelineno-4-12"></a><span class="n">value</span> <span class="o">=</span> <span class="n">s</span><span class="p">[</span><span class="s1">&#39;b&#39;</span><span class="p">]</span>  <span class="c1"># 获取索引为&#39;b&#39;的值</span>
+</span><span id="__span-4-12"><a id="__codelineno-4-12" name="__codelineno-4-12" href="#__codelineno-4-12"></a><span class="n">value</span> <span class="o">=</span> <span class="n">s</span><span class="p">[</span><span class="s1">'b'</span><span class="p">]</span>  <span class="c1"># 获取索引为'b'的值</span>
 </span><span id="__span-4-13"><a id="__codelineno-4-13" name="__codelineno-4-13" href="#__codelineno-4-13"></a>
 </span><span id="__span-4-14"><a id="__codelineno-4-14" name="__codelineno-4-14" href="#__codelineno-4-14"></a><span class="c1"># 索引和值的对应关系</span>
 </span><span id="__span-4-15"><a id="__codelineno-4-15" name="__codelineno-4-15" href="#__codelineno-4-15"></a><span class="k">for</span> <span class="n">index</span><span class="p">,</span> <span class="n">value</span> <span class="ow">in</span> <span class="n">s</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
-</span><span id="__span-4-16"><a id="__codelineno-4-16" name="__codelineno-4-16" href="#__codelineno-4-16"></a>    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Index: </span><span class="si">{</span><span class="n">index</span><span class="si">}</span><span class="s2">, Value: </span><span class="si">{</span><span class="n">value</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</span><span id="__span-4-16"><a id="__codelineno-4-16" name="__codelineno-4-16" href="#__codelineno-4-16"></a>    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"Index: </span><span class="si">{</span><span class="n">index</span><span class="si">}</span><span class="s2">, Value: </span><span class="si">{</span><span class="n">value</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
 </span><span id="__span-4-17"><a id="__codelineno-4-17" name="__codelineno-4-17" href="#__codelineno-4-17"></a>
 </span><span id="__span-4-18"><a id="__codelineno-4-18" name="__codelineno-4-18" href="#__codelineno-4-18"></a>
 </span><span id="__span-4-19"><a id="__codelineno-4-19" name="__codelineno-4-19" href="#__codelineno-4-19"></a><span class="c1"># 使用切片语法来访问 Series 的一部分</span>
-</span><span id="__span-4-20"><a id="__codelineno-4-20" name="__codelineno-4-20" href="#__codelineno-4-20"></a><span class="nb">print</span><span class="p">(</span><span class="n">s</span><span class="p">[</span><span class="s1">&#39;a&#39;</span><span class="p">:</span><span class="s1">&#39;c&#39;</span><span class="p">])</span>  <span class="c1"># 返回索引标签 &#39;a&#39; 到 &#39;c&#39; 之间的元素</span>
+</span><span id="__span-4-20"><a id="__codelineno-4-20" name="__codelineno-4-20" href="#__codelineno-4-20"></a><span class="nb">print</span><span class="p">(</span><span class="n">s</span><span class="p">[</span><span class="s1">'a'</span><span class="p">:</span><span class="s1">'c'</span><span class="p">])</span>  <span class="c1"># 返回索引标签 'a' 到 'c' 之间的元素</span>
 </span><span id="__span-4-21"><a id="__codelineno-4-21" name="__codelineno-4-21" href="#__codelineno-4-21"></a><span class="nb">print</span><span class="p">(</span><span class="n">s</span><span class="p">[:</span><span class="mi">3</span><span class="p">])</span>  <span class="c1"># 返回前三个元素</span>
 </span><span id="__span-4-22"><a id="__codelineno-4-22" name="__codelineno-4-22" href="#__codelineno-4-22"></a>
 </span><span id="__span-4-23"><a id="__codelineno-4-23" name="__codelineno-4-23" href="#__codelineno-4-23"></a><span class="c1"># 为特定的索引标签赋值</span>
-</span><span id="__span-4-24"><a id="__codelineno-4-24" name="__codelineno-4-24" href="#__codelineno-4-24"></a><span class="n">s</span><span class="p">[</span><span class="s1">&#39;a&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">10</span>  <span class="c1"># 将索引标签 &#39;a&#39; 对应的元素修改为 10</span>
+</span><span id="__span-4-24"><a id="__codelineno-4-24" name="__codelineno-4-24" href="#__codelineno-4-24"></a><span class="n">s</span><span class="p">[</span><span class="s1">'a'</span><span class="p">]</span> <span class="o">=</span> <span class="mi">10</span>  <span class="c1"># 将索引标签 'a' 对应的元素修改为 10</span>
 </span><span id="__span-4-25"><a id="__codelineno-4-25" name="__codelineno-4-25" href="#__codelineno-4-25"></a>
 </span><span id="__span-4-26"><a id="__codelineno-4-26" name="__codelineno-4-26" href="#__codelineno-4-26"></a><span class="c1"># 通过赋值给新的索引标签来添加元素</span>
-</span><span id="__span-4-27"><a id="__codelineno-4-27" name="__codelineno-4-27" href="#__codelineno-4-27"></a><span class="n">s</span><span class="p">[</span><span class="s1">&#39;e&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">5</span>  <span class="c1"># 在 Series 中添加一个新的元素，索引标签为 &#39;e&#39;</span>
+</span><span id="__span-4-27"><a id="__codelineno-4-27" name="__codelineno-4-27" href="#__codelineno-4-27"></a><span class="n">s</span><span class="p">[</span><span class="s1">'e'</span><span class="p">]</span> <span class="o">=</span> <span class="mi">5</span>  <span class="c1"># 在 Series 中添加一个新的元素，索引标签为 'e'</span>
 </span><span id="__span-4-28"><a id="__codelineno-4-28" name="__codelineno-4-28" href="#__codelineno-4-28"></a>
 </span><span id="__span-4-29"><a id="__codelineno-4-29" name="__codelineno-4-29" href="#__codelineno-4-29"></a><span class="c1"># 使用 del 删除指定索引标签的元素。</span>
-</span><span id="__span-4-30"><a id="__codelineno-4-30" name="__codelineno-4-30" href="#__codelineno-4-30"></a><span class="k">del</span> <span class="n">s</span><span class="p">[</span><span class="s1">&#39;a&#39;</span><span class="p">]</span>  <span class="c1"># 删除索引标签 &#39;a&#39; 对应的元素</span>
+</span><span id="__span-4-30"><a id="__codelineno-4-30" name="__codelineno-4-30" href="#__codelineno-4-30"></a><span class="k">del</span> <span class="n">s</span><span class="p">[</span><span class="s1">'a'</span><span class="p">]</span>  <span class="c1"># 删除索引标签 'a' 对应的元素</span>
 </span><span id="__span-4-31"><a id="__codelineno-4-31" name="__codelineno-4-31" href="#__codelineno-4-31"></a>
 </span><span id="__span-4-32"><a id="__codelineno-4-32" name="__codelineno-4-32" href="#__codelineno-4-32"></a><span class="c1"># 使用 drop 方法删除一个或多个索引标签，并返回一个新的 Series。</span>
-</span><span id="__span-4-33"><a id="__codelineno-4-33" name="__codelineno-4-33" href="#__codelineno-4-33"></a><span class="n">s_dropped</span> <span class="o">=</span> <span class="n">s</span><span class="o">.</span><span class="n">drop</span><span class="p">([</span><span class="s1">&#39;b&#39;</span><span class="p">])</span>  <span class="c1"># 返回一个删除了索引标签 &#39;b&#39; 的新 Series</span>
+</span><span id="__span-4-33"><a id="__codelineno-4-33" name="__codelineno-4-33" href="#__codelineno-4-33"></a><span class="n">s_dropped</span> <span class="o">=</span> <span class="n">s</span><span class="o">.</span><span class="n">drop</span><span class="p">([</span><span class="s1">'b'</span><span class="p">])</span>  <span class="c1"># 返回一个删除了索引标签 'b' 的新 Series</span>
 </span></code></pre></div>
 <div class="language-python highlight"><span class="filename">基本运算</span><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="c1"># 算术运算</span>
 </span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="n">result</span> <span class="o">=</span> <span class="n">series</span> <span class="o">*</span> <span class="mi">2</span>  <span class="c1"># 所有元素乘以2</span>
@@ -3957,7 +4824,7 @@ Name: RUNOOB-Series-TEST, dtype: object</p>
 </span><span id="__span-5-5"><a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a><span class="n">filtered_series</span> <span class="o">=</span> <span class="n">series</span><span class="p">[</span><span class="n">series</span> <span class="o">&gt;</span> <span class="mi">2</span><span class="p">]</span>  <span class="c1"># 选择大于2的元素</span>
 </span><span id="__span-5-6"><a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a>
 </span><span id="__span-5-7"><a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a><span class="c1"># 数学函数</span>
-</span><span id="__span-5-8"><a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+</span><span id="__span-5-8"><a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
 </span><span id="__span-5-9"><a id="__codelineno-5-9" name="__codelineno-5-9" href="#__codelineno-5-9"></a><span class="n">result</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">series</span><span class="p">)</span>  <span class="c1"># 对每个元素取平方根</span>
 </span><span id="__span-5-10"><a id="__codelineno-5-10" name="__codelineno-5-10" href="#__codelineno-5-10"></a>
 </span><span id="__span-5-11"><a id="__codelineno-5-11" name="__codelineno-5-11" href="#__codelineno-5-11"></a><span class="nb">print</span><span class="p">(</span><span class="n">s</span><span class="o">.</span><span class="n">sum</span><span class="p">())</span>  <span class="c1"># 输出 Series 的总和</span>
@@ -3992,8 +4859,8 @@ Name: RUNOOB-Series-TEST, dtype: object</p>
 </span><span id="__span-6-24"><a id="__codelineno-6-24" name="__codelineno-6-24" href="#__codelineno-6-24"></a><span class="nb">print</span><span class="p">(</span><span class="n">s</span><span class="o">.</span><span class="n">max</span><span class="p">())</span>   <span class="c1"># 最大值</span>
 </span></code></pre></div>
 </details>
-<hr />
-<h3 id="dataframe">DataFrame<a class="headerlink" href="#dataframe" title="Permanent link">&para;</a></h3>
+<hr>
+<h3 id="dataframe">DataFrame<a class="headerlink" href="#dataframe" title="Permanent link">¶</a></h3>
 <ul>
 <li>
 <p>DataFrame 特点   </p>
@@ -4049,8 +4916,8 @@ Name: RUNOOB-Series-TEST, dtype: object</p>
 </ul>
 </li>
 </ul>
-<p><a class="glightbox" href="../module_1.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../module_1.png" /></a></p>
-<hr />
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../module_1.png" data-desc-position="bottom"><img alt="alt text" src="../module_1.png"></a></p>
+<hr>
 <p><code>pandas.DataFrame(data=None, index=None, columns=None, dtype=None, copy=False)</code></p>
 <ul>
 <li>data：DataFrame 的数据部分，可以是字典、二维数组、Series、DataFrame 或其他可转换为 DataFrame 的对象。如果不提供此参数，则创建一个空的 DataFrame。</li>
@@ -4059,46 +4926,46 @@ Name: RUNOOB-Series-TEST, dtype: object</p>
 <li>dtype：指定 DataFrame 的数据类型。可以是 NumPy 的数据类型，例如 np.int64、np.float64 等。如果不提供此参数，则根据数据自动推断数据类型。</li>
 <li>copy：是否复制数据。默认为 False，表示不复制数据。如果设置为 True，则复制输入的数据。</li>
 </ul>
-<h4 id="_2">创建<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h4>
-<div class="language-python highlight"><span class="filename">使用列表创建</span><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<h4 id="_2">创建<a class="headerlink" href="#_2" title="Permanent link">¶</a></h4>
+<div class="language-python highlight"><span class="filename">使用列表创建</span><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
 </span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>
-</span><span id="__span-7-3"><a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a><span class="n">data</span> <span class="o">=</span> <span class="p">[[</span><span class="s1">&#39;Google&#39;</span><span class="p">,</span> <span class="mi">10</span><span class="p">],</span> <span class="p">[</span><span class="s1">&#39;Runoob&#39;</span><span class="p">,</span> <span class="mi">12</span><span class="p">],</span> <span class="p">[</span><span class="s1">&#39;Wiki&#39;</span><span class="p">,</span> <span class="mi">13</span><span class="p">]]</span>
+</span><span id="__span-7-3"><a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a><span class="n">data</span> <span class="o">=</span> <span class="p">[[</span><span class="s1">'Google'</span><span class="p">,</span> <span class="mi">10</span><span class="p">],</span> <span class="p">[</span><span class="s1">'Runoob'</span><span class="p">,</span> <span class="mi">12</span><span class="p">],</span> <span class="p">[</span><span class="s1">'Wiki'</span><span class="p">,</span> <span class="mi">13</span><span class="p">]]</span>
 </span><span id="__span-7-4"><a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a>
 </span><span id="__span-7-5"><a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a><span class="c1"># 创建DataFrame</span>
-</span><span id="__span-7-6"><a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;Site&#39;</span><span class="p">,</span> <span class="s1">&#39;Age&#39;</span><span class="p">])</span>
+</span><span id="__span-7-6"><a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s1">'Site'</span><span class="p">,</span> <span class="s1">'Age'</span><span class="p">])</span>
 </span><span id="__span-7-7"><a id="__codelineno-7-7" name="__codelineno-7-7" href="#__codelineno-7-7"></a>
 </span><span id="__span-7-8"><a id="__codelineno-7-8" name="__codelineno-7-8" href="#__codelineno-7-8"></a><span class="c1"># 使用astype方法设置每列的数据类型</span>
-</span><span id="__span-7-9"><a id="__codelineno-7-9" name="__codelineno-7-9" href="#__codelineno-7-9"></a><span class="n">df</span><span class="p">[</span><span class="s1">&#39;Site&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;Site&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">str</span><span class="p">)</span>
-</span><span id="__span-7-10"><a id="__codelineno-7-10" name="__codelineno-7-10" href="#__codelineno-7-10"></a><span class="n">df</span><span class="p">[</span><span class="s1">&#39;Age&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;Age&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">float</span><span class="p">)</span>
+</span><span id="__span-7-9"><a id="__codelineno-7-9" name="__codelineno-7-9" href="#__codelineno-7-9"></a><span class="n">df</span><span class="p">[</span><span class="s1">'Site'</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">'Site'</span><span class="p">]</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">str</span><span class="p">)</span>
+</span><span id="__span-7-10"><a id="__codelineno-7-10" name="__codelineno-7-10" href="#__codelineno-7-10"></a><span class="n">df</span><span class="p">[</span><span class="s1">'Age'</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">'Age'</span><span class="p">]</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">float</span><span class="p">)</span>
 </span><span id="__span-7-11"><a id="__codelineno-7-11" name="__codelineno-7-11" href="#__codelineno-7-11"></a>
 </span><span id="__span-7-12"><a id="__codelineno-7-12" name="__codelineno-7-12" href="#__codelineno-7-12"></a><span class="nb">print</span><span class="p">(</span><span class="n">df</span><span class="p">)</span>
 </span></code></pre></div>
-<div class="language-python highlight"><span class="filename">使用字典创建</span><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<div class="language-python highlight"><span class="filename">使用字典创建</span><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
 </span><span id="__span-8-2"><a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a>
-</span><span id="__span-8-3"><a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a><span class="n">data</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;Site&#39;</span><span class="p">:[</span><span class="s1">&#39;Google&#39;</span><span class="p">,</span> <span class="s1">&#39;Runoob&#39;</span><span class="p">,</span> <span class="s1">&#39;Wiki&#39;</span><span class="p">],</span> <span class="s1">&#39;Age&#39;</span><span class="p">:[</span><span class="mi">10</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">13</span><span class="p">]}</span>
+</span><span id="__span-8-3"><a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a><span class="n">data</span> <span class="o">=</span> <span class="p">{</span><span class="s1">'Site'</span><span class="p">:[</span><span class="s1">'Google'</span><span class="p">,</span> <span class="s1">'Runoob'</span><span class="p">,</span> <span class="s1">'Wiki'</span><span class="p">],</span> <span class="s1">'Age'</span><span class="p">:[</span><span class="mi">10</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">13</span><span class="p">]}</span>
 </span><span id="__span-8-4"><a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a>
 </span><span id="__span-8-5"><a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
 </span><span id="__span-8-6"><a id="__codelineno-8-6" name="__codelineno-8-6" href="#__codelineno-8-6"></a>
 </span><span id="__span-8-7"><a id="__codelineno-8-7" name="__codelineno-8-7" href="#__codelineno-8-7"></a><span class="nb">print</span> <span class="p">(</span><span class="n">df</span><span class="p">)</span>
 </span></code></pre></div>
-<div class="language-python highlight"><span class="filename">使用 ndarrays 创建</span><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-</span><span id="__span-9-2"><a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<div class="language-python highlight"><span class="filename">使用 ndarrays 创建</span><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+</span><span id="__span-9-2"><a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a><span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
 </span><span id="__span-9-3"><a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a>
 </span><span id="__span-9-4"><a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a><span class="c1"># 创建一个包含网站和年龄的二维ndarray</span>
 </span><span id="__span-9-5"><a id="__codelineno-9-5" name="__codelineno-9-5" href="#__codelineno-9-5"></a><span class="n">ndarray_data</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span>
-</span><span id="__span-9-6"><a id="__codelineno-9-6" name="__codelineno-9-6" href="#__codelineno-9-6"></a>    <span class="p">[</span><span class="s1">&#39;Google&#39;</span><span class="p">,</span> <span class="mi">10</span><span class="p">],</span>
-</span><span id="__span-9-7"><a id="__codelineno-9-7" name="__codelineno-9-7" href="#__codelineno-9-7"></a>    <span class="p">[</span><span class="s1">&#39;Runoob&#39;</span><span class="p">,</span> <span class="mi">12</span><span class="p">],</span>
-</span><span id="__span-9-8"><a id="__codelineno-9-8" name="__codelineno-9-8" href="#__codelineno-9-8"></a>    <span class="p">[</span><span class="s1">&#39;Wiki&#39;</span><span class="p">,</span> <span class="mi">13</span><span class="p">]</span>
+</span><span id="__span-9-6"><a id="__codelineno-9-6" name="__codelineno-9-6" href="#__codelineno-9-6"></a>    <span class="p">[</span><span class="s1">'Google'</span><span class="p">,</span> <span class="mi">10</span><span class="p">],</span>
+</span><span id="__span-9-7"><a id="__codelineno-9-7" name="__codelineno-9-7" href="#__codelineno-9-7"></a>    <span class="p">[</span><span class="s1">'Runoob'</span><span class="p">,</span> <span class="mi">12</span><span class="p">],</span>
+</span><span id="__span-9-8"><a id="__codelineno-9-8" name="__codelineno-9-8" href="#__codelineno-9-8"></a>    <span class="p">[</span><span class="s1">'Wiki'</span><span class="p">,</span> <span class="mi">13</span><span class="p">]</span>
 </span><span id="__span-9-9"><a id="__codelineno-9-9" name="__codelineno-9-9" href="#__codelineno-9-9"></a><span class="p">])</span>
 </span><span id="__span-9-10"><a id="__codelineno-9-10" name="__codelineno-9-10" href="#__codelineno-9-10"></a>
 </span><span id="__span-9-11"><a id="__codelineno-9-11" name="__codelineno-9-11" href="#__codelineno-9-11"></a><span class="c1"># 使用DataFrame构造函数创建数据帧</span>
-</span><span id="__span-9-12"><a id="__codelineno-9-12" name="__codelineno-9-12" href="#__codelineno-9-12"></a><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">ndarray_data</span><span class="p">,</span> <span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;Site&#39;</span><span class="p">,</span> <span class="s1">&#39;Age&#39;</span><span class="p">])</span>
+</span><span id="__span-9-12"><a id="__codelineno-9-12" name="__codelineno-9-12" href="#__codelineno-9-12"></a><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">ndarray_data</span><span class="p">,</span> <span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s1">'Site'</span><span class="p">,</span> <span class="s1">'Age'</span><span class="p">])</span>
 </span><span id="__span-9-13"><a id="__codelineno-9-13" name="__codelineno-9-13" href="#__codelineno-9-13"></a>
 </span><span id="__span-9-14"><a id="__codelineno-9-14" name="__codelineno-9-14" href="#__codelineno-9-14"></a><span class="c1"># 打印数据帧</span>
 </span><span id="__span-9-15"><a id="__codelineno-9-15" name="__codelineno-9-15" href="#__codelineno-9-15"></a><span class="nb">print</span><span class="p">(</span><span class="n">df</span><span class="p">)</span>
 </span></code></pre></div>
-<h3 id="_3">常用函数<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
-<h4 id="_4">读取数据<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h4>
+<h3 id="_3">常用函数<a class="headerlink" href="#_3" title="Permanent link">¶</a></h3>
+<h4 id="_4">读取数据<a class="headerlink" href="#_4" title="Permanent link">¶</a></h4>
 <table>
 <thead>
 <tr>
@@ -4129,29 +4996,29 @@ Name: RUNOOB-Series-TEST, dtype: object</p>
 </tr>
 </tbody>
 </table>
-<div class="language-python highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
 </span><span id="__span-10-2"><a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a>
 </span><span id="__span-10-3"><a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a><span class="c1"># 从 CSV 文件中读取数据</span>
-</span><span id="__span-10-4"><a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;data.csv&#39;</span><span class="p">)</span>
+</span><span id="__span-10-4"><a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">'data.csv'</span><span class="p">)</span>
 </span><span id="__span-10-5"><a id="__codelineno-10-5" name="__codelineno-10-5" href="#__codelineno-10-5"></a>
 </span><span id="__span-10-6"><a id="__codelineno-10-6" name="__codelineno-10-6" href="#__codelineno-10-6"></a><span class="c1"># 从 Excel 文件中读取数据</span>
-</span><span id="__span-10-7"><a id="__codelineno-10-7" name="__codelineno-10-7" href="#__codelineno-10-7"></a><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_excel</span><span class="p">(</span><span class="s1">&#39;data.xlsx&#39;</span><span class="p">)</span>
+</span><span id="__span-10-7"><a id="__codelineno-10-7" name="__codelineno-10-7" href="#__codelineno-10-7"></a><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_excel</span><span class="p">(</span><span class="s1">'data.xlsx'</span><span class="p">)</span>
 </span><span id="__span-10-8"><a id="__codelineno-10-8" name="__codelineno-10-8" href="#__codelineno-10-8"></a>
 </span><span id="__span-10-9"><a id="__codelineno-10-9" name="__codelineno-10-9" href="#__codelineno-10-9"></a><span class="c1"># 从 SQL 数据库中读取数据</span>
-</span><span id="__span-10-10"><a id="__codelineno-10-10" name="__codelineno-10-10" href="#__codelineno-10-10"></a><span class="kn">import</span> <span class="nn">sqlite3</span>
-</span><span id="__span-10-11"><a id="__codelineno-10-11" name="__codelineno-10-11" href="#__codelineno-10-11"></a><span class="n">conn</span> <span class="o">=</span> <span class="n">sqlite3</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="s1">&#39;database.db&#39;</span><span class="p">)</span>
-</span><span id="__span-10-12"><a id="__codelineno-10-12" name="__codelineno-10-12" href="#__codelineno-10-12"></a><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_sql</span><span class="p">(</span><span class="s1">&#39;SELECT * FROM table_name&#39;</span><span class="p">,</span> <span class="n">conn</span><span class="p">)</span>
+</span><span id="__span-10-10"><a id="__codelineno-10-10" name="__codelineno-10-10" href="#__codelineno-10-10"></a><span class="kn">import</span><span class="w"> </span><span class="nn">sqlite3</span>
+</span><span id="__span-10-11"><a id="__codelineno-10-11" name="__codelineno-10-11" href="#__codelineno-10-11"></a><span class="n">conn</span> <span class="o">=</span> <span class="n">sqlite3</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="s1">'database.db'</span><span class="p">)</span>
+</span><span id="__span-10-12"><a id="__codelineno-10-12" name="__codelineno-10-12" href="#__codelineno-10-12"></a><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_sql</span><span class="p">(</span><span class="s1">'SELECT * FROM table_name'</span><span class="p">,</span> <span class="n">conn</span><span class="p">)</span>
 </span><span id="__span-10-13"><a id="__codelineno-10-13" name="__codelineno-10-13" href="#__codelineno-10-13"></a>
 </span><span id="__span-10-14"><a id="__codelineno-10-14" name="__codelineno-10-14" href="#__codelineno-10-14"></a><span class="c1"># 从 JSON 字符串中读取数据</span>
-</span><span id="__span-10-15"><a id="__codelineno-10-15" name="__codelineno-10-15" href="#__codelineno-10-15"></a><span class="n">json_string</span> <span class="o">=</span> <span class="s1">&#39;{&quot;name&quot;: &quot;John&quot;, &quot;age&quot;: 30, &quot;city&quot;: &quot;New York&quot;}&#39;</span>
+</span><span id="__span-10-15"><a id="__codelineno-10-15" name="__codelineno-10-15" href="#__codelineno-10-15"></a><span class="n">json_string</span> <span class="o">=</span> <span class="s1">'{"name": "John", "age": 30, "city": "New York"}'</span>
 </span><span id="__span-10-16"><a id="__codelineno-10-16" name="__codelineno-10-16" href="#__codelineno-10-16"></a><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_json</span><span class="p">(</span><span class="n">json_string</span><span class="p">)</span>
 </span><span id="__span-10-17"><a id="__codelineno-10-17" name="__codelineno-10-17" href="#__codelineno-10-17"></a>
 </span><span id="__span-10-18"><a id="__codelineno-10-18" name="__codelineno-10-18" href="#__codelineno-10-18"></a><span class="c1"># 从 HTML 页面中读取数据</span>
-</span><span id="__span-10-19"><a id="__codelineno-10-19" name="__codelineno-10-19" href="#__codelineno-10-19"></a><span class="n">url</span> <span class="o">=</span> <span class="s1">&#39;https://www.runoob.com&#39;</span>
+</span><span id="__span-10-19"><a id="__codelineno-10-19" name="__codelineno-10-19" href="#__codelineno-10-19"></a><span class="n">url</span> <span class="o">=</span> <span class="s1">'https://www.runoob.com'</span>
 </span><span id="__span-10-20"><a id="__codelineno-10-20" name="__codelineno-10-20" href="#__codelineno-10-20"></a><span class="n">dfs</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_html</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
 </span><span id="__span-10-21"><a id="__codelineno-10-21" name="__codelineno-10-21" href="#__codelineno-10-21"></a><span class="n">df</span> <span class="o">=</span> <span class="n">dfs</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="c1"># 选择第一个数据框</span>
 </span></code></pre></div>
-<h4 id="_5">查看数据<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h4>
+<h4 id="_5">查看数据<a class="headerlink" href="#_5" title="Permanent link">¶</a></h4>
 <table>
 <thead>
 <tr>
@@ -4182,7 +5049,7 @@ Name: RUNOOB-Series-TEST, dtype: object</p>
 </tr>
 </tbody>
 </table>
-<h4 id="_6">数据清洗<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h4>
+<h4 id="_6">数据清洗<a class="headerlink" href="#_6" title="Permanent link">¶</a></h4>
 <table>
 <thead>
 <tr>
@@ -4213,7 +5080,7 @@ Name: RUNOOB-Series-TEST, dtype: object</p>
 </tr>
 </tbody>
 </table>
-<h4 id="_7">数据选择和切片<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h4>
+<h4 id="_7">数据选择和切片<a class="headerlink" href="#_7" title="Permanent link">¶</a></h4>
 <table>
 <thead>
 <tr>
@@ -4252,7 +5119,7 @@ Name: RUNOOB-Series-TEST, dtype: object</p>
 </tr>
 </tbody>
 </table>
-<h4 id="_8">数据排列<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h4>
+<h4 id="_8">数据排列<a class="headerlink" href="#_8" title="Permanent link">¶</a></h4>
 <table>
 <thead>
 <tr>
@@ -4275,7 +5142,7 @@ Name: RUNOOB-Series-TEST, dtype: object</p>
 </tr>
 </tbody>
 </table>
-<h4 id="_9">数据统计和描述<a class="headerlink" href="#_9" title="Permanent link">&para;</a></h4>
+<h4 id="_9">数据统计和描述<a class="headerlink" href="#_9" title="Permanent link">¶</a></h4>
 <table>
 <thead>
 <tr>
@@ -4306,18 +5173,18 @@ Name: RUNOOB-Series-TEST, dtype: object</p>
 </tr>
 </tbody>
 </table>
-<h4 id="_10">实例<a class="headerlink" href="#_10" title="Permanent link">&para;</a></h4>
+<h4 id="_10">实例<a class="headerlink" href="#_10" title="Permanent link">¶</a></h4>
 <details class="note">
 <summary>筛选、排序、统计量的简单应用</summary>
-<div class="language-python highlight"><span class="filename">题干</span><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<div class="language-python highlight"><span class="filename">题干</span><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
 </span><span id="__span-11-2"><a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a><span class="n">data</span> <span class="o">=</span> <span class="p">{</span>
-</span><span id="__span-11-3"><a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a>    <span class="s1">&#39;产品&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;手机&#39;</span><span class="p">,</span> <span class="s1">&#39;笔记本&#39;</span><span class="p">,</span> <span class="s1">&#39;平板&#39;</span><span class="p">,</span> <span class="s1">&#39;耳机&#39;</span><span class="p">,</span> <span class="s1">&#39;智能手表&#39;</span><span class="p">,</span> 
-</span><span id="__span-11-4"><a id="__codelineno-11-4" name="__codelineno-11-4" href="#__codelineno-11-4"></a>        <span class="s1">&#39;相机&#39;</span><span class="p">,</span> <span class="s1">&#39;电视&#39;</span><span class="p">,</span> <span class="s1">&#39;音响&#39;</span><span class="p">,</span> <span class="s1">&#39;打印机&#39;</span><span class="p">,</span> <span class="s1">&#39;路由器&#39;</span><span class="p">],</span>
-</span><span id="__span-11-5"><a id="__codelineno-11-5" name="__codelineno-11-5" href="#__codelineno-11-5"></a>    <span class="s1">&#39;销售量&#39;</span><span class="p">:</span> <span class="p">[</span><span class="mi">150</span><span class="p">,</span> <span class="mi">80</span><span class="p">,</span> <span class="mi">90</span><span class="p">,</span> <span class="mi">200</span><span class="p">,</span> <span class="mi">120</span><span class="p">,</span> 
+</span><span id="__span-11-3"><a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a>    <span class="s1">'产品'</span><span class="p">:</span> <span class="p">[</span><span class="s1">'手机'</span><span class="p">,</span> <span class="s1">'笔记本'</span><span class="p">,</span> <span class="s1">'平板'</span><span class="p">,</span> <span class="s1">'耳机'</span><span class="p">,</span> <span class="s1">'智能手表'</span><span class="p">,</span> 
+</span><span id="__span-11-4"><a id="__codelineno-11-4" name="__codelineno-11-4" href="#__codelineno-11-4"></a>        <span class="s1">'相机'</span><span class="p">,</span> <span class="s1">'电视'</span><span class="p">,</span> <span class="s1">'音响'</span><span class="p">,</span> <span class="s1">'打印机'</span><span class="p">,</span> <span class="s1">'路由器'</span><span class="p">],</span>
+</span><span id="__span-11-5"><a id="__codelineno-11-5" name="__codelineno-11-5" href="#__codelineno-11-5"></a>    <span class="s1">'销售量'</span><span class="p">:</span> <span class="p">[</span><span class="mi">150</span><span class="p">,</span> <span class="mi">80</span><span class="p">,</span> <span class="mi">90</span><span class="p">,</span> <span class="mi">200</span><span class="p">,</span> <span class="mi">120</span><span class="p">,</span> 
 </span><span id="__span-11-6"><a id="__codelineno-11-6" name="__codelineno-11-6" href="#__codelineno-11-6"></a>            <span class="mi">60</span><span class="p">,</span> <span class="mi">50</span><span class="p">,</span> <span class="mi">130</span><span class="p">,</span> <span class="mi">70</span><span class="p">,</span> <span class="mi">40</span><span class="p">],</span>
-</span><span id="__span-11-7"><a id="__codelineno-11-7" name="__codelineno-11-7" href="#__codelineno-11-7"></a>    <span class="s1">&#39;价格(元)&#39;</span><span class="p">:</span> <span class="p">[</span><span class="mi">3000</span><span class="p">,</span> <span class="mi">6000</span><span class="p">,</span> <span class="mi">2000</span><span class="p">,</span> <span class="mi">800</span><span class="p">,</span> <span class="mi">1500</span><span class="p">,</span> 
+</span><span id="__span-11-7"><a id="__codelineno-11-7" name="__codelineno-11-7" href="#__codelineno-11-7"></a>    <span class="s1">'价格(元)'</span><span class="p">:</span> <span class="p">[</span><span class="mi">3000</span><span class="p">,</span> <span class="mi">6000</span><span class="p">,</span> <span class="mi">2000</span><span class="p">,</span> <span class="mi">800</span><span class="p">,</span> <span class="mi">1500</span><span class="p">,</span> 
 </span><span id="__span-11-8"><a id="__codelineno-11-8" name="__codelineno-11-8" href="#__codelineno-11-8"></a>                <span class="mi">5000</span><span class="p">,</span> <span class="mi">4000</span><span class="p">,</span> <span class="mi">1500</span><span class="p">,</span> <span class="mi">1000</span><span class="p">,</span> <span class="mi">600</span><span class="p">],</span>
-</span><span id="__span-11-9"><a id="__codelineno-11-9" name="__codelineno-11-9" href="#__codelineno-11-9"></a>    <span class="s1">&#39;销售日期&#39;</span><span class="p">:</span> <span class="n">pd</span><span class="o">.</span><span class="n">date_range</span><span class="p">(</span><span class="n">start</span><span class="o">=</span><span class="s1">&#39;2023-01-01&#39;</span><span class="p">,</span> <span class="n">periods</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">freq</span><span class="o">=</span><span class="s1">&#39;D&#39;</span><span class="p">)</span>
+</span><span id="__span-11-9"><a id="__codelineno-11-9" name="__codelineno-11-9" href="#__codelineno-11-9"></a>    <span class="s1">'销售日期'</span><span class="p">:</span> <span class="n">pd</span><span class="o">.</span><span class="n">date_range</span><span class="p">(</span><span class="n">start</span><span class="o">=</span><span class="s1">'2023-01-01'</span><span class="p">,</span> <span class="n">periods</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">freq</span><span class="o">=</span><span class="s1">'D'</span><span class="p">)</span>
 </span><span id="__span-11-10"><a id="__codelineno-11-10" name="__codelineno-11-10" href="#__codelineno-11-10"></a><span class="p">}</span>
 </span><span id="__span-11-11"><a id="__codelineno-11-11" name="__codelineno-11-11" href="#__codelineno-11-11"></a><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
 </span><span id="__span-11-12"><a id="__codelineno-11-12" name="__codelineno-11-12" href="#__codelineno-11-12"></a><span class="nb">print</span><span class="p">(</span><span class="n">df</span><span class="p">)</span>
@@ -4356,8 +5223,8 @@ Name: RUNOOB-Series-TEST, dtype: object</p>
 </li>
 </ul>
 </details>
-<h2 id="numpy">NumPy<a class="headerlink" href="#numpy" title="Permanent link">&para;</a></h2>
-<h3 id="ndarray">Ndarray 对象<a class="headerlink" href="#ndarray" title="Permanent link">&para;</a></h3>
+<h2 id="numpy">NumPy<a class="headerlink" href="#numpy" title="Permanent link">¶</a></h2>
+<h3 id="ndarray">Ndarray 对象<a class="headerlink" href="#ndarray" title="Permanent link">¶</a></h3>
 <ul>
 <li>
 <p>NumPy 最重要的一个特点是其 <strong>N 维数组对象 ndarray</strong>，它是一系列同类型数据的集合，以 0 下标为开始进行集合中元素的索引。</p>
@@ -4396,22 +5263,22 @@ Name: RUNOOB-Series-TEST, dtype: object</p>
 </ul>
 </li>
 </ol>
-<div class="language-python highlight"><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
 </span><span id="__span-12-2"><a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a>
 </span><span id="__span-12-3"><a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a><span class="c1"># 创建一个 2x3 的 ndarray</span>
 </span><span id="__span-12-4"><a id="__codelineno-12-4" name="__codelineno-12-4" href="#__codelineno-12-4"></a><span class="n">arr</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span> <span class="p">[</span><span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">]])</span>
 </span><span id="__span-12-5"><a id="__codelineno-12-5" name="__codelineno-12-5" href="#__codelineno-12-5"></a>
 </span><span id="__span-12-6"><a id="__codelineno-12-6" name="__codelineno-12-6" href="#__codelineno-12-6"></a><span class="c1"># 查看数据指针</span>
-</span><span id="__span-12-7"><a id="__codelineno-12-7" name="__codelineno-12-7" href="#__codelineno-12-7"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;数据指针:&quot;</span><span class="p">,</span> <span class="n">arr</span><span class="o">.</span><span class="n">data</span><span class="p">)</span>
+</span><span id="__span-12-7"><a id="__codelineno-12-7" name="__codelineno-12-7" href="#__codelineno-12-7"></a><span class="nb">print</span><span class="p">(</span><span class="s2">"数据指针:"</span><span class="p">,</span> <span class="n">arr</span><span class="o">.</span><span class="n">data</span><span class="p">)</span>
 </span><span id="__span-12-8"><a id="__codelineno-12-8" name="__codelineno-12-8" href="#__codelineno-12-8"></a>
 </span><span id="__span-12-9"><a id="__codelineno-12-9" name="__codelineno-12-9" href="#__codelineno-12-9"></a><span class="c1"># 查看数据类型</span>
-</span><span id="__span-12-10"><a id="__codelineno-12-10" name="__codelineno-12-10" href="#__codelineno-12-10"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;数据类型:&quot;</span><span class="p">,</span> <span class="n">arr</span><span class="o">.</span><span class="n">dtype</span><span class="p">)</span>
+</span><span id="__span-12-10"><a id="__codelineno-12-10" name="__codelineno-12-10" href="#__codelineno-12-10"></a><span class="nb">print</span><span class="p">(</span><span class="s2">"数据类型:"</span><span class="p">,</span> <span class="n">arr</span><span class="o">.</span><span class="n">dtype</span><span class="p">)</span>
 </span><span id="__span-12-11"><a id="__codelineno-12-11" name="__codelineno-12-11" href="#__codelineno-12-11"></a>
 </span><span id="__span-12-12"><a id="__codelineno-12-12" name="__codelineno-12-12" href="#__codelineno-12-12"></a><span class="c1"># 查看数组形状</span>
-</span><span id="__span-12-13"><a id="__codelineno-12-13" name="__codelineno-12-13" href="#__codelineno-12-13"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;数组形状:&quot;</span><span class="p">,</span> <span class="n">arr</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
+</span><span id="__span-12-13"><a id="__codelineno-12-13" name="__codelineno-12-13" href="#__codelineno-12-13"></a><span class="nb">print</span><span class="p">(</span><span class="s2">"数组形状:"</span><span class="p">,</span> <span class="n">arr</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
 </span><span id="__span-12-14"><a id="__codelineno-12-14" name="__codelineno-12-14" href="#__codelineno-12-14"></a>
 </span><span id="__span-12-15"><a id="__codelineno-12-15" name="__codelineno-12-15" href="#__codelineno-12-15"></a><span class="c1"># 查看跨度</span>
-</span><span id="__span-12-16"><a id="__codelineno-12-16" name="__codelineno-12-16" href="#__codelineno-12-16"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;跨度:&quot;</span><span class="p">,</span> <span class="n">arr</span><span class="o">.</span><span class="n">strides</span><span class="p">)</span>
+</span><span id="__span-12-16"><a id="__codelineno-12-16" name="__codelineno-12-16" href="#__codelineno-12-16"></a><span class="nb">print</span><span class="p">(</span><span class="s2">"跨度:"</span><span class="p">,</span> <span class="n">arr</span><span class="o">.</span><span class="n">strides</span><span class="p">)</span>
 </span><span id="__span-12-17"><a id="__codelineno-12-17" name="__codelineno-12-17" href="#__codelineno-12-17"></a>
 </span><span id="__span-12-18"><a id="__codelineno-12-18" name="__codelineno-12-18" href="#__codelineno-12-18"></a><span class="n">数据指针</span><span class="p">:</span> <span class="o">&lt;</span><span class="n">memory</span> <span class="n">at</span> <span class="mh">0x7f8c8c0b0b80</span><span class="o">&gt;</span>
 </span><span id="__span-12-19"><a id="__codelineno-12-19" name="__codelineno-12-19" href="#__codelineno-12-19"></a><span class="n">数据类型</span><span class="p">:</span> <span class="n">int64</span>
@@ -4420,7 +5287,7 @@ Name: RUNOOB-Series-TEST, dtype: object</p>
 </span></code></pre></div>
 </li>
 </ul>
-<hr />
+<hr>
 <p><code>numpy.array(object, dtype = None, copy = True, order = None, subok = False, ndmin = 0)</code></p>
 <table>
 <thead>
@@ -4459,7 +5326,7 @@ Name: RUNOOB-Series-TEST, dtype: object</p>
 <details class="note">
 <summary>实例</summary>
 <div class="language-python highlight"><span class="filename">多于一个维度</span><pre><span></span><code><span id="__span-13-1"><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="c1"># 多于一个维度  </span>
-</span><span id="__span-13-2"><a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span> 
+</span><span id="__span-13-2"><a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span> 
 </span><span id="__span-13-3"><a id="__codelineno-13-3" name="__codelineno-13-3" href="#__codelineno-13-3"></a><span class="n">a</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">1</span><span class="p">,</span>  <span class="mi">2</span><span class="p">],</span>  <span class="p">[</span><span class="mi">3</span><span class="p">,</span>  <span class="mi">4</span><span class="p">]])</span>  
 </span><span id="__span-13-4"><a id="__codelineno-13-4" name="__codelineno-13-4" href="#__codelineno-13-4"></a><span class="nb">print</span> <span class="p">(</span><span class="n">a</span><span class="p">)</span>
 </span><span id="__span-13-5"><a id="__codelineno-13-5" name="__codelineno-13-5" href="#__codelineno-13-5"></a>
@@ -4467,15 +5334,15 @@ Name: RUNOOB-Series-TEST, dtype: object</p>
 </span><span id="__span-13-7"><a id="__codelineno-13-7" name="__codelineno-13-7" href="#__codelineno-13-7"></a><span class="p">[</span><span class="mi">3</span>  <span class="mi">4</span><span class="p">]]</span>
 </span></code></pre></div>
 <div class="language-python highlight"><span class="filename">最小维度的设置</span><pre><span></span><code><span id="__span-14-1"><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a><span class="c1"># 最小维度  </span>
-</span><span id="__span-14-2"><a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span> 
+</span><span id="__span-14-2"><a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span> 
 </span><span id="__span-14-3"><a id="__codelineno-14-3" name="__codelineno-14-3" href="#__codelineno-14-3"></a><span class="n">a</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">],</span> <span class="n">ndmin</span> <span class="o">=</span>  <span class="mi">2</span><span class="p">)</span>  
 </span><span id="__span-14-4"><a id="__codelineno-14-4" name="__codelineno-14-4" href="#__codelineno-14-4"></a><span class="nb">print</span> <span class="p">(</span><span class="n">a</span><span class="p">)</span>
 </span><span id="__span-14-5"><a id="__codelineno-14-5" name="__codelineno-14-5" href="#__codelineno-14-5"></a>
 </span><span id="__span-14-6"><a id="__codelineno-14-6" name="__codelineno-14-6" href="#__codelineno-14-6"></a><span class="p">[[</span><span class="mi">1</span> <span class="mi">2</span> <span class="mi">3</span> <span class="mi">4</span> <span class="mi">5</span><span class="p">]]</span>
 </span></code></pre></div>
 </details>
-<hr />
-<h3 id="_11">数据类型<a class="headerlink" href="#_11" title="Permanent link">&para;</a></h3>
+<hr>
+<h3 id="_11">数据类型<a class="headerlink" href="#_11" title="Permanent link">¶</a></h3>
 <ul>
 <li>下表列举了常用 NumPy 基本类型。</li>
 </ul>
@@ -4622,7 +5489,7 @@ Name: RUNOOB-Series-TEST, dtype: object</p>
 </tr>
 </tbody>
 </table>
-<h4 id="dtype">数据类型对象 (dtype)<a class="headerlink" href="#dtype" title="Permanent link">&para;</a></h4>
+<h4 id="dtype">数据类型对象 (dtype)<a class="headerlink" href="#dtype" title="Permanent link">¶</a></h4>
 <p><code>numpy.dtype(object, align, copy)</code></p>
 <ul>
 <li>object : 要转换为的数据类型对象  </li>
@@ -4630,16 +5497,16 @@ Name: RUNOOB-Series-TEST, dtype: object</p>
 <li>copy : 复制 dtype 对象 ，如果为 false，则是对内置数据类型对象的引用  </li>
 </ul>
 <div class="language-python highlight"><pre><span></span><code><span id="__span-15-1"><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a><span class="c1"># 首先创建结构化数据类型</span>
-</span><span id="__span-15-2"><a id="__codelineno-15-2" name="__codelineno-15-2" href="#__codelineno-15-2"></a><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-</span><span id="__span-15-3"><a id="__codelineno-15-3" name="__codelineno-15-3" href="#__codelineno-15-3"></a><span class="n">dt</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">dtype</span><span class="p">([(</span><span class="s1">&#39;age&#39;</span><span class="p">,</span><span class="n">np</span><span class="o">.</span><span class="n">int8</span><span class="p">)])</span> 
+</span><span id="__span-15-2"><a id="__codelineno-15-2" name="__codelineno-15-2" href="#__codelineno-15-2"></a><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+</span><span id="__span-15-3"><a id="__codelineno-15-3" name="__codelineno-15-3" href="#__codelineno-15-3"></a><span class="n">dt</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">dtype</span><span class="p">([(</span><span class="s1">'age'</span><span class="p">,</span><span class="n">np</span><span class="o">.</span><span class="n">int8</span><span class="p">)])</span> 
 </span><span id="__span-15-4"><a id="__codelineno-15-4" name="__codelineno-15-4" href="#__codelineno-15-4"></a><span class="nb">print</span><span class="p">(</span><span class="n">dt</span><span class="p">)</span>
 </span><span id="__span-15-5"><a id="__codelineno-15-5" name="__codelineno-15-5" href="#__codelineno-15-5"></a>
 </span><span id="__span-15-6"><a id="__codelineno-15-6" name="__codelineno-15-6" href="#__codelineno-15-6"></a><span class="n">输出结果为</span><span class="p">:</span>
-</span><span id="__span-15-7"><a id="__codelineno-15-7" name="__codelineno-15-7" href="#__codelineno-15-7"></a><span class="p">[(</span><span class="s1">&#39;age&#39;</span><span class="p">,</span> <span class="s1">&#39;i1&#39;</span><span class="p">)]</span>
+</span><span id="__span-15-7"><a id="__codelineno-15-7" name="__codelineno-15-7" href="#__codelineno-15-7"></a><span class="p">[(</span><span class="s1">'age'</span><span class="p">,</span> <span class="s1">'i1'</span><span class="p">)]</span>
 </span><span id="__span-15-8"><a id="__codelineno-15-8" name="__codelineno-15-8" href="#__codelineno-15-8"></a>
 </span><span id="__span-15-9"><a id="__codelineno-15-9" name="__codelineno-15-9" href="#__codelineno-15-9"></a><span class="c1"># 将数据类型应用于 ndarray 对象</span>
-</span><span id="__span-15-10"><a id="__codelineno-15-10" name="__codelineno-15-10" href="#__codelineno-15-10"></a><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-</span><span id="__span-15-11"><a id="__codelineno-15-11" name="__codelineno-15-11" href="#__codelineno-15-11"></a><span class="n">dt</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">dtype</span><span class="p">([(</span><span class="s1">&#39;age&#39;</span><span class="p">,</span><span class="n">np</span><span class="o">.</span><span class="n">int8</span><span class="p">)])</span> 
+</span><span id="__span-15-10"><a id="__codelineno-15-10" name="__codelineno-15-10" href="#__codelineno-15-10"></a><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+</span><span id="__span-15-11"><a id="__codelineno-15-11" name="__codelineno-15-11" href="#__codelineno-15-11"></a><span class="n">dt</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">dtype</span><span class="p">([(</span><span class="s1">'age'</span><span class="p">,</span><span class="n">np</span><span class="o">.</span><span class="n">int8</span><span class="p">)])</span> 
 </span><span id="__span-15-12"><a id="__codelineno-15-12" name="__codelineno-15-12" href="#__codelineno-15-12"></a><span class="n">a</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([(</span><span class="mi">10</span><span class="p">,),(</span><span class="mi">20</span><span class="p">,),(</span><span class="mi">30</span><span class="p">,)],</span> <span class="n">dtype</span> <span class="o">=</span> <span class="n">dt</span><span class="p">)</span> 
 </span><span id="__span-15-13"><a id="__codelineno-15-13" name="__codelineno-15-13" href="#__codelineno-15-13"></a><span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
 </span><span id="__span-15-14"><a id="__codelineno-15-14" name="__codelineno-15-14" href="#__codelineno-15-14"></a>
@@ -4647,35 +5514,35 @@ Name: RUNOOB-Series-TEST, dtype: object</p>
 </span><span id="__span-15-16"><a id="__codelineno-15-16" name="__codelineno-15-16" href="#__codelineno-15-16"></a><span class="p">[(</span><span class="mi">10</span><span class="p">,)</span> <span class="p">(</span><span class="mi">20</span><span class="p">,)</span> <span class="p">(</span><span class="mi">30</span><span class="p">,)]</span>
 </span><span id="__span-15-17"><a id="__codelineno-15-17" name="__codelineno-15-17" href="#__codelineno-15-17"></a>
 </span><span id="__span-15-18"><a id="__codelineno-15-18" name="__codelineno-15-18" href="#__codelineno-15-18"></a><span class="c1"># 类型字段名可以用于存取实际的 age 列</span>
-</span><span id="__span-15-19"><a id="__codelineno-15-19" name="__codelineno-15-19" href="#__codelineno-15-19"></a><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-</span><span id="__span-15-20"><a id="__codelineno-15-20" name="__codelineno-15-20" href="#__codelineno-15-20"></a><span class="n">dt</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">dtype</span><span class="p">([(</span><span class="s1">&#39;age&#39;</span><span class="p">,</span><span class="n">np</span><span class="o">.</span><span class="n">int8</span><span class="p">)])</span> 
+</span><span id="__span-15-19"><a id="__codelineno-15-19" name="__codelineno-15-19" href="#__codelineno-15-19"></a><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+</span><span id="__span-15-20"><a id="__codelineno-15-20" name="__codelineno-15-20" href="#__codelineno-15-20"></a><span class="n">dt</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">dtype</span><span class="p">([(</span><span class="s1">'age'</span><span class="p">,</span><span class="n">np</span><span class="o">.</span><span class="n">int8</span><span class="p">)])</span> 
 </span><span id="__span-15-21"><a id="__codelineno-15-21" name="__codelineno-15-21" href="#__codelineno-15-21"></a><span class="n">a</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([(</span><span class="mi">10</span><span class="p">,),(</span><span class="mi">20</span><span class="p">,),(</span><span class="mi">30</span><span class="p">,)],</span> <span class="n">dtype</span> <span class="o">=</span> <span class="n">dt</span><span class="p">)</span> 
-</span><span id="__span-15-22"><a id="__codelineno-15-22" name="__codelineno-15-22" href="#__codelineno-15-22"></a><span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="p">[</span><span class="s1">&#39;age&#39;</span><span class="p">])</span>
+</span><span id="__span-15-22"><a id="__codelineno-15-22" name="__codelineno-15-22" href="#__codelineno-15-22"></a><span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="p">[</span><span class="s1">'age'</span><span class="p">])</span>
 </span><span id="__span-15-23"><a id="__codelineno-15-23" name="__codelineno-15-23" href="#__codelineno-15-23"></a>
 </span><span id="__span-15-24"><a id="__codelineno-15-24" name="__codelineno-15-24" href="#__codelineno-15-24"></a><span class="n">输出结果为</span><span class="err">：</span>
 </span><span id="__span-15-25"><a id="__codelineno-15-25" name="__codelineno-15-25" href="#__codelineno-15-25"></a><span class="p">[</span><span class="mi">10</span> <span class="mi">20</span> <span class="mi">30</span><span class="p">]</span>
 </span></code></pre></div>
-<hr />
+<hr>
 <ul>
 <li>下面的示例定义一个结构化数据类型 student，包含字符串字段 name，整数字段 age，及浮点字段 marks，并将这个 dtype 应用到 ndarray 对象。
-<div class="language-python highlight"><pre><span></span><code><span id="__span-16-1"><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-</span><span id="__span-16-2"><a id="__codelineno-16-2" name="__codelineno-16-2" href="#__codelineno-16-2"></a><span class="n">student</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">dtype</span><span class="p">([(</span><span class="s1">&#39;name&#39;</span><span class="p">,</span><span class="s1">&#39;S20&#39;</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;age&#39;</span><span class="p">,</span> <span class="s1">&#39;i1&#39;</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;marks&#39;</span><span class="p">,</span> <span class="s1">&#39;f4&#39;</span><span class="p">)])</span> 
+<div class="language-python highlight"><pre><span></span><code><span id="__span-16-1"><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+</span><span id="__span-16-2"><a id="__codelineno-16-2" name="__codelineno-16-2" href="#__codelineno-16-2"></a><span class="n">student</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">dtype</span><span class="p">([(</span><span class="s1">'name'</span><span class="p">,</span><span class="s1">'S20'</span><span class="p">),</span> <span class="p">(</span><span class="s1">'age'</span><span class="p">,</span> <span class="s1">'i1'</span><span class="p">),</span> <span class="p">(</span><span class="s1">'marks'</span><span class="p">,</span> <span class="s1">'f4'</span><span class="p">)])</span> 
 </span><span id="__span-16-3"><a id="__codelineno-16-3" name="__codelineno-16-3" href="#__codelineno-16-3"></a><span class="nb">print</span><span class="p">(</span><span class="n">student</span><span class="p">)</span>
 </span><span id="__span-16-4"><a id="__codelineno-16-4" name="__codelineno-16-4" href="#__codelineno-16-4"></a>
 </span><span id="__span-16-5"><a id="__codelineno-16-5" name="__codelineno-16-5" href="#__codelineno-16-5"></a><span class="n">输出结果为</span><span class="err">：</span>
-</span><span id="__span-16-6"><a id="__codelineno-16-6" name="__codelineno-16-6" href="#__codelineno-16-6"></a><span class="p">[(</span><span class="s1">&#39;name&#39;</span><span class="p">,</span> <span class="s1">&#39;S20&#39;</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;age&#39;</span><span class="p">,</span> <span class="s1">&#39;i1&#39;</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;marks&#39;</span><span class="p">,</span> <span class="s1">&#39;f4&#39;</span><span class="p">)]</span>
+</span><span id="__span-16-6"><a id="__codelineno-16-6" name="__codelineno-16-6" href="#__codelineno-16-6"></a><span class="p">[(</span><span class="s1">'name'</span><span class="p">,</span> <span class="s1">'S20'</span><span class="p">),</span> <span class="p">(</span><span class="s1">'age'</span><span class="p">,</span> <span class="s1">'i1'</span><span class="p">),</span> <span class="p">(</span><span class="s1">'marks'</span><span class="p">,</span> <span class="s1">'f4'</span><span class="p">)]</span>
 </span><span id="__span-16-7"><a id="__codelineno-16-7" name="__codelineno-16-7" href="#__codelineno-16-7"></a>
-</span><span id="__span-16-8"><a id="__codelineno-16-8" name="__codelineno-16-8" href="#__codelineno-16-8"></a><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-</span><span id="__span-16-9"><a id="__codelineno-16-9" name="__codelineno-16-9" href="#__codelineno-16-9"></a><span class="n">student</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">dtype</span><span class="p">([(</span><span class="s1">&#39;name&#39;</span><span class="p">,</span><span class="s1">&#39;S20&#39;</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;age&#39;</span><span class="p">,</span> <span class="s1">&#39;i1&#39;</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;marks&#39;</span><span class="p">,</span> <span class="s1">&#39;f4&#39;</span><span class="p">)])</span> 
-</span><span id="__span-16-10"><a id="__codelineno-16-10" name="__codelineno-16-10" href="#__codelineno-16-10"></a><span class="n">a</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([(</span><span class="s1">&#39;abc&#39;</span><span class="p">,</span> <span class="mi">21</span><span class="p">,</span> <span class="mi">50</span><span class="p">),(</span><span class="s1">&#39;xyz&#39;</span><span class="p">,</span> <span class="mi">18</span><span class="p">,</span> <span class="mi">75</span><span class="p">)],</span> <span class="n">dtype</span> <span class="o">=</span> <span class="n">student</span><span class="p">)</span> 
+</span><span id="__span-16-8"><a id="__codelineno-16-8" name="__codelineno-16-8" href="#__codelineno-16-8"></a><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+</span><span id="__span-16-9"><a id="__codelineno-16-9" name="__codelineno-16-9" href="#__codelineno-16-9"></a><span class="n">student</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">dtype</span><span class="p">([(</span><span class="s1">'name'</span><span class="p">,</span><span class="s1">'S20'</span><span class="p">),</span> <span class="p">(</span><span class="s1">'age'</span><span class="p">,</span> <span class="s1">'i1'</span><span class="p">),</span> <span class="p">(</span><span class="s1">'marks'</span><span class="p">,</span> <span class="s1">'f4'</span><span class="p">)])</span> 
+</span><span id="__span-16-10"><a id="__codelineno-16-10" name="__codelineno-16-10" href="#__codelineno-16-10"></a><span class="n">a</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([(</span><span class="s1">'abc'</span><span class="p">,</span> <span class="mi">21</span><span class="p">,</span> <span class="mi">50</span><span class="p">),(</span><span class="s1">'xyz'</span><span class="p">,</span> <span class="mi">18</span><span class="p">,</span> <span class="mi">75</span><span class="p">)],</span> <span class="n">dtype</span> <span class="o">=</span> <span class="n">student</span><span class="p">)</span> 
 </span><span id="__span-16-11"><a id="__codelineno-16-11" name="__codelineno-16-11" href="#__codelineno-16-11"></a><span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
 </span><span id="__span-16-12"><a id="__codelineno-16-12" name="__codelineno-16-12" href="#__codelineno-16-12"></a>
 </span><span id="__span-16-13"><a id="__codelineno-16-13" name="__codelineno-16-13" href="#__codelineno-16-13"></a><span class="n">输出结果为</span><span class="err">：</span>
-</span><span id="__span-16-14"><a id="__codelineno-16-14" name="__codelineno-16-14" href="#__codelineno-16-14"></a><span class="p">[(</span><span class="s1">&#39;abc&#39;</span><span class="p">,</span> <span class="mi">21</span><span class="p">,</span> <span class="mf">50.0</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;xyz&#39;</span><span class="p">,</span> <span class="mi">18</span><span class="p">,</span> <span class="mf">75.0</span><span class="p">)]</span>
+</span><span id="__span-16-14"><a id="__codelineno-16-14" name="__codelineno-16-14" href="#__codelineno-16-14"></a><span class="p">[(</span><span class="s1">'abc'</span><span class="p">,</span> <span class="mi">21</span><span class="p">,</span> <span class="mf">50.0</span><span class="p">),</span> <span class="p">(</span><span class="s1">'xyz'</span><span class="p">,</span> <span class="mi">18</span><span class="p">,</span> <span class="mf">75.0</span><span class="p">)]</span>
 </span></code></pre></div></li>
 </ul>
-<h3 id="_12">排序、条件筛选函数<a class="headerlink" href="#_12" title="Permanent link">&para;</a></h3>
-<div class="tabbed-set tabbed-alternate" data-tabs="2:1"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="__tabbed_2_1">numpy.sort()</label></div>
+<h3 id="_12">排序、条件筛选函数<a class="headerlink" href="#_12" title="Permanent link">¶</a></h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="2:1"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio"><div class="tabbed-labels"><label for="__tabbed_2_1">numpy.sort()</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <p><code>numpy.sort(a, axis, kind, order)</code></p>
@@ -4706,9 +5573,9 @@ Name: RUNOOB-Series-TEST, dtype: object</p>
       
   <span class="md-source-file__fact">
     <span class="md-icon" title="最后更新">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"></path></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">2024年10月24日</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="2024年10月24日 07:23:11 UTC">2024年10月24日</span>
   </span>
 
     
@@ -4731,7 +5598,7 @@ Name: RUNOOB-Series-TEST, dtype: object</p>
         
           <button type="button" class="md-top md-icon" data-md-component="top" hidden>
   
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"></path></svg>
   回到页面顶部
 </button>
         
@@ -4744,7 +5611,7 @@ Name: RUNOOB-Series-TEST, dtype: object</p>
       <div class="md-copyright">
   
     <div class="md-copyright__highlight">
-      Copyright &copy; 2023-2024 <a herf="https://github.com/Wu-wu-u" target="_blank" rel="noopener">Wu-wu-u</a>
+      Copyright © 2023-2024 <a herf="https://github.com/Wu-wu-u" target="_blank" rel="noopener">Wu-wu-u</a>
     </div>
   
   
@@ -4755,7 +5622,8 @@ Name: RUNOOB-Series-TEST, dtype: object</p>
   
 </div>
       
-        <div class="md-social">
+        
+<div class="md-social">
   
     
     
@@ -4765,7 +5633,7 @@ Name: RUNOOB-Series-TEST, dtype: object</p>
       
     
     <a href="https://github.com/Wu-wu-u" target="_blank" rel="noopener" title="github.com" class="md-social__link">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.7.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8M97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"></path></svg>
     </a>
   
 </div>
@@ -4780,17 +5648,19 @@ Name: RUNOOB-Series-TEST, dtype: object</p>
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "../../..", "features": ["toc.follow", "navigation.tabs", "navigation.top", "navigation.indexes", "content.code.copy", "content.code.annotate", "search.suggest", "search.highlight"], "search": "../../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}}</script>
+    
+      
+      <script id="__config" type="application/json">{"base": "../../..", "features": ["toc.follow", "navigation.tabs", "navigation.top", "navigation.indexes", "content.code.copy", "content.code.annotate", "search.suggest", "search.highlight"], "search": "../../../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}, "version": null}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.88dd0f4e.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.f55a23d4.min.js"></script>
       
         <script src="../../../javascripts/mathjax.js"></script>
       
         <script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
       
     
-  <script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
-document$.subscribe(() => { lightbox.reload() });
-</script></body>
-</html>
+  
+<script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+document$.subscribe(()=>{ lightbox.reload(); });
+</script></body></html>
