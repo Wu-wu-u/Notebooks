@@ -1,0 +1,15 @@
+[
+  {
+    "arguments": [
+      "/usr/bin/g++",
+      "-c",
+      "-std=c++23",
+      "-o",
+      "newFeature",
+      "newFeature.cpp"
+    ],
+    "directory": "/Users/mac/Code/Notebooks/docs/cs/pl/java",
+    "file": "/Users/mac/Code/Notebooks/docs/cs/pl/java/newFeature.cpp",
+    "output": "/Users/mac/Code/Notebooks/docs/cs/pl/java/newFeature"
+  }
+]

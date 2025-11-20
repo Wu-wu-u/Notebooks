@@ -24,7 +24,7 @@ theme:
 
       # 主颜色
       # https://squidfunk.github.io/mkdocs-material/setup/changing-the-colors/#primary-color
-      primary: white
+      primary: custom
 
       # 链接等可交互元件的高亮色
       # https://squidfunk.github.io/mkdocs-material/setup/changing-the-colors/#accent-color
@@ -169,6 +169,9 @@ nav:
             - cs/pl/python/CS61A/index.md
             - 函数与列表: cs/pl/python/CS61A/cs61a.md
             - 面向对象编程: cs/pl/python/CS61A/object.md
+        - java:
+          - 内存管理: cs/pl/java/memory.md
+          - Java语法: cs/pl/java/java.md
         - x86 汇编语言: cs/pl/asm/asm.md
     - 计算机系统:
         - Verilog: cs/systems/Verilog/verilog.md
@@ -191,14 +194,16 @@ nav:
           - 6.I/O: cs/systems/CO/IO.md
         - 计算机体系结构:
           - cs/systems/CA/index.md
-          - Ch1 导论: cs/systems/CA/ch1.md
-          - Ch2 Cache: cs/systems/CA/ch2.md
           - Ch3 指令级并行: cs/systems/CA/ch3.md
           - Ch4 DLP: cs/systems/CA/ch4.md
           - Ch5 TLP: cs/systems/CA/ch5.md
-        - 操作系统原理(NJU):
-          - 绪论: cs/systems/OS/intro.md
-          - 虚拟化: cs/systems/OS/virtualization.md
+        - 操作系统:
+          - 总概: cs/systems/OS/overview.md
+          - 进程管理: cs/systems/OS/process.md
+          - 编译、链接、加载和运行: cs/systems/OS/program.md
+          - 同步工具|进程同步: cs/systems/OS/sync_tool.md
+          - 同步问题例子|进程同步: cs/systems/OS/sync_example.md
+          - 死锁: cs/systems/OS/deadlock.md
     - 算法相关:
       - 数据结构基础: 
         - cs/algorithm/FDS/index.md
@@ -241,9 +246,7 @@ nav:
         - Chapter 9 Relations: cs/theories/Discrete_Math/chapter9.md
         - Chapter 10 Graphs: cs/theories/Discrete_Math/chapter10.md
         - Chapter 11 Trees: cs/theories/Discrete_Math/chapter11.md
-    - 人工智能:
-      - 基础库的使用: cs/AI/basic_module.md
-    - 其他课程:
+    - 核心课程:
       - 数据库系统:
         - Introduction: cs/others/DB/intro.md
         - Relational Model: cs/others/DB/relationalModel.md
@@ -255,6 +258,13 @@ nav:
         - 关系数据库设计: cs/others/DB/design.md
         - 并发控制: cs/others/DB/concurrency.md
         - 故障恢复: cs/others/DB/recovery.md
+      - 计算机网络:
+        - 物理层: cs/others/CN/phy_layer.md
+        - 数据链路层|主要功能: cs/others/CN/data_link.md
+        - 数据链路层|介质访问控制层: cs/others/CN/mac.md
+        - 网络层: cs/others/CN/network.md
+
+
     - 工具相关:
       - Git: cs/tools/git/git.md
       - Latex: cs/tools/latex/latex.md
